@@ -48,6 +48,9 @@ public/data/
 public/fonts/
 test-results/
 playwright-report/
+dist-*/
+pw-*/
+pw-*-report/
 lighthouse/
 .wrangler/
 coverage/

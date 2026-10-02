@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "module": "preserve",
+    "moduleResolution": "bundler"
+  },
+  "include": [
+    "scripts/**/*.ts",
+    "tests/**/*.ts",
+    "src/lib/**/*.ts",
+    "src/**/*.test.ts",
+    "*.config.ts",
+    "*.config.mts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

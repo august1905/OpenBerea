@@ -1,0 +1,11 @@
+{
+ "generated": "2026-10-02",
+ "source": "LibriVox API https://librivox.org/api/feed/audiobooks?title=^Bible&format=json&extended=1 and https://archive.org/metadata/<id>",
+ "license": "LibriVox recordings are in the public domain (USA). See https://librivox.org/pages/public-domain/",
+ "audioFormat": "64kbps MP3 (LibriVox listen_url files)",
+ "note": "chapters maps chapter -> MP3 URL. When onePerChapter is false, several chapters share one file; files[] gives the chapter range of each file. No verse-level or chapter-start timings exist.",
+ "files": {
+  "kjv-audio.json": "Primary map: per book, the LibriVox KJV project with the finest chapter granularity (one MP3 per chapter where one exists).",
+  "kjv-audio-armenta-complete.json": "Alternate map: Bible (KJV), Complete, read by Michael Armenta (one solo reader for all 66 books; 127 files of about 1 hour, several chapters each)."
+ }
+}

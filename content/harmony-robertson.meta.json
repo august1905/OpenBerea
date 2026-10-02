@@ -1,0 +1,30 @@
+{
+ "work": "A. T. Robertson, A Harmony of the Gospels for Students of the Life of Christ, Based on the Broadus Harmony in the Revised Version",
+ "firstPublished": "New York: George H. Doran Company, 1922 (\"Copyright, 1922, by George H. Doran Company\"); later printings by Harper & Brothers carry \"Copyright, 1922, by Harper & Brothers\".",
+ "copyrightStatus": "Public domain in the United States (published 1922, i.e. before 1929; US works published in 1922 entered the public domain no later than 1998). Robertson died in 1934, so it is also public domain in life+70 and life+80 countries; not necessarily PD in life+95/100 jurisdictions. Gutenberg flags the text as PD in the US.",
+ "primarySource": {
+  "edition": "Project Gutenberg eBook #36264 (released 2011-05-29, updated 2021-01-07, produced by Ron Swanson), transcribed from a Harper & Brothers printing",
+  "url": "https://www.gutenberg.org/ebooks/36264",
+  "text": "https://www.gutenberg.org/cache/epub/36264/pg36264.txt",
+  "part": "Analytical Outline of the Harmony (pp. xiii-xxxii)"
+ },
+ "crossChecks": [
+  "Table for Finding Any Passage in the Harmony (same Gutenberg text): verse sets agree for every section and gospel.",
+  "Section headers in the body of the Harmony (same Gutenberg text): verse sets agree for every section.",
+  "archive.org OCR of two independent scans of the 1922 George H. Doran printing: https://archive.org/details/harmonyofgospels00robe (Princeton Theological Seminary Library) and https://archive.org/details/harmonyofgospels00robeuoft (University of Toronto). Outline aligned line by line; body section headers compared per section. All differences were OCR noise or misprints in the printed outline (see note fields), checked against the page images.",
+  "Verse existence: every start and end verse exists (KJV/RV versification, from STEPBible TAGNT, checked against a KJV verse-count table). Taken together the sections cover every verse of the four Gospels except Matt. 17:21 and Mark 11:26, which the Revised Version omits (the book notes this)."
+ ],
+ "fields": {
+  "refs": "Compact gospel references (MAT/MRK/LUK/JHN, null when absent). A \";\" separates ranges in different chapters; a \",\" adds verses in the same chapter as the preceding range (e.g. \"14:26, 32-42\"). Whole chapters are expanded (e.g. \"Matt. 24, 25\" becomes \"24:1-25:46\").",
+  "ranges": "The same references as [startChapter, startVerse, endChapter, endVerse] arrays in printed order. These include otherRefs books (ACT, 1CO).",
+  "printedRefs": "The reference line exactly as given in the Gutenberg Analytical Outline.",
+  "label": "The section label: \"128a\" and \"128b\" are split sections; every other label is the section number.",
+  "order": "Order in the Harmony, 1-185.",
+  "subsections": "Sections 54 (Sermon on the Mount) and 64 (first group of parables) only.",
+  "note": "Explains each place where the 1922 printed outline differs from the data, or the order is non-obvious."
+ },
+ "counts": {
+  "entries": 185,
+  "sectionNumbers": 184
+ }
+}

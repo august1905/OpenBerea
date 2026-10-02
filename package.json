@@ -8,14 +8,15 @@
   "scripts": {
     "start": "expo start",
     "web": "expo start --web",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.node.json",
     "lint": "expo lint",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest",
     "data": "tsx scripts/pipeline/run.ts",
-    "build": "expo export --platform web && node scripts/postbuild.mjs",
+    "build": "expo export --platform web --output-dir ${DIST_DIR:-dist} && node scripts/postbuild.mjs",
     "serve": "node scripts/serve-dist.mjs",
     "e2e": "playwright test",
+    "check:links": "tsx scripts/check-links.ts",
     "check": "npm run typecheck && npm run lint && npm run test && npm run build && npm run e2e",
     "deploy": "wrangler deploy"
   },
@@ -36,6 +37,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.63.0",
+    "@types/node": "^24.19.1",
     "@types/react": "~19.2.2",
     "eslint": "^9.39.5",
     "eslint-config-expo": "^57.0.2",

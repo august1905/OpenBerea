@@ -1,0 +1,6947 @@
+[
+ {
+  "part": "Part I. The Sources of the Gospels",
+  "partNumber": 1,
+  "partPeriod": null,
+  "section": 1,
+  "label": "1",
+  "order": 1,
+  "title": "In the Dedication Luke Explains His Method of Research",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "1:1-4",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     1,
+     1,
+     1,
+     4
+    ]
+   ]
+  },
+  "printedRefs": "Luke 1:1-4",
+  "titlePrinted": "IN THE DEDICATION LUKE EXPLAINS HIS METHOD OF RESEARCH"
+ },
+ {
+  "part": "Part II. The Pre-Existent State of Christ and His Incarnation",
+  "partNumber": 2,
+  "partPeriod": null,
+  "section": 2,
+  "label": "2",
+  "order": 2,
+  "title": "In His Introduction John Pictures Christ as the Word (Logos)",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "1:1-18"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     1,
+     1,
+     1,
+     18
+    ]
+   ]
+  },
+  "printedRefs": "John 1:1-18",
+  "titlePrinted": "IN HIS INTRODUCTION JOHN PICTURES CHRIST AS THE WORD (LOGOS)"
+ },
+ {
+  "part": "Part III. The Two Genealogies in Matthew and Luke",
+  "partNumber": 3,
+  "partPeriod": null,
+  "section": 3,
+  "label": "3",
+  "order": 3,
+  "title": "Apparently Joseph's Genealogy in Matthew and Mary's in Luke",
+  "refs": {
+   "MAT": "1:1-17",
+   "MRK": null,
+   "LUK": "3:23-38",
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     1,
+     1,
+     1,
+     17
+    ]
+   ],
+   "LUK": [
+    [
+     3,
+     23,
+     3,
+     38
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 1:1-17; Luke 3:23-38",
+  "titlePrinted": "APPARENTLY JOSEPH'S GENEALOGY IN MATTHEW AND MARY'S IN LUKE"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 4,
+  "label": "4",
+  "order": 4,
+  "title": "The Annunciation of the Birth of the Baptist to Zacharias",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "1:5-25",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     1,
+     5,
+     1,
+     25
+    ]
+   ]
+  },
+  "printedRefs": "Luke 1:5-25",
+  "titlePrinted": "THE ANNUNCIATION OF THE BIRTH OF THE BAPTIST TO ZACHARIAS"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 5,
+  "label": "5",
+  "order": 5,
+  "title": "The Annunciation to the Virgin Mary of the Birth of Jesus",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "1:26-38",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     1,
+     26,
+     1,
+     38
+    ]
+   ]
+  },
+  "printedRefs": "Luke 1:26-38",
+  "titlePrinted": "THE ANNUNCIATION TO THE VIRGIN MARY OF THE BIRTH OF JESUS"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 6,
+  "label": "6",
+  "order": 6,
+  "title": "The Song of Elizabeth to Mary upon Her Visit",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "1:39-45",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     1,
+     39,
+     1,
+     45
+    ]
+   ]
+  },
+  "printedRefs": "Luke 1:39-45",
+  "titlePrinted": "THE SONG OF ELIZABETH TO MARY UPON HER VISIT"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 7,
+  "label": "7",
+  "order": 7,
+  "title": "The Magnificat of Mary",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "1:46-56",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     1,
+     46,
+     1,
+     56
+    ]
+   ]
+  },
+  "printedRefs": "Luke 1:46-56",
+  "titlePrinted": "THE MAGNIFICAT OF MARY"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 8,
+  "label": "8",
+  "order": 8,
+  "title": "The Birth and Childhood of the Baptist and His Desert Life",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "1:57-80",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     1,
+     57,
+     1,
+     80
+    ]
+   ]
+  },
+  "printedRefs": "Luke 1:57-80",
+  "titlePrinted": "THE BIRTH AND CHILDHOOD OF THE BAPTIST AND HIS DESERT LIFE"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 9,
+  "label": "9",
+  "order": 9,
+  "title": "The Annunciation to Joseph of the Birth of Jesus",
+  "refs": {
+   "MAT": "1:18-25",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     1,
+     18,
+     1,
+     25
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 1:18-25",
+  "titlePrinted": "THE ANNUNCIATION TO JOSEPH OF THE BIRTH OF JESUS"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 10,
+  "label": "10",
+  "order": 10,
+  "title": "The Birth of Jesus",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "2:1-7",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     2,
+     1,
+     2,
+     7
+    ]
+   ]
+  },
+  "printedRefs": "Luke 2:1-7",
+  "titlePrinted": "THE BIRTH OF JESUS"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 11,
+  "label": "11",
+  "order": 11,
+  "title": "The Praise of the Angels and the Homage of the Shepherds",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "2:8-20",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     2,
+     8,
+     2,
+     20
+    ]
+   ]
+  },
+  "printedRefs": "Luke 2:8-20",
+  "titlePrinted": "THE PRAISE OF THE ANGELS AND THE HOMAGE OF THE SHEPHERDS"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 12,
+  "label": "12",
+  "order": 12,
+  "title": "The Circumcision of Jesus",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "2:21",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     2,
+     21,
+     2,
+     21
+    ]
+   ]
+  },
+  "printedRefs": "Luke 2:21",
+  "titlePrinted": "THE CIRCUMCISION OF JESUS"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 13,
+  "label": "13",
+  "order": 13,
+  "title": "The Presentation in the Temple with the Homage of Simeon and Anna",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "2:22-38",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     2,
+     22,
+     2,
+     38
+    ]
+   ]
+  },
+  "printedRefs": "Luke 2:22-38",
+  "titlePrinted": "THE PRESENTATION IN THE TEMPLE WITH THE HOMAGE OF SIMEON AND ANNA"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 14,
+  "label": "14",
+  "order": 14,
+  "title": "Magi Visit the New-Born King of the Jews",
+  "refs": {
+   "MAT": "2:1-12",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     2,
+     1,
+     2,
+     12
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 2:1-12",
+  "titlePrinted": "MAGI VISIT THE NEW-BORN KING OF THE JEWS"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 15,
+  "label": "15",
+  "order": 15,
+  "title": "The Child Jesus Carried to Egypt, and the Children at Bethlehem Slain",
+  "refs": {
+   "MAT": "2:13-18",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     2,
+     13,
+     2,
+     18
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 2:13-18",
+  "titlePrinted": "THE CHILD JESUS CARRIED TO EGYPT, AND THE CHILDREN AT BETHLEHEM SLAIN"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 16,
+  "label": "16",
+  "order": 16,
+  "title": "The Child Brought from Egypt to Nazareth",
+  "refs": {
+   "MAT": "2:19-23",
+   "MRK": null,
+   "LUK": "2:39",
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     2,
+     19,
+     2,
+     23
+    ]
+   ],
+   "LUK": [
+    [
+     2,
+     39,
+     2,
+     39
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 2:19-23; Luke 2:39",
+  "titlePrinted": "THE CHILD BROUGHT FROM EGYPT TO NAZARETH"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 17,
+  "label": "17",
+  "order": 17,
+  "title": "The Childhood of Jesus at Nazareth",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "2:40",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     2,
+     40,
+     2,
+     40
+    ]
+   ]
+  },
+  "printedRefs": "Luke 2:40",
+  "titlePrinted": "THE CHILDHOOD OF JESUS AT NAZARETH"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 18,
+  "label": "18",
+  "order": 18,
+  "title": "The Visit of the Boy Jesus to Jerusalem When Twelve Years Old",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "2:41-50",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     2,
+     41,
+     2,
+     50
+    ]
+   ]
+  },
+  "printedRefs": "Luke 2:41-50",
+  "titlePrinted": "THE VISIT OF THE BOY JESUS TO JERUSALEM WHEN TWELVE YEARS OLD"
+ },
+ {
+  "part": "Part IV. The Birth and Childhood of the Baptist and of Jesus",
+  "partNumber": 4,
+  "partPeriod": "Probably B.C. 7 to A.D. 7",
+  "section": 19,
+  "label": "19",
+  "order": 19,
+  "title": "The Eighteen Years at Nazareth",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "2:51-52",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     2,
+     51,
+     2,
+     52
+    ]
+   ]
+  },
+  "printedRefs": "Luke 2:51-52",
+  "titlePrinted": "THE EIGHTEEN YEARS AT NAZARETH",
+  "note": "The 1922 printed outline reads \"Luke 2:51.\"; the section itself (body) and the finding table give Luke 2:51-52."
+ },
+ {
+  "part": "Part V. The Beginning of the Baptist's Ministry",
+  "partNumber": 5,
+  "partPeriod": "Probably A.D. 25",
+  "section": 20,
+  "label": "20",
+  "order": 20,
+  "title": "The Time of the Beginning",
+  "refs": {
+   "MAT": null,
+   "MRK": "1:1",
+   "LUK": "3:1-2",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "LUK": [
+    [
+     3,
+     1,
+     3,
+     2
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:1; Luke 3:1-2",
+  "titlePrinted": "THE TIME OF THE BEGINNING",
+  "note": "The 1922 printed outline reads \"Luke 2:1-2\" (misprint); the body and the finding table give Luke 3:1-2."
+ },
+ {
+  "part": "Part V. The Beginning of the Baptist's Ministry",
+  "partNumber": 5,
+  "partPeriod": "Probably A.D. 25",
+  "section": 21,
+  "label": "21",
+  "order": 21,
+  "title": "The Message and the Messenger",
+  "refs": {
+   "MAT": "3:1-6",
+   "MRK": "1:2-6",
+   "LUK": "3:3-6",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     2,
+     1,
+     6
+    ]
+   ],
+   "MAT": [
+    [
+     3,
+     1,
+     3,
+     6
+    ]
+   ],
+   "LUK": [
+    [
+     3,
+     3,
+     3,
+     6
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:2-6; Matt. 3:1-6; Luke 3:3-6",
+  "titlePrinted": "THE MESSAGE AND THE MESSENGER"
+ },
+ {
+  "part": "Part V. The Beginning of the Baptist's Ministry",
+  "partNumber": 5,
+  "partPeriod": "Probably A.D. 25",
+  "section": 22,
+  "label": "22",
+  "order": 22,
+  "title": "A Specimen of John's Preaching",
+  "refs": {
+   "MAT": "3:7-10",
+   "MRK": null,
+   "LUK": "3:7-14",
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     3,
+     7,
+     3,
+     10
+    ]
+   ],
+   "LUK": [
+    [
+     3,
+     7,
+     3,
+     14
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 3:7-10; Luke 3:7-14",
+  "titlePrinted": "A SPECIMEN OF JOHN'S PREACHING"
+ },
+ {
+  "part": "Part V. The Beginning of the Baptist's Ministry",
+  "partNumber": 5,
+  "partPeriod": "Probably A.D. 25",
+  "section": 23,
+  "label": "23",
+  "order": 23,
+  "title": "The Forerunner's Picture of the Messiah Before Seeing Him",
+  "refs": {
+   "MAT": "3:11-12",
+   "MRK": "1:7-8",
+   "LUK": "3:15-18",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     7,
+     1,
+     8
+    ]
+   ],
+   "MAT": [
+    [
+     3,
+     11,
+     3,
+     12
+    ]
+   ],
+   "LUK": [
+    [
+     3,
+     15,
+     3,
+     18
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:7-8; Matt. 3:11-12; Luke 3:15-18",
+  "titlePrinted": "THE FORERUNNER'S PICTURE OF THE MESSIAH BEFORE SEEING HIM"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 24,
+  "label": "24",
+  "order": 24,
+  "title": "Jesus Baptized by John in the Jordan",
+  "refs": {
+   "MAT": "3:13-17",
+   "MRK": "1:9-11",
+   "LUK": "3:21-23",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     9,
+     1,
+     11
+    ]
+   ],
+   "MAT": [
+    [
+     3,
+     13,
+     3,
+     17
+    ]
+   ],
+   "LUK": [
+    [
+     3,
+     21,
+     3,
+     23
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:9-11; Matt. 3:13-17; Luke 3:21-23",
+  "titlePrinted": "JESUS BAPTIZED BY JOHN IN THE JORDAN"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 25,
+  "label": "25",
+  "order": 25,
+  "title": "The Three Temptations of Jesus",
+  "refs": {
+   "MAT": "4:1-11",
+   "MRK": "1:12-13",
+   "LUK": "4:1-13",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     12,
+     1,
+     13
+    ]
+   ],
+   "MAT": [
+    [
+     4,
+     1,
+     4,
+     11
+    ]
+   ],
+   "LUK": [
+    [
+     4,
+     1,
+     4,
+     13
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:12-13; Matt. 4:1-11; Luke 4:1-13",
+  "titlePrinted": "THE THREE TEMPTATIONS OF JESUS"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 26,
+  "label": "26",
+  "order": 26,
+  "title": "The Testimony of the Baptist to the Committee of the Sanhedrin",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "1:19-28"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     1,
+     19,
+     1,
+     28
+    ]
+   ]
+  },
+  "printedRefs": "John 1:19-28",
+  "titlePrinted": "THE TESTIMONY OF THE BAPTIST TO THE COMMITTEE OF THE SANHEDRIN"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 27,
+  "label": "27",
+  "order": 27,
+  "title": "John's Identification of Jesus as the Messiah",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "1:29-34"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     1,
+     29,
+     1,
+     34
+    ]
+   ]
+  },
+  "printedRefs": "John 1:29-34",
+  "titlePrinted": "JOHN'S IDENTIFICATION OF JESUS AS THE MESSIAH"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 28,
+  "label": "28",
+  "order": 28,
+  "title": "Jesus Makes His First Disciples",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "1:35-51"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     1,
+     35,
+     1,
+     51
+    ]
+   ]
+  },
+  "printedRefs": "John 1:35-51",
+  "titlePrinted": "JESUS MAKES HIS FIRST DISCIPLES"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 29,
+  "label": "29",
+  "order": 29,
+  "title": "Jesus Works His First Miracle",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "2:1-11"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     2,
+     1,
+     2,
+     11
+    ]
+   ]
+  },
+  "printedRefs": "John 2:1-11",
+  "titlePrinted": "JESUS WORKS HIS FIRST MIRACLE"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 30,
+  "label": "30",
+  "order": 30,
+  "title": "Jesus Makes a First Sojourn at Capernaum, Accompanied by His Kindred and His Early Disciples",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "2:12"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     2,
+     12,
+     2,
+     12
+    ]
+   ]
+  },
+  "printedRefs": "John 2:12",
+  "titlePrinted": "JESUS MAKES A FIRST SOJOURN AT CAPERNAUM, ACCOMPANIED BY HIS KINDRED AND HIS EARLY DISCIPLES"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 31,
+  "label": "31",
+  "order": 31,
+  "title": "The First Cleansing of the Temple at the Passover",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "2:13-22"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     2,
+     13,
+     2,
+     22
+    ]
+   ]
+  },
+  "printedRefs": "John 2:13-22",
+  "titlePrinted": "THE FIRST CLEANSING OF THE TEMPLE AT THE PASSOVER"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 32,
+  "label": "32",
+  "order": 32,
+  "title": "The Interview of Nicodemus with Jesus",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "2:23-3:21"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     2,
+     23,
+     3,
+     21
+    ]
+   ]
+  },
+  "printedRefs": "John 2:23-3:21",
+  "titlePrinted": "THE INTERVIEW OF NICODEMUS WITH JESUS",
+  "note": "The 1922 printed outline reads \"John 2:23; 3:21.\"; the body reads \"John 2:23 to 3:21\"."
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 33,
+  "label": "33",
+  "order": 33,
+  "title": "The Parallel Ministry of Jesus and John with John's Loyalty to Jesus",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "3:22-36"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     3,
+     22,
+     3,
+     36
+    ]
+   ]
+  },
+  "printedRefs": "John 3:22-36",
+  "titlePrinted": "THE PARALLEL MINISTRY OF JESUS AND JOHN WITH JOHN'S LOYALTY TO JESUS"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 34,
+  "label": "34",
+  "order": 34,
+  "title": "Christ's Reasons for Leaving Judea",
+  "refs": {
+   "MAT": "4:12",
+   "MRK": "1:14",
+   "LUK": "3:19-20; 4:14",
+   "JHN": "4:1-4"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     14,
+     1,
+     14
+    ]
+   ],
+   "MAT": [
+    [
+     4,
+     12,
+     4,
+     12
+    ]
+   ],
+   "LUK": [
+    [
+     3,
+     19,
+     3,
+     20
+    ],
+    [
+     4,
+     14,
+     4,
+     14
+    ]
+   ],
+   "JHN": [
+    [
+     4,
+     1,
+     4,
+     4
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:14; Matt. 4:12; Luke 3:19-20; 4:14; John 4:1-4",
+  "titlePrinted": "CHRIST'S REASONS FOR LEAVING JUDEA"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 35,
+  "label": "35",
+  "order": 35,
+  "title": "Jesus in Samaria at Jacob's Well and in Sychar",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "4:5-42"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     4,
+     5,
+     4,
+     42
+    ]
+   ]
+  },
+  "printedRefs": "John 4:5-42",
+  "titlePrinted": "JESUS IN SAMARIA AT JACOB'S WELL AND IN SYCHAR"
+ },
+ {
+  "part": "Part VI. The Beginning of Christ's Public Ministry",
+  "partNumber": 6,
+  "partPeriod": "In all parts of Palestine. Probably A.D. 26 and 27",
+  "section": 36,
+  "label": "36",
+  "order": 36,
+  "title": "The Arrival of Jesus in Galilee",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "4:43-45"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     4,
+     43,
+     4,
+     45
+    ]
+   ]
+  },
+  "printedRefs": "John 4:43-45",
+  "titlePrinted": "THE ARRIVAL OF JESUS IN GALILEE"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 37,
+  "label": "37",
+  "order": 37,
+  "title": "General Account of His Teaching in Galilee",
+  "refs": {
+   "MAT": "4:17",
+   "MRK": "1:14-15",
+   "LUK": "4:14-15",
+   "JHN": null
+  },
+  "group": "(1) The Rejection at Nazareth and the New Home in Capernaum",
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     14,
+     1,
+     15
+    ]
+   ],
+   "MAT": [
+    [
+     4,
+     17,
+     4,
+     17
+    ]
+   ],
+   "LUK": [
+    [
+     4,
+     14,
+     4,
+     15
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:14-15; Matt. 4:17; Luke 4:14-15",
+  "titlePrinted": "GENERAL ACCOUNT OF HIS TEACHING IN GALILEE"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 38,
+  "label": "38",
+  "order": 38,
+  "title": "The Healing at Cana of the Son of a Courtier of Capernaum",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "4:46-54"
+  },
+  "group": "(1) The Rejection at Nazareth and the New Home in Capernaum",
+  "ranges": {
+   "JHN": [
+    [
+     4,
+     46,
+     4,
+     54
+    ]
+   ]
+  },
+  "printedRefs": "John 4:46-54",
+  "titlePrinted": "THE HEALING AT CANA OF THE SON OF A COURTIER OF CAPERNAUM"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 39,
+  "label": "39",
+  "order": 39,
+  "title": "The First Rejection at Nazareth",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "4:16-31",
+   "JHN": null
+  },
+  "group": "(1) The Rejection at Nazareth and the New Home in Capernaum",
+  "ranges": {
+   "LUK": [
+    [
+     4,
+     16,
+     4,
+     31
+    ]
+   ]
+  },
+  "printedRefs": "Luke 4:16-31",
+  "titlePrinted": "THE FIRST REJECTION AT NAZARETH"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 40,
+  "label": "40",
+  "order": 40,
+  "title": "The New Home in Capernaum",
+  "refs": {
+   "MAT": "4:13-16",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "group": "(1) The Rejection at Nazareth and the New Home in Capernaum",
+  "ranges": {
+   "MAT": [
+    [
+     4,
+     13,
+     4,
+     16
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 4:13-16",
+  "titlePrinted": "THE NEW HOME IN CAPERNAUM"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 41,
+  "label": "41",
+  "order": 41,
+  "title": "Jesus Finds Four Fishers of Men in Four Fishermen",
+  "refs": {
+   "MAT": "4:18-22",
+   "MRK": "1:16-20",
+   "LUK": "5:1-11",
+   "JHN": null
+  },
+  "group": "(1) The Rejection at Nazareth and the New Home in Capernaum",
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     16,
+     1,
+     20
+    ]
+   ],
+   "MAT": [
+    [
+     4,
+     18,
+     4,
+     22
+    ]
+   ],
+   "LUK": [
+    [
+     5,
+     1,
+     5,
+     11
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:16-20; Matt. 4:18-22; Luke 5:1-11",
+  "titlePrinted": "JESUS FINDS FOUR FISHERS OF MEN IN FOUR FISHERMEN"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 42,
+  "label": "42",
+  "order": 42,
+  "title": "The Excitement in the Synagogue Because of the Teaching of Jesus and the Healing of a Demoniac on the Sabbath",
+  "refs": {
+   "MAT": null,
+   "MRK": "1:21-28",
+   "LUK": "4:31-37",
+   "JHN": null
+  },
+  "group": "(1) The Rejection at Nazareth and the New Home in Capernaum",
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     21,
+     1,
+     28
+    ]
+   ],
+   "LUK": [
+    [
+     4,
+     31,
+     4,
+     37
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:21-28; Luke 4:31-37",
+  "titlePrinted": "THE EXCITEMENT IN THE SYNAGOGUE BECAUSE OF THE TEACHING OF JESUS AND THE HEALING OF A DEMONIAC ON THE SABBATH"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 43,
+  "label": "43",
+  "order": 43,
+  "title": "He Heals Peter's Mother-in-Law and Many Others",
+  "refs": {
+   "MAT": "8:14-17",
+   "MRK": "1:29-34",
+   "LUK": "4:38-41",
+   "JHN": null
+  },
+  "group": "(1) The Rejection at Nazareth and the New Home in Capernaum",
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     29,
+     1,
+     34
+    ]
+   ],
+   "MAT": [
+    [
+     8,
+     14,
+     8,
+     17
+    ]
+   ],
+   "LUK": [
+    [
+     4,
+     38,
+     4,
+     41
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:29-34; Matt. 8:14-17; Luke 4:38-41",
+  "titlePrinted": "HE HEALS PETER'S MOTHER-IN-LAW AND MANY OTHERS"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 44,
+  "label": "44",
+  "order": 44,
+  "title": "The First Tour of Galilee with the Four Fishermen",
+  "refs": {
+   "MAT": "4:23-25",
+   "MRK": "1:35-39",
+   "LUK": "4:42-44",
+   "JHN": null
+  },
+  "group": "(2) The First Tour of Galilee with the Four Fishermen and the Call of Matthew (Levi) on the Return with the Growing Fame of Jesus",
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     35,
+     1,
+     39
+    ]
+   ],
+   "MAT": [
+    [
+     4,
+     23,
+     4,
+     25
+    ]
+   ],
+   "LUK": [
+    [
+     4,
+     42,
+     4,
+     44
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:35-39; Matt. 4:23-25; Luke 4:42-44",
+  "titlePrinted": "THE FIRST TOUR OF GALILEE WITH THE FOUR FISHERMEN"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 45,
+  "label": "45",
+  "order": 45,
+  "title": "A Leper Healed and Much Popular Excitement",
+  "refs": {
+   "MAT": "8:2-4",
+   "MRK": "1:40-45",
+   "LUK": "5:12-16",
+   "JHN": null
+  },
+  "group": "(2) The First Tour of Galilee with the Four Fishermen and the Call of Matthew (Levi) on the Return with the Growing Fame of Jesus",
+  "ranges": {
+   "MRK": [
+    [
+     1,
+     40,
+     1,
+     45
+    ]
+   ],
+   "MAT": [
+    [
+     8,
+     2,
+     8,
+     4
+    ]
+   ],
+   "LUK": [
+    [
+     5,
+     12,
+     5,
+     16
+    ]
+   ]
+  },
+  "printedRefs": "Mark 1:40-45; Matt. 8:2-4; Luke 5:12-16",
+  "titlePrinted": "A LEPER HEALED AND MUCH POPULAR EXCITEMENT"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 46,
+  "label": "46",
+  "order": 46,
+  "title": "Thronged in Capernaum, He Heals a Paralytic Lowered Through the Roof of Peter's House",
+  "refs": {
+   "MAT": "9:1-8",
+   "MRK": "2:1-12",
+   "LUK": "5:17-26",
+   "JHN": null
+  },
+  "group": "(2) The First Tour of Galilee with the Four Fishermen and the Call of Matthew (Levi) on the Return with the Growing Fame of Jesus",
+  "ranges": {
+   "MRK": [
+    [
+     2,
+     1,
+     2,
+     12
+    ]
+   ],
+   "MAT": [
+    [
+     9,
+     1,
+     9,
+     8
+    ]
+   ],
+   "LUK": [
+    [
+     5,
+     17,
+     5,
+     26
+    ]
+   ]
+  },
+  "printedRefs": "Mark 2:1-12; Matt. 9:1-8; Luke 5:17-26",
+  "titlePrinted": "THRONGED IN CAPERNAUM, HE HEALS A PARALYTIC LOWERED THROUGH THE ROOF OF PETER'S HOUSE"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 47,
+  "label": "47",
+  "order": 47,
+  "title": "The Call of Matthew (Levi) and His Reception in Honor of Jesus",
+  "refs": {
+   "MAT": "9:9-13",
+   "MRK": "2:13-17",
+   "LUK": "5:27-32",
+   "JHN": null
+  },
+  "group": "(2) The First Tour of Galilee with the Four Fishermen and the Call of Matthew (Levi) on the Return with the Growing Fame of Jesus",
+  "ranges": {
+   "MRK": [
+    [
+     2,
+     13,
+     2,
+     17
+    ]
+   ],
+   "MAT": [
+    [
+     9,
+     9,
+     9,
+     13
+    ]
+   ],
+   "LUK": [
+    [
+     5,
+     27,
+     5,
+     32
+    ]
+   ]
+  },
+  "printedRefs": "Mark 2:13-17; Matt. 9:9-13; Luke 5:27-32",
+  "titlePrinted": "THE CALL OF MATTHEW (LEVI) AND HIS RECEPTION IN HONOR OF JESUS"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 48,
+  "label": "48",
+  "order": 48,
+  "title": "Jesus in Three Parables Defends His Disciples for Feasting Instead of Fasting",
+  "refs": {
+   "MAT": "9:14-17",
+   "MRK": "2:18-22",
+   "LUK": "5:33-39",
+   "JHN": null
+  },
+  "group": "(2) The First Tour of Galilee with the Four Fishermen and the Call of Matthew (Levi) on the Return with the Growing Fame of Jesus",
+  "ranges": {
+   "MRK": [
+    [
+     2,
+     18,
+     2,
+     22
+    ]
+   ],
+   "MAT": [
+    [
+     9,
+     14,
+     9,
+     17
+    ]
+   ],
+   "LUK": [
+    [
+     5,
+     33,
+     5,
+     39
+    ]
+   ]
+  },
+  "printedRefs": "Mark 2:18-22; Matt. 9:14-17; Luke 5:33-39",
+  "titlePrinted": "JESUS IN THREE PARABLES DEFENDS HIS DISCIPLES FOR FEASTING INSTEAD OF FASTING"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 49,
+  "label": "49",
+  "order": 49,
+  "title": "At a Feast in Jerusalem (Possibly the Passover) Jesus Heals a Lame Man on the Sabbath and Defends This Action to the Pharisees in a Great Discourse",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "5:1-47"
+  },
+  "group": "(3) The Sabbath Controversy in Jerusalem and in Galilee",
+  "ranges": {
+   "JHN": [
+    [
+     5,
+     1,
+     5,
+     47
+    ]
+   ]
+  },
+  "printedRefs": "John 5:1-47",
+  "titlePrinted": "AT A FEAST IN JERUSALEM (POSSIBLY THE PASSOVER) JESUS HEALS A LAME MAN ON THE SABBATH AND DEFENDS THIS ACTION TO THE PHARISEES IN A GREAT DISCOURSE"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 50,
+  "label": "50",
+  "order": 50,
+  "title": "Another Sabbath Controversy with the Pharisees When the Disciples Pluck Ears of Grain in the Fields",
+  "refs": {
+   "MAT": "12:1-8",
+   "MRK": "2:23-28",
+   "LUK": "6:1-5",
+   "JHN": null
+  },
+  "group": "(3) The Sabbath Controversy in Jerusalem and in Galilee",
+  "ranges": {
+   "MRK": [
+    [
+     2,
+     23,
+     2,
+     28
+    ]
+   ],
+   "MAT": [
+    [
+     12,
+     1,
+     12,
+     8
+    ]
+   ],
+   "LUK": [
+    [
+     6,
+     1,
+     6,
+     5
+    ]
+   ]
+  },
+  "printedRefs": "Mark 2:23-28; Matt. 12:1-8; Luke 6:1-5",
+  "titlePrinted": "ANOTHER SABBATH CONTROVERSY WITH THE PHARISEES WHEN THE DISCIPLES PLUCK EARS OF GRAIN IN THE FIELDS"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 51,
+  "label": "51",
+  "order": 51,
+  "title": "A Third Sabbath Controversy with the Pharisees over the Healing of a Man with a Withered Hand in a Synagogue",
+  "refs": {
+   "MAT": "12:9-14",
+   "MRK": "3:1-6",
+   "LUK": "6:6-11",
+   "JHN": null
+  },
+  "group": "(3) The Sabbath Controversy in Jerusalem and in Galilee",
+  "ranges": {
+   "MRK": [
+    [
+     3,
+     1,
+     3,
+     6
+    ]
+   ],
+   "MAT": [
+    [
+     12,
+     9,
+     12,
+     14
+    ]
+   ],
+   "LUK": [
+    [
+     6,
+     6,
+     6,
+     11
+    ]
+   ]
+  },
+  "printedRefs": "Mark 3:1-6; Matt. 12:9-14; Luke 6:6-11",
+  "titlePrinted": "A THIRD SABBATH CONTROVERSY WITH THE PHARISEES OVER THE HEALING OF A MAN WITH A WITHERED HAND IN A SYNAGOGUE"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 52,
+  "label": "52",
+  "order": 52,
+  "title": "Jesus Teaches and Heals Great Multitudes by the Sea of Galilee",
+  "refs": {
+   "MAT": "12:15-21",
+   "MRK": "3:7-12",
+   "LUK": null,
+   "JHN": null
+  },
+  "group": "(4) The Choice of the Twelve and the Sermon on the Mount",
+  "ranges": {
+   "MRK": [
+    [
+     3,
+     7,
+     3,
+     12
+    ]
+   ],
+   "MAT": [
+    [
+     12,
+     15,
+     12,
+     21
+    ]
+   ]
+  },
+  "printedRefs": "Mark 3:7-12; Matt. 12:15-21",
+  "titlePrinted": "JESUS TEACHES AND HEALS GREAT MULTITUDES BY THE SEA OF GALILEE"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 53,
+  "label": "53",
+  "order": 53,
+  "title": "After a Night of Prayer Jesus Selects Twelve Apostles",
+  "refs": {
+   "MAT": null,
+   "MRK": "3:13-19",
+   "LUK": "6:12-16",
+   "JHN": null
+  },
+  "group": "(4) The Choice of the Twelve and the Sermon on the Mount",
+  "ranges": {
+   "MRK": [
+    [
+     3,
+     13,
+     3,
+     19
+    ]
+   ],
+   "LUK": [
+    [
+     6,
+     12,
+     6,
+     16
+    ]
+   ]
+  },
+  "printedRefs": "Mark 3:13-19; Luke 6:12-16",
+  "titlePrinted": "AFTER A NIGHT OF PRAYER JESUS SELECTS TWELVE APOSTLES"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 54,
+  "label": "54",
+  "order": 54,
+  "title": "The Sermon on the Mount. Privileges and Requirements of the Messianic Reign, Christ's Standard of Righteousness",
+  "refs": {
+   "MAT": "5:1-8:1",
+   "MRK": null,
+   "LUK": "6:17-49",
+   "JHN": null
+  },
+  "group": "(4) The Choice of the Twelve and the Sermon on the Mount",
+  "ranges": {
+   "MAT": [
+    [
+     5,
+     1,
+     8,
+     1
+    ]
+   ],
+   "LUK": [
+    [
+     6,
+     17,
+     6,
+     49
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 5-7; Luke 6:17-49",
+  "titlePrinted": "THE SERMON ON THE MOUNT. PRIVILEGES AND REQUIREMENTS OF THE MESSIANIC REIGN, CHRIST'S STANDARD OF RIGHTEOUSNESS",
+  "subsections": [
+   {
+    "title": "The Place and the Audience",
+    "refs": {
+     "MAT": "5:1-2",
+     "MRK": null,
+     "LUK": "6:17-19",
+     "JHN": null
+    },
+    "printedRefs": "Matt. 5:1-2; Luke 6:17-19"
+   },
+   {
+    "title": "(1) The Introduction: The Beatitudes and the Woes. Privileges of the Messiah's Subjects",
+    "refs": {
+     "MAT": "5:3-12",
+     "MRK": null,
+     "LUK": "6:20-26",
+     "JHN": null
+    },
+    "printedRefs": "Matt. 5:3-12; Luke 6:20-26"
+   },
+   {
+    "title": "(2) The Theme of the Sermon: Christ's Standard of Righteousness in Contrast with that of the Scribes and Pharisees",
+    "refs": {
+     "MAT": "5:13-20",
+     "MRK": null,
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Matt. 5:13-20"
+   },
+   {
+    "title": "(3) Christ's Ethical Teaching Superior to that of the Scribes (both the Old Testament and the Oral Law) in Six Items or Illustrations (Murder, Adultery, Divorce, Oaths, Retaliations, Love of Enemies)",
+    "refs": {
+     "MAT": "5:21-48",
+     "MRK": null,
+     "LUK": "6:27-30, 32-36",
+     "JHN": null
+    },
+    "printedRefs": "Matt. 5:21-48; Luke 6:27-30, 32-36"
+   },
+   {
+    "title": "(4) The Practice of Real Righteousness unlike the Ostentatious Hypocrisy of the Pharisees as in Almsgiving, Prayer, Fasting",
+    "refs": {
+     "MAT": "6:1-18",
+     "MRK": null,
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Matt. 6:1-18"
+   },
+   {
+    "title": "(5) Single-hearted Devotion to God as Opposed to Worldly Aims and Anxieties",
+    "refs": {
+     "MAT": "6:19-34",
+     "MRK": null,
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Matt. 6:19-34"
+   },
+   {
+    "title": "(6) Captious Criticism, or Judging Others",
+    "refs": {
+     "MAT": "7:1-6",
+     "MRK": null,
+     "LUK": "6:37-42",
+     "JHN": null
+    },
+    "printedRefs": "Matt. 7:1-6; Luke 6:37-42"
+   },
+   {
+    "title": "(7) Prayer and the Golden Rule",
+    "refs": {
+     "MAT": "7:7-12",
+     "MRK": null,
+     "LUK": "6:31",
+     "JHN": null
+    },
+    "printedRefs": "Matt. 7:7-12; Luke 6:31"
+   },
+   {
+    "title": "(8) The Conclusion of the Sermon. The Lesson of Personal Righteousness Driven Home by Powerful Parables",
+    "refs": {
+     "MAT": "7:13-8:1",
+     "MRK": null,
+     "LUK": "6:43-49",
+     "JHN": null
+    },
+    "printedRefs": "Matt. 7:13-8:1; Luke 6:43-49"
+   }
+  ],
+  "note": "Printed as \"Matt. 5-7; Luke 6:17-49\". Subsection (8), the body and the finding table run Matthew to 8:1, so MAT is given as 5:1-8:1. The 1922 printed outline omits \"Luke 6:31\" from subsection (7); the body includes it there."
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 55,
+  "label": "55",
+  "order": 55,
+  "title": "Jesus Heals a Centurion's Servant at Capernaum",
+  "refs": {
+   "MAT": "8:5-13",
+   "MRK": null,
+   "LUK": "7:1-10",
+   "JHN": null
+  },
+  "group": "(5) The Spread of Christ's Influence and the Inquiry from John in Prison",
+  "ranges": {
+   "MAT": [
+    [
+     8,
+     5,
+     8,
+     13
+    ]
+   ],
+   "LUK": [
+    [
+     7,
+     1,
+     7,
+     10
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 8:5-13; Luke 7:1-10",
+  "titlePrinted": "JESUS HEALS A CENTURION'S SERVANT AT CAPERNAUM"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 56,
+  "label": "56",
+  "order": 56,
+  "title": "He Raises a Widow's Son at Nain",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "7:11-17",
+   "JHN": null
+  },
+  "group": "(5) The Spread of Christ's Influence and the Inquiry from John in Prison",
+  "ranges": {
+   "LUK": [
+    [
+     7,
+     11,
+     7,
+     17
+    ]
+   ]
+  },
+  "printedRefs": "Luke 7:11-17",
+  "titlePrinted": "HE RAISES A WIDOW'S SON AT NAIN"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 57,
+  "label": "57",
+  "order": 57,
+  "title": "The Message from the Baptist and the Eulogy of Jesus",
+  "refs": {
+   "MAT": "11:2-19",
+   "MRK": null,
+   "LUK": "7:18-35",
+   "JHN": null
+  },
+  "group": "(5) The Spread of Christ's Influence and the Inquiry from John in Prison",
+  "ranges": {
+   "MAT": [
+    [
+     11,
+     2,
+     11,
+     19
+    ]
+   ],
+   "LUK": [
+    [
+     7,
+     18,
+     7,
+     35
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 11:2-19; Luke 7:18-35",
+  "titlePrinted": "THE MESSAGE FROM THE BAPTIST AND THE EULOGY OF JESUS"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 58,
+  "label": "58",
+  "order": 58,
+  "title": "Woes upon the Cities of Opportunity. The Claims of Christ as the Teacher about the Father",
+  "refs": {
+   "MAT": "11:20-30",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "group": "(5) The Spread of Christ's Influence and the Inquiry from John in Prison",
+  "ranges": {
+   "MAT": [
+    [
+     11,
+     20,
+     11,
+     30
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 11:20-30",
+  "titlePrinted": "WOES UPON THE CITIES OF OPPORTUNITY. THE CLAIMS OF CHRIST AS THE TEACHER ABOUT THE FATHER"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 59,
+  "label": "59",
+  "order": 59,
+  "title": "The Anointing of Christ's Feet by a Sinful Woman in the House of Simon a Pharisee. The Parable of the Two Debtors",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "7:36-50",
+   "JHN": null
+  },
+  "group": "(5) The Spread of Christ's Influence and the Inquiry from John in Prison",
+  "ranges": {
+   "LUK": [
+    [
+     7,
+     36,
+     7,
+     50
+    ]
+   ]
+  },
+  "printedRefs": "Luke 7:36-50",
+  "titlePrinted": "THE ANOINTING OF CHRIST'S FEET BY A SINFUL WOMAN IN THE HOUSE OF SIMON A PHARISEE. THE PARABLE OF THE TWO DEBTORS"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 60,
+  "label": "60",
+  "order": 60,
+  "title": "The Second Tour of Galilee",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "8:1-3",
+   "JHN": null
+  },
+  "group": "(6) The Second Tour of Galilee (now with the Twelve) and the Intense Hostility of the Pharisees",
+  "ranges": {
+   "LUK": [
+    [
+     8,
+     1,
+     8,
+     3
+    ]
+   ]
+  },
+  "printedRefs": "Luke 8:1-3",
+  "titlePrinted": "THE SECOND TOUR OF GALILEE"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 61,
+  "label": "61",
+  "order": 61,
+  "title": "Blasphemous Accusation of League with Beelzebub",
+  "refs": {
+   "MAT": "12:22-37",
+   "MRK": "3:19-30",
+   "LUK": null,
+   "JHN": null
+  },
+  "group": "(6) The Second Tour of Galilee (now with the Twelve) and the Intense Hostility of the Pharisees",
+  "ranges": {
+   "MRK": [
+    [
+     3,
+     19,
+     3,
+     30
+    ]
+   ],
+   "MAT": [
+    [
+     12,
+     22,
+     12,
+     37
+    ]
+   ]
+  },
+  "printedRefs": "Mark 3:19-30; Matt. 12:22-37",
+  "titlePrinted": "BLASPHEMOUS ACCUSATION OF LEAGUE WITH BEELZEBUB"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 62,
+  "label": "62",
+  "order": 62,
+  "title": "Scribes and Pharisees Demand a Sign",
+  "refs": {
+   "MAT": "12:38-45",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "group": "(6) The Second Tour of Galilee (now with the Twelve) and the Intense Hostility of the Pharisees",
+  "ranges": {
+   "MAT": [
+    [
+     12,
+     38,
+     12,
+     45
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 12:38-45",
+  "titlePrinted": "SCRIBES AND PHARISEES DEMAND A SIGN"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 63,
+  "label": "63",
+  "order": 63,
+  "title": "Christ's Mother and Brethren Seek to Take Him Home",
+  "refs": {
+   "MAT": "12:46-50",
+   "MRK": "3:31-35",
+   "LUK": "8:19-21",
+   "JHN": null
+  },
+  "group": "(6) The Second Tour of Galilee (now with the Twelve) and the Intense Hostility of the Pharisees",
+  "ranges": {
+   "MRK": [
+    [
+     3,
+     31,
+     3,
+     35
+    ]
+   ],
+   "MAT": [
+    [
+     12,
+     46,
+     12,
+     50
+    ]
+   ],
+   "LUK": [
+    [
+     8,
+     19,
+     8,
+     21
+    ]
+   ]
+  },
+  "printedRefs": "Mark 3:31-35; Matt. 12:46-50; Luke 8:19-21",
+  "titlePrinted": "CHRIST'S MOTHER AND BRETHREN SEEK TO TAKE HIM HOME"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 64,
+  "label": "64",
+  "order": 64,
+  "title": "The First Great Group of Parables",
+  "refs": {
+   "MAT": "13:1-53",
+   "MRK": "4:1-34",
+   "LUK": "8:4-18",
+   "JHN": null
+  },
+  "group": "(7) The First Great Group of Parables with the Visit to Gerasa (Khersa) and to Nazareth (final one)",
+  "ranges": {
+   "MRK": [
+    [
+     4,
+     1,
+     4,
+     34
+    ]
+   ],
+   "MAT": [
+    [
+     13,
+     1,
+     13,
+     53
+    ]
+   ],
+   "LUK": [
+    [
+     8,
+     4,
+     8,
+     18
+    ]
+   ]
+  },
+  "printedRefs": "Mark 4:1-34; Matt. 13:1-53; Luke 8:4-18",
+  "titlePrinted": "THE FIRST GREAT GROUP OF PARABLES",
+  "subsections": [
+   {
+    "title": "Introduction to the Group",
+    "refs": {
+     "MAT": "13:1-3",
+     "MRK": "4:1-2",
+     "LUK": "8:4",
+     "JHN": null
+    },
+    "printedRefs": "Mark 4:1-2; Matt. 13:1-3; Luke 8:4"
+   },
+   {
+    "heading": "1: To the Crowds by the Sea",
+    "title": "(a) Parable of the Sower",
+    "refs": {
+     "MAT": "13:3-23",
+     "MRK": "4:3-25",
+     "LUK": "8:5-18",
+     "JHN": null
+    },
+    "printedRefs": "Mark 4:3-25; Matt. 13:3-23; Luke 8:5-18"
+   },
+   {
+    "heading": "1: To the Crowds by the Sea",
+    "title": "(b) Parable of the Seed Growing of Itself",
+    "refs": {
+     "MAT": null,
+     "MRK": "4:26-29",
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Mark 4:26-29"
+   },
+   {
+    "heading": "1: To the Crowds by the Sea",
+    "title": "(c) Parable of the Tares",
+    "refs": {
+     "MAT": "13:24-30",
+     "MRK": null,
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Matt. 13:24-30"
+   },
+   {
+    "heading": "1: To the Crowds by the Sea",
+    "title": "(d) Parable of the Mustard Seed",
+    "refs": {
+     "MAT": "13:31-32",
+     "MRK": "4:30-32",
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Mark 4:30-32; Matt. 13:31-32"
+   },
+   {
+    "heading": "1: To the Crowds by the Sea",
+    "title": "(e) Parable of the Leaven and Many Such Parables",
+    "refs": {
+     "MAT": "13:33-35",
+     "MRK": "4:33-34",
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Mark 4:33-34; Matt. 13:33-35"
+   },
+   {
+    "heading": "2. To the Disciples in the House",
+    "title": "(a) Explanation of the Parable of the Tares",
+    "refs": {
+     "MAT": "13:36-43",
+     "MRK": null,
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Matt. 13:36-43"
+   },
+   {
+    "heading": "2. To the Disciples in the House",
+    "title": "(b) The Parable of the Hid Treasure",
+    "refs": {
+     "MAT": "13:44",
+     "MRK": null,
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Matt. 13:44"
+   },
+   {
+    "heading": "2. To the Disciples in the House",
+    "title": "(c) The Parable of the Pearl of Great Price",
+    "refs": {
+     "MAT": "13:45-46",
+     "MRK": null,
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Matt. 13:45-46"
+   },
+   {
+    "heading": "2. To the Disciples in the House",
+    "title": "(d) The Parable of the Net",
+    "refs": {
+     "MAT": "13:47-50",
+     "MRK": null,
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Matt. 13:47-50"
+   },
+   {
+    "heading": "2. To the Disciples in the House",
+    "title": "(e) The Parable of the Householder",
+    "refs": {
+     "MAT": "13:51-53",
+     "MRK": null,
+     "LUK": null,
+     "JHN": null
+    },
+    "printedRefs": "Matt. 13:51-53"
+   }
+  ]
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 65,
+  "label": "65",
+  "order": 65,
+  "title": "In Crossing the Lake, Jesus Stills the Tempest",
+  "refs": {
+   "MAT": "8:18, 23-27",
+   "MRK": "4:35-41",
+   "LUK": "8:22-25",
+   "JHN": null
+  },
+  "group": "(7) The First Great Group of Parables with the Visit to Gerasa (Khersa) and to Nazareth (final one)",
+  "ranges": {
+   "MRK": [
+    [
+     4,
+     35,
+     4,
+     41
+    ]
+   ],
+   "MAT": [
+    [
+     8,
+     18,
+     8,
+     18
+    ],
+    [
+     8,
+     23,
+     8,
+     27
+    ]
+   ],
+   "LUK": [
+    [
+     8,
+     22,
+     8,
+     25
+    ]
+   ]
+  },
+  "printedRefs": "Mark 4:35-41; Matt. 8:18, 23-27; Luke 8:22-25",
+  "titlePrinted": "IN CROSSING THE LAKE, JESUS STILLS THE TEMPEST"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 66,
+  "label": "66",
+  "order": 66,
+  "title": "Beyond the Lake Jesus Heals the Gerasene Demoniac",
+  "refs": {
+   "MAT": "8:28-34",
+   "MRK": "5:1-20",
+   "LUK": "8:26-39",
+   "JHN": null
+  },
+  "group": "(7) The First Great Group of Parables with the Visit to Gerasa (Khersa) and to Nazareth (final one)",
+  "ranges": {
+   "MRK": [
+    [
+     5,
+     1,
+     5,
+     20
+    ]
+   ],
+   "MAT": [
+    [
+     8,
+     28,
+     8,
+     34
+    ]
+   ],
+   "LUK": [
+    [
+     8,
+     26,
+     8,
+     39
+    ]
+   ]
+  },
+  "printedRefs": "Mark 5:1-20; Matt. 8:28-34; Luke 8:26-39",
+  "titlePrinted": "BEYOND THE LAKE JESUS HEALS THE GERASENE DEMONIAC"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 67,
+  "label": "67",
+  "order": 67,
+  "title": "The Return and the Healing of Jairus' Daughter and of the Woman Who Only Touched Christ's Garment",
+  "refs": {
+   "MAT": "9:18-26",
+   "MRK": "5:21-43",
+   "LUK": "8:40-56",
+   "JHN": null
+  },
+  "group": "(7) The First Great Group of Parables with the Visit to Gerasa (Khersa) and to Nazareth (final one)",
+  "ranges": {
+   "MRK": [
+    [
+     5,
+     21,
+     5,
+     43
+    ]
+   ],
+   "MAT": [
+    [
+     9,
+     18,
+     9,
+     26
+    ]
+   ],
+   "LUK": [
+    [
+     8,
+     40,
+     8,
+     56
+    ]
+   ]
+  },
+  "printedRefs": "Mark 5:21-43; Matt. 9:18-26; Luke 8:40-56",
+  "titlePrinted": "THE RETURN AND THE HEALING OF JAIRUS' DAUGHTER AND OF THE WOMAN WHO ONLY TOUCHED CHRIST'S GARMENT"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 68,
+  "label": "68",
+  "order": 68,
+  "title": "He Heals Two Blind Men and a Dumb Demoniac, a Blasphemous Accusation",
+  "refs": {
+   "MAT": "9:27-34",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "group": "(7) The First Great Group of Parables with the Visit to Gerasa (Khersa) and to Nazareth (final one)",
+  "ranges": {
+   "MAT": [
+    [
+     9,
+     27,
+     9,
+     34
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 9:27-34",
+  "titlePrinted": "HE HEALS TWO BLIND MEN AND A DUMB DEMONIAC, A BLASPHEMOUS ACCUSATION"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 69,
+  "label": "69",
+  "order": 69,
+  "title": "The Last Visit to Nazareth",
+  "refs": {
+   "MAT": "13:54-58",
+   "MRK": "6:1-6",
+   "LUK": null,
+   "JHN": null
+  },
+  "group": "(7) The First Great Group of Parables with the Visit to Gerasa (Khersa) and to Nazareth (final one)",
+  "ranges": {
+   "MRK": [
+    [
+     6,
+     1,
+     6,
+     6
+    ]
+   ],
+   "MAT": [
+    [
+     13,
+     54,
+     13,
+     58
+    ]
+   ]
+  },
+  "printedRefs": "Mark 6:1-6; Matt. 13:54-58",
+  "titlePrinted": "THE LAST VISIT TO NAZARETH"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 70,
+  "label": "70",
+  "order": 70,
+  "title": "The Third Tour of Galilee After Instructing the Twelve and Sending Them Forth by Twos",
+  "refs": {
+   "MAT": "9:35-11:1",
+   "MRK": "6:6-13",
+   "LUK": "9:1-6",
+   "JHN": null
+  },
+  "group": "(8) The Third Tour of Galilee (following the Twelve) and the Effect on Herod Antipas",
+  "ranges": {
+   "MRK": [
+    [
+     6,
+     6,
+     6,
+     13
+    ]
+   ],
+   "MAT": [
+    [
+     9,
+     35,
+     11,
+     1
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     1,
+     9,
+     6
+    ]
+   ]
+  },
+  "printedRefs": "Mark 6:6-13; Matt. 9:35-11:1; Luke 9:1-6",
+  "titlePrinted": "THE THIRD TOUR OF GALILEE AFTER INSTRUCTING THE TWELVE AND SENDING THEM FORTH BY TWOS"
+ },
+ {
+  "part": "Part VII. The Great Galilean Ministry",
+  "partNumber": 7,
+  "partPeriod": "Probably A.D. 27 to 29",
+  "section": 71,
+  "label": "71",
+  "order": 71,
+  "title": "The Guilty Fears of Herod Antipas in Tiberias about Jesus Because He Had Beheaded the Baptist in Machaerus",
+  "refs": {
+   "MAT": "14:1-12",
+   "MRK": "6:14-29",
+   "LUK": "9:7-9",
+   "JHN": null
+  },
+  "group": "(8) The Third Tour of Galilee (following the Twelve) and the Effect on Herod Antipas",
+  "ranges": {
+   "MRK": [
+    [
+     6,
+     14,
+     6,
+     29
+    ]
+   ],
+   "MAT": [
+    [
+     14,
+     1,
+     14,
+     12
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     7,
+     9,
+     9
+    ]
+   ]
+  },
+  "printedRefs": "Mark 6:14-29; Matt. 14:1-12; Luke 9:7-9",
+  "titlePrinted": "THE GUILTY FEARS OF HEROD ANTIPAS IN TIBERIAS ABOUT JESUS BECAUSE HE HAD BEHEADED THE BAPTIST IN MACHAERUS"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 72,
+  "label": "72",
+  "order": 72,
+  "title": "The First Retirement. The Twelve Return, and Jesus Retires with Them Beyond the Lake to Rest. Feeding of the Five Thousand",
+  "refs": {
+   "MAT": "14:13-21",
+   "MRK": "6:30-44",
+   "LUK": "9:10-17",
+   "JHN": "6:1-13"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     6,
+     30,
+     6,
+     44
+    ]
+   ],
+   "MAT": [
+    [
+     14,
+     13,
+     14,
+     21
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     10,
+     9,
+     17
+    ]
+   ],
+   "JHN": [
+    [
+     6,
+     1,
+     6,
+     13
+    ]
+   ]
+  },
+  "printedRefs": "Mark 6:30-44; Matt. 14:13-21; Luke 9:10-17; John 6:1-13",
+  "titlePrinted": "THE FIRST RETIREMENT. THE TWELVE RETURN, AND JESUS RETIRES WITH THEM BEYOND THE LAKE TO REST. FEEDING OF THE FIVE THOUSAND",
+  "note": "The 1922 printed outline reads \"John 6:1-14\"; the body and the finding table give John 6:1-13 (6:14-15 is Sect. 73)."
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 73,
+  "label": "73",
+  "order": 73,
+  "title": "The Prevention of the Revolutionary Purpose to Proclaim Jesus King (a Political Messiah)",
+  "refs": {
+   "MAT": "14:22-23",
+   "MRK": "6:45-46",
+   "LUK": null,
+   "JHN": "6:14-15"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     6,
+     45,
+     6,
+     46
+    ]
+   ],
+   "MAT": [
+    [
+     14,
+     22,
+     14,
+     23
+    ]
+   ],
+   "JHN": [
+    [
+     6,
+     14,
+     6,
+     15
+    ]
+   ]
+  },
+  "printedRefs": "Mark 6:45-46; Matt. 14:22-23; John 6:14-15",
+  "titlePrinted": "THE PREVENTION OF THE REVOLUTIONARY PURPOSE TO PROCLAIM JESUS KING (A POLITICAL MESSIAH)"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 74,
+  "label": "74",
+  "order": 74,
+  "title": "The Peril to the Twelve in the Storm at Sea and Christ's Coming to Them on the Water in the Darkness",
+  "refs": {
+   "MAT": "14:24-33",
+   "MRK": "6:47-52",
+   "LUK": null,
+   "JHN": "6:16-21"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     6,
+     47,
+     6,
+     52
+    ]
+   ],
+   "MAT": [
+    [
+     14,
+     24,
+     14,
+     33
+    ]
+   ],
+   "JHN": [
+    [
+     6,
+     16,
+     6,
+     21
+    ]
+   ]
+  },
+  "printedRefs": "Mark 6:47-52; Matt. 14:24-33; John 6:16-21",
+  "titlePrinted": "THE PERIL TO THE TWELVE IN THE STORM AT SEA AND CHRIST'S COMING TO THEM ON THE WATER IN THE DARKNESS"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 75,
+  "label": "75",
+  "order": 75,
+  "title": "The Reception at Gennesaret",
+  "refs": {
+   "MAT": "14:34-36",
+   "MRK": "6:53-56",
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     6,
+     53,
+     6,
+     56
+    ]
+   ],
+   "MAT": [
+    [
+     14,
+     34,
+     14,
+     36
+    ]
+   ]
+  },
+  "printedRefs": "Mark 6:53-56; Matt. 14:34-36",
+  "titlePrinted": "THE RECEPTION AT GENNESARET"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 76,
+  "label": "76",
+  "order": 76,
+  "title": "The Collapse of the Galilean Campaign Because Jesus Will Not Conform to Popular Messianic Expectations",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "6:22-71"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     6,
+     22,
+     6,
+     71
+    ]
+   ]
+  },
+  "printedRefs": "John 6:22-71",
+  "titlePrinted": "THE COLLAPSE OF THE GALILEAN CAMPAIGN BECAUSE JESUS WILL NOT CONFORM TO POPULAR MESSIANIC EXPECTATIONS"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 77,
+  "label": "77",
+  "order": 77,
+  "title": "Pharisees from Jerusalem Reproach Jesus for Allowing His Disciples to Disregard Their Traditions about Ceremonial Defilement of the Hands. A Puzzling Parable in Reply",
+  "refs": {
+   "MAT": "15:1-20",
+   "MRK": "7:1-23",
+   "LUK": null,
+   "JHN": "7:1"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     7,
+     1,
+     7,
+     23
+    ]
+   ],
+   "MAT": [
+    [
+     15,
+     1,
+     15,
+     20
+    ]
+   ],
+   "JHN": [
+    [
+     7,
+     1,
+     7,
+     1
+    ]
+   ]
+  },
+  "printedRefs": "Mark 7:1-23; Matt. 15:1-20; John 7:1",
+  "titlePrinted": "PHARISEES FROM JERUSALEM REPROACH JESUS FOR ALLOWING HIS DISCIPLES TO DISREGARD THEIR TRADITIONS ABOUT CEREMONIAL DEFILEMENT OF THE HANDS. A PUZZLING PARABLE IN REPLY"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 78,
+  "label": "78",
+  "order": 78,
+  "title": "The Second Withdrawal to the Region of Tyre and Sidon and the Healing of the Daughter of a Syro-Phoenician Woman",
+  "refs": {
+   "MAT": "15:21-28",
+   "MRK": "7:24-30",
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     7,
+     24,
+     7,
+     30
+    ]
+   ],
+   "MAT": [
+    [
+     15,
+     21,
+     15,
+     28
+    ]
+   ]
+  },
+  "printedRefs": "Mark 7:24-30; Matt. 15:21-28",
+  "titlePrinted": "THE SECOND WITHDRAWAL TO THE REGION OF TYRE AND SIDON AND THE HEALING OF THE DAUGHTER OF A SYRO-PHOENICIAN WOMAN"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 79,
+  "label": "79",
+  "order": 79,
+  "title": "The Third Withdrawal North Through Phoenicia and East Towards Hermon and South into Decapolis (Keeping Out of the Territory of Herod Antipas) with the Healing of the Deaf and Dumb Man and the Feeding of the Four Thousand",
+  "refs": {
+   "MAT": "15:29-38",
+   "MRK": "7:31-8:9",
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     7,
+     31,
+     8,
+     9
+    ]
+   ],
+   "MAT": [
+    [
+     15,
+     29,
+     15,
+     38
+    ]
+   ]
+  },
+  "printedRefs": "Mark 7:31-8:9; Matt. 15:29-38",
+  "titlePrinted": "THE THIRD WITHDRAWAL NORTH THROUGH PHOENICIA AND EAST TOWARDS HERMON AND SOUTH INTO DECAPOLIS (KEEPING OUT OF THE TERRITORY OF HEROD ANTIPAS) WITH THE HEALING OF THE DEAF AND DUMB MAN AND THE FEEDING OF THE FOUR THOUSAND"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 80,
+  "label": "80",
+  "order": 80,
+  "title": "The Brief Visit to Magadan (Dalmanutha) in Galilee and the Sharp Attack by the Pharisees and Sadducees. (Note Their Appearance Now Against Jesus)",
+  "refs": {
+   "MAT": "15:39-16:4",
+   "MRK": "8:10-12",
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     8,
+     10,
+     8,
+     12
+    ]
+   ],
+   "MAT": [
+    [
+     15,
+     39,
+     16,
+     4
+    ]
+   ]
+  },
+  "printedRefs": "Mark 8:10-12; Matt. 15:39-16:4",
+  "titlePrinted": "THE BRIEF VISIT TO MAGADAN (DALMANUTHA) IN GALILEE AND THE SHARP ATTACK BY THE PHARISEES AND SADDUCEES. (NOTE THEIR APPEARANCE NOW AGAINST JESUS)"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 81,
+  "label": "81",
+  "order": 81,
+  "title": "The Fourth Retirement to Bethsaida Julias in the Tetrarchy of Herod Philip with Sharp Rebuke of the Dulness of the Disciples on the Way Across and the Healing of a Blind Man in Bethsaida",
+  "refs": {
+   "MAT": "16:5-12",
+   "MRK": "8:13-26",
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     8,
+     13,
+     8,
+     26
+    ]
+   ],
+   "MAT": [
+    [
+     16,
+     5,
+     16,
+     12
+    ]
+   ]
+  },
+  "printedRefs": "Mark 8:13-26; Matt. 16:5-12",
+  "titlePrinted": "THE FOURTH RETIREMENT TO BETHSAIDA JULIAS IN THE TETRARCHY OF HEROD PHILIP WITH SHARP REBUKE OF THE DULNESS OF THE DISCIPLES ON THE WAY ACROSS AND THE HEALING OF A BLIND MAN IN BETHSAIDA"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 82,
+  "label": "82",
+  "order": 82,
+  "title": "Near Caesarea Philippi Jesus Tests the Faith of the Twelve in His Messiahship",
+  "refs": {
+   "MAT": "16:13-20",
+   "MRK": "8:27-30",
+   "LUK": "9:18-21",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     8,
+     27,
+     8,
+     30
+    ]
+   ],
+   "MAT": [
+    [
+     16,
+     13,
+     16,
+     20
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     18,
+     9,
+     21
+    ]
+   ]
+  },
+  "printedRefs": "Mark 8:27-30; Matt. 16:13-20; Luke 9:18-21",
+  "titlePrinted": "NEAR CAESAREA PHILIPPI JESUS TESTS THE FAITH OF THE TWELVE IN HIS MESSIAHSHIP"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 83,
+  "label": "83",
+  "order": 83,
+  "title": "Jesus Distinctly Foretells that He, the Messiah, Will Be Rejected and Killed and Will Rise the Third Day",
+  "refs": {
+   "MAT": "16:21-26",
+   "MRK": "8:31-37",
+   "LUK": "9:22-25",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     8,
+     31,
+     8,
+     37
+    ]
+   ],
+   "MAT": [
+    [
+     16,
+     21,
+     16,
+     26
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     22,
+     9,
+     25
+    ]
+   ]
+  },
+  "printedRefs": "Mark 8:31-37; Matt. 16:21-26; Luke 9:22-25",
+  "titlePrinted": "JESUS DISTINCTLY FORETELLS THAT HE, THE MESSIAH, WILL BE REJECTED AND KILLED AND WILL RISE THE THIRD DAY"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 84,
+  "label": "84",
+  "order": 84,
+  "title": "The Coming of the Son of Man in that Generation",
+  "refs": {
+   "MAT": "16:27-28",
+   "MRK": "8:38-9:1",
+   "LUK": "9:26-27",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     8,
+     38,
+     9,
+     1
+    ]
+   ],
+   "MAT": [
+    [
+     16,
+     27,
+     16,
+     28
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     26,
+     9,
+     27
+    ]
+   ]
+  },
+  "printedRefs": "Mark 8:38-9:1; Matt. 16:27-28; Luke 9:26-27",
+  "titlePrinted": "THE COMING OF THE SON OF MAN IN THAT GENERATION"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 85,
+  "label": "85",
+  "order": 85,
+  "title": "The Transfiguration of Jesus on a Mountain (Probably Hermon) Near Caesarea Philippi",
+  "refs": {
+   "MAT": "17:1-8",
+   "MRK": "9:2-8",
+   "LUK": "9:28-36",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     9,
+     2,
+     9,
+     8
+    ]
+   ],
+   "MAT": [
+    [
+     17,
+     1,
+     17,
+     8
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     28,
+     9,
+     36
+    ]
+   ]
+  },
+  "printedRefs": "Mark 9:2-8; Matt. 17:1-8; Luke 9:28-36",
+  "titlePrinted": "THE TRANSFIGURATION OF JESUS ON A MOUNTAIN (PROBABLY HERMON) NEAR CAESAREA PHILIPPI"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 86,
+  "label": "86",
+  "order": 86,
+  "title": "The Puzzle of the Three Disciples about the Resurrection and about Elijah on Their Way Down the Mountain",
+  "refs": {
+   "MAT": "17:9-13",
+   "MRK": "9:9-13",
+   "LUK": "9:36",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     9,
+     9,
+     9,
+     13
+    ]
+   ],
+   "MAT": [
+    [
+     17,
+     9,
+     17,
+     13
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     36,
+     9,
+     36
+    ]
+   ]
+  },
+  "printedRefs": "Mark 9:9-13; Matt. 17:9-13; Luke 9:36",
+  "titlePrinted": "THE PUZZLE OF THE THREE DISCIPLES ABOUT THE RESURRECTION AND ABOUT ELIJAH ON THEIR WAY DOWN THE MOUNTAIN"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 87,
+  "label": "87",
+  "order": 87,
+  "title": "The Demoniac Boy, Whom the Disciples Could Not Heal",
+  "refs": {
+   "MAT": "17:14-20",
+   "MRK": "9:14-29",
+   "LUK": "9:37-43",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     9,
+     14,
+     9,
+     29
+    ]
+   ],
+   "MAT": [
+    [
+     17,
+     14,
+     17,
+     20
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     37,
+     9,
+     43
+    ]
+   ]
+  },
+  "printedRefs": "Mark 9:14-29; Matt. 17:14-20; Luke 9:37-43",
+  "titlePrinted": "THE DEMONIAC BOY, WHOM THE DISCIPLES COULD NOT HEAL"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 88,
+  "label": "88",
+  "order": 88,
+  "title": "Returning Privately Through Galilee, He Again Foretells His Death and Resurrection",
+  "refs": {
+   "MAT": "17:22-23",
+   "MRK": "9:30-32",
+   "LUK": "9:43-45",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     9,
+     30,
+     9,
+     32
+    ]
+   ],
+   "MAT": [
+    [
+     17,
+     22,
+     17,
+     23
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     43,
+     9,
+     45
+    ]
+   ]
+  },
+  "printedRefs": "Mark 9:30-32; Matt. 17:22-23; Luke 9:43-45",
+  "titlePrinted": "RETURNING PRIVATELY THROUGH GALILEE, HE AGAIN FORETELLS HIS DEATH AND RESURRECTION"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 89,
+  "label": "89",
+  "order": 89,
+  "title": "Jesus, the Messiah, Pays the Half-Shekel for the Temple",
+  "refs": {
+   "MAT": "17:24-27",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     17,
+     24,
+     17,
+     27
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 17:24-27",
+  "titlePrinted": "JESUS, THE MESSIAH, PAYS THE HALF-SHEKEL FOR THE TEMPLE"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 90,
+  "label": "90",
+  "order": 90,
+  "title": "The Twelve Contend as to Who Shall Be the Greatest Under the Messiah's Reign. His Subjects Must Be Childlike",
+  "refs": {
+   "MAT": "18:1-5",
+   "MRK": "9:33-37",
+   "LUK": "9:46-48",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     9,
+     33,
+     9,
+     37
+    ]
+   ],
+   "MAT": [
+    [
+     18,
+     1,
+     18,
+     5
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     46,
+     9,
+     48
+    ]
+   ]
+  },
+  "printedRefs": "Mark 9:33-37; Matt. 18:1-5; Luke 9:46-48",
+  "titlePrinted": "THE TWELVE CONTEND AS TO WHO SHALL BE THE GREATEST UNDER THE MESSIAH'S REIGN. HIS SUBJECTS MUST BE CHILDLIKE"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 91,
+  "label": "91",
+  "order": 91,
+  "title": "The Mistaken Zeal of the Apostle John Rebuked by Jesus in Pertinent Parables",
+  "refs": {
+   "MAT": "18:6-14",
+   "MRK": "9:38-50",
+   "LUK": "9:49-50",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     9,
+     38,
+     9,
+     50
+    ]
+   ],
+   "MAT": [
+    [
+     18,
+     6,
+     18,
+     14
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     49,
+     9,
+     50
+    ]
+   ]
+  },
+  "printedRefs": "Mark 9:38-50; Matt. 18:6-14; Luke 9:49-50",
+  "titlePrinted": "THE MISTAKEN ZEAL OF THE APOSTLE JOHN REBUKED BY JESUS IN PERTINENT PARABLES"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 92,
+  "label": "92",
+  "order": 92,
+  "title": "Right Treatment of a Brother Who Has Sinned Against One, and Duty of Patiently Forgiving a Brother (Parable of the Unmerciful Servant)",
+  "refs": {
+   "MAT": "18:15-35",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     18,
+     15,
+     18,
+     35
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 18:15-35",
+  "titlePrinted": "RIGHT TREATMENT OF A BROTHER WHO HAS SINNED AGAINST ONE, AND DUTY OF PATIENTLY FORGIVING A BROTHER (PARABLE OF THE UNMERCIFUL SERVANT)"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 93,
+  "label": "93",
+  "order": 93,
+  "title": "The Messiah's Followers Must Give Up Everything for His Service",
+  "refs": {
+   "MAT": "8:19-22",
+   "MRK": null,
+   "LUK": "9:57-62",
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     8,
+     19,
+     8,
+     22
+    ]
+   ],
+   "LUK": [
+    [
+     9,
+     57,
+     9,
+     62
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 8:19-22; Luke 9:57-62",
+  "titlePrinted": "THE MESSIAH'S FOLLOWERS MUST GIVE UP EVERYTHING FOR HIS SERVICE"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 94,
+  "label": "94",
+  "order": 94,
+  "title": "The Unbelieving Brothers of Jesus Counsel Him to Exhibit Himself in Judea, and He Rejects the Advice",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "7:2-9"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     7,
+     2,
+     7,
+     9
+    ]
+   ]
+  },
+  "printedRefs": "John 7:2-9",
+  "titlePrinted": "THE UNBELIEVING BROTHERS OF JESUS COUNSEL HIM TO EXHIBIT HIMSELF IN JUDEA, AND HE REJECTS THE ADVICE"
+ },
+ {
+  "part": "Part VIII. The Special Training of the Twelve in Districts Around Galilee",
+  "partNumber": 8,
+  "partPeriod": "Probably Passover in A.D. 29 to Tabernacles in A.D. 29",
+  "section": 95,
+  "label": "95",
+  "order": 95,
+  "title": "He Goes Privately to Jerusalem Through Samaria",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "9:51-56",
+   "JHN": "7:10"
+  },
+  "ranges": {
+   "LUK": [
+    [
+     9,
+     51,
+     9,
+     56
+    ]
+   ],
+   "JHN": [
+    [
+     7,
+     10,
+     7,
+     10
+    ]
+   ]
+  },
+  "printedRefs": "Luke 9:51-56; John 7:10",
+  "titlePrinted": "HE GOES PRIVATELY TO JERUSALEM THROUGH SAMARIA"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 96,
+  "label": "96",
+  "order": 96,
+  "title": "The Coming of Jesus to the Feast of Tabernacles Creates Intense Excitement Concerning the Messiahship",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "7:11-52"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     7,
+     11,
+     7,
+     52
+    ]
+   ]
+  },
+  "printedRefs": "John 7:11-52",
+  "titlePrinted": "THE COMING OF JESUS TO THE FEAST OF TABERNACLES CREATES INTENSE EXCITEMENT CONCERNING THE MESSIAHSHIP"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 97,
+  "label": "97",
+  "order": 97,
+  "title": "Story of an Adulterous Woman Brought to Jesus for Judgment",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "7:53-8:11"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     7,
+     53,
+     8,
+     11
+    ]
+   ]
+  },
+  "printedRefs": "John 7:53-8:11",
+  "titlePrinted": "STORY OF AN ADULTEROUS WOMAN BROUGHT TO JESUS FOR JUDGMENT"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 98,
+  "label": "98",
+  "order": 98,
+  "title": "After the Feast of Tabernacles in the Temple Jesus Angers the Pharisees by Claiming to Be the Light of the World",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "8:12-20"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     8,
+     12,
+     8,
+     20
+    ]
+   ]
+  },
+  "printedRefs": "John 8:12-20",
+  "titlePrinted": "AFTER THE FEAST OF TABERNACLES IN THE TEMPLE JESUS ANGERS THE PHARISEES BY CLAIMING TO BE THE LIGHT OF THE WORLD"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 99,
+  "label": "99",
+  "order": 99,
+  "title": "The Pharisees Attempt to Stone Jesus When He Exposes Their Sinfulness",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "8:21-59"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     8,
+     21,
+     8,
+     59
+    ]
+   ]
+  },
+  "printedRefs": "John 8:21-59",
+  "titlePrinted": "THE PHARISEES ATTEMPT TO STONE JESUS WHEN HE EXPOSES THEIR SINFULNESS"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 100,
+  "label": "100",
+  "order": 100,
+  "title": "Jesus Heals a Man Born Blind Who Outwits the Pharisees. The Rulers Forbid the Recognition of Jesus as the Messiah. The Conversion of the Healed Man",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "9:1-41"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     9,
+     1,
+     9,
+     41
+    ]
+   ]
+  },
+  "printedRefs": "John 9:1-41",
+  "titlePrinted": "JESUS HEALS A MAN BORN BLIND WHO OUTWITS THE PHARISEES. THE RULERS FORBID THE RECOGNITION OF JESUS AS THE MESSIAH. THE CONVERSION OF THE HEALED MAN"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 101,
+  "label": "101",
+  "order": 101,
+  "title": "In the Parable (Allegory) of the Good Shepherd Jesus Draws the Picture of the Hostile Pharisees and Intimates that He Is Going to Die for His Flock and Come to Life Again",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "10:1-21"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     10,
+     1,
+     10,
+     21
+    ]
+   ]
+  },
+  "printedRefs": "John 10:1-21",
+  "titlePrinted": "IN THE PARABLE (ALLEGORY) OF THE GOOD SHEPHERD JESUS DRAWS THE PICTURE OF THE HOSTILE PHARISEES AND INTIMATES THAT HE IS GOING TO DIE FOR HIS FLOCK AND COME TO LIFE AGAIN"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 102,
+  "label": "102",
+  "order": 102,
+  "title": "The Mission of the Seventy. Christ's Joy in Their Work on Their Return",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "10:1-24",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     10,
+     1,
+     10,
+     24
+    ]
+   ]
+  },
+  "printedRefs": "Luke 10:1-24",
+  "titlePrinted": "THE MISSION OF THE SEVENTY. CHRIST'S JOY IN THEIR WORK ON THEIR RETURN"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 103,
+  "label": "103",
+  "order": 103,
+  "title": "Jesus Answers a Lawyer's Question as to Eternal Life, Giving the Parable of the Good Samaritan",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "10:25-37",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     10,
+     25,
+     10,
+     37
+    ]
+   ]
+  },
+  "printedRefs": "Luke 10:25-37",
+  "titlePrinted": "JESUS ANSWERS A LAWYER'S QUESTION AS TO ETERNAL LIFE, GIVING THE PARABLE OF THE GOOD SAMARITAN"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 104,
+  "label": "104",
+  "order": 104,
+  "title": "Jesus the Guest of Martha and Mary",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "10:38-42",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     10,
+     38,
+     10,
+     42
+    ]
+   ]
+  },
+  "printedRefs": "Luke 10:38-42",
+  "titlePrinted": "JESUS THE GUEST OF MARTHA AND MARY"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 105,
+  "label": "105",
+  "order": 105,
+  "title": "Jesus Again Gives a Model of Prayer (comp. Sect. 54) and Encourages His Disciples to Pray. Parable of the Importunate Friend",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "11:1-13",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     11,
+     1,
+     11,
+     13
+    ]
+   ]
+  },
+  "printedRefs": "Luke 11:1-13",
+  "titlePrinted": "JESUS AGAIN GIVES A MODEL OF PRAYER (COMP. SECT. 54) AND ENCOURAGES HIS DISCIPLES TO PRAY. PARABLE OF THE IMPORTUNATE FRIEND"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 106,
+  "label": "106",
+  "order": 106,
+  "title": "Blasphemous Accusation of League with Beelzebub",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "11:14-36",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     11,
+     14,
+     11,
+     36
+    ]
+   ]
+  },
+  "printedRefs": "Luke 11:14-36",
+  "titlePrinted": "BLASPHEMOUS ACCUSATION OF LEAGUE WITH BEELZEBUB"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 107,
+  "label": "107",
+  "order": 107,
+  "title": "While Breakfasting with a Pharisee, Jesus Severely Denounces the Pharisees and Lawyers and Excites Their Enmity",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "11:37-54",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     11,
+     37,
+     11,
+     54
+    ]
+   ]
+  },
+  "printedRefs": "Luke 11:37-54",
+  "titlePrinted": "WHILE BREAKFASTING WITH A PHARISEE, JESUS SEVERELY DENOUNCES THE PHARISEES AND LAWYERS AND EXCITES THEIR ENMITY"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 108,
+  "label": "108",
+  "order": 108,
+  "title": "He Speaks to His Disciples and a Vast Throng about Hypocrisy, Covetousness (Parable of the Rich Fool), Worldly Anxieties, Watchfulness (Parable of the Waiting Servants and of the Wise Steward), and His Own Approaching Passion",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "12:1-59",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     12,
+     1,
+     12,
+     59
+    ]
+   ]
+  },
+  "printedRefs": "Luke 12",
+  "titlePrinted": "HE SPEAKS TO HIS DISCIPLES AND A VAST THRONG ABOUT HYPOCRISY, COVETOUSNESS (PARABLE OF THE RICH FOOL), WORLDLY ANXIETIES, WATCHFULNESS (PARABLE OF THE WAITING SERVANTS AND OF THE WISE STEWARD), AND HIS OWN APPROACHING PASSION"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 109,
+  "label": "109",
+  "order": 109,
+  "title": "All Must Repent or Perish. (Two Current Tragedies); Parable of the Barren Fig Tree",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "13:1-9",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     13,
+     1,
+     13,
+     9
+    ]
+   ]
+  },
+  "printedRefs": "Luke 13:1-9",
+  "titlePrinted": "ALL MUST REPENT OR PERISH. (TWO CURRENT TRAGEDIES); PARABLE OF THE BARREN FIG TREE"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 110,
+  "label": "110",
+  "order": 110,
+  "title": "Jesus Heals a Crippled Woman on the Sabbath and Defends Himself Against the Ruler of the Synagogue. (cf. Sects. 49-51 and 114.) Repetition of the Parables of the Mustard Seed and of the Leaven",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "13:10-21",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     13,
+     10,
+     13,
+     21
+    ]
+   ]
+  },
+  "printedRefs": "Luke 13:10-21",
+  "titlePrinted": "JESUS HEALS A CRIPPLED WOMAN ON THE SABBATH AND DEFENDS HIMSELF AGAINST THE RULER OF THE SYNAGOGUE. (CF. SECTS. 49-51 AND 114.) REPETITION OF THE PARABLES OF THE MUSTARD SEED AND OF THE LEAVEN"
+ },
+ {
+  "part": "Part IX. The Later Judean Ministry",
+  "partNumber": 9,
+  "partPeriod": "Probably Tabernacles to Dedication in A.D. 29",
+  "section": 111,
+  "label": "111",
+  "order": 111,
+  "title": "At the Feast of Dedication Jesus Will Not Yet Openly Say that He Is the Messiah. The Jews Try to Stone Him",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "10:22-39"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     10,
+     22,
+     10,
+     39
+    ]
+   ]
+  },
+  "printedRefs": "John 10:22-39",
+  "titlePrinted": "AT THE FEAST OF DEDICATION JESUS WILL NOT YET OPENLY SAY THAT HE IS THE MESSIAH. THE JEWS TRY TO STONE HIM"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 112,
+  "label": "112",
+  "order": 112,
+  "title": "The Withdrawal from Jerusalem to Bethany Beyond Jordan",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "10:40-42"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     10,
+     40,
+     10,
+     42
+    ]
+   ]
+  },
+  "printedRefs": "John 10:40-42",
+  "titlePrinted": "THE WITHDRAWAL FROM JERUSALEM TO BETHANY BEYOND JORDAN"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 113,
+  "label": "113",
+  "order": 113,
+  "title": "Teaching in Perea, on a Journey Toward Jerusalem, Warned Against Herod Antipas",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "13:22-35",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     13,
+     22,
+     13,
+     35
+    ]
+   ]
+  },
+  "printedRefs": "Luke 13:22-35",
+  "titlePrinted": "TEACHING IN PEREA, ON A JOURNEY TOWARD JERUSALEM, WARNED AGAINST HEROD ANTIPAS"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 114,
+  "label": "114",
+  "order": 114,
+  "title": "While Dining (Breakfasting) with a Chief Pharisee, He Again Heals on the Sabbath and Defends Himself (comp. Sects. 49 to 51 and 110) Three Parables Suggested by the Occasion",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "14:1-24",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     14,
+     1,
+     14,
+     24
+    ]
+   ]
+  },
+  "printedRefs": "Luke 14:1-24",
+  "titlePrinted": "WHILE DINING (BREAKFASTING) WITH A CHIEF PHARISEE, HE AGAIN HEALS ON THE SABBATH AND DEFENDS HIMSELF (COMP. SECTS. 49 TO 51 AND 110) THREE PARABLES SUGGESTED BY THE OCCASION"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 115,
+  "label": "115",
+  "order": 115,
+  "title": "Great Crowds Follow Him, and He Warns Them to Count the Cost of Discipleship to Him (comp. Sects. 70 and 83)",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "14:25-35",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     14,
+     25,
+     14,
+     35
+    ]
+   ]
+  },
+  "printedRefs": "Luke 14:25-35",
+  "titlePrinted": "GREAT CROWDS FOLLOW HIM, AND HE WARNS THEM TO COUNT THE COST OF DISCIPLESHIP TO HIM (COMP. SECTS. 70 AND 83)"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 116,
+  "label": "116",
+  "order": 116,
+  "title": "The Pharisees and the Scribes Murmur Against Jesus for Receiving Sinners. He Defends Himself by Three Great Parables (the Lost Sheep, the Lost Coin, the Lost Son)",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "15:1-32",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     15,
+     1,
+     15,
+     32
+    ]
+   ]
+  },
+  "printedRefs": "Luke 15:1-32",
+  "titlePrinted": "THE PHARISEES AND THE SCRIBES MURMUR AGAINST JESUS FOR RECEIVING SINNERS. HE DEFENDS HIMSELF BY THREE GREAT PARABLES (THE LOST SHEEP, THE LOST COIN, THE LOST SON)"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 117,
+  "label": "117",
+  "order": 117,
+  "title": "Three Parables on Stewardship (to the Disciples, the Parable of the Unjust Steward; to the Pharisees, the Parable of the Rich Man and Lazarus; to the Disciples, the Parable of the Unprofitable Servants)",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "16:1-17:10",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     16,
+     1,
+     17,
+     10
+    ]
+   ]
+  },
+  "printedRefs": "Luke 16:1-17:10",
+  "titlePrinted": "THREE PARABLES ON STEWARDSHIP (TO THE DISCIPLES, THE PARABLE OF THE UNJUST STEWARD; TO THE PHARISEES, THE PARABLE OF THE RICH MAN AND LAZARUS; TO THE DISCIPLES, THE PARABLE OF THE UNPROFITABLE SERVANTS)",
+  "note": "The 1922 printed outline reads \"Luke 16:1, 17:10.\"; the body reads \"Luke 16:1-17:10\"."
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 118,
+  "label": "118",
+  "order": 118,
+  "title": "Jesus Raises Lazarus from the Dead",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "11:1-44"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     11,
+     1,
+     11,
+     44
+    ]
+   ]
+  },
+  "printedRefs": "John 11:1-44",
+  "titlePrinted": "JESUS RAISES LAZARUS FROM THE DEAD"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 119,
+  "label": "119",
+  "order": 119,
+  "title": "The Effect of the Raising of Lazarus (on the People, on the Sanhedrin, on the Movements of Jesus)",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "11:45-54"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     11,
+     45,
+     11,
+     54
+    ]
+   ]
+  },
+  "printedRefs": "John 11:45-54",
+  "titlePrinted": "THE EFFECT OF THE RAISING OF LAZARUS (ON THE PEOPLE, ON THE SANHEDRIN, ON THE MOVEMENTS OF JESUS)"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 120,
+  "label": "120",
+  "order": 120,
+  "title": "Jesus Starts on the Last Journey to Jerusalem by Way of Samaria and Galilee",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "17:11-37",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     17,
+     11,
+     17,
+     37
+    ]
+   ]
+  },
+  "printedRefs": "Luke 17:11-37",
+  "titlePrinted": "JESUS STARTS ON THE LAST JOURNEY TO JERUSALEM BY WAY OF SAMARIA AND GALILEE"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 121,
+  "label": "121",
+  "order": 121,
+  "title": "Two Parables on Prayer (the Importunate Widow, the Pharisee and the Publican)",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "18:1-14",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     18,
+     1,
+     18,
+     14
+    ]
+   ]
+  },
+  "printedRefs": "Luke 18:1-14",
+  "titlePrinted": "TWO PARABLES ON PRAYER (THE IMPORTUNATE WIDOW, THE PHARISEE AND THE PUBLICAN)"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 122,
+  "label": "122",
+  "order": 122,
+  "title": "Going from Galilee Through Perea, He Teaches Concerning Divorce",
+  "refs": {
+   "MAT": "19:1-12",
+   "MRK": "10:1-12",
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     10,
+     1,
+     10,
+     12
+    ]
+   ],
+   "MAT": [
+    [
+     19,
+     1,
+     19,
+     12
+    ]
+   ]
+  },
+  "printedRefs": "Mark 10:1-12; Matt. 19:1-12",
+  "titlePrinted": "GOING FROM GALILEE THROUGH PEREA, HE TEACHES CONCERNING DIVORCE"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 123,
+  "label": "123",
+  "order": 123,
+  "title": "Christ and Children and the Failure of the Disciples to Understand the Attitude of Jesus",
+  "refs": {
+   "MAT": "19:13-15",
+   "MRK": "10:13-16",
+   "LUK": "18:15-17",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     10,
+     13,
+     10,
+     16
+    ]
+   ],
+   "MAT": [
+    [
+     19,
+     13,
+     19,
+     15
+    ]
+   ],
+   "LUK": [
+    [
+     18,
+     15,
+     18,
+     17
+    ]
+   ]
+  },
+  "printedRefs": "Mark 10:13-16; Matt. 19:13-15; Luke 18:15-17",
+  "titlePrinted": "CHRIST AND CHILDREN AND THE FAILURE OF THE DISCIPLES TO UNDERSTAND THE ATTITUDE OF JESUS"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 124,
+  "label": "124",
+  "order": 124,
+  "title": "The Rich Young Ruler, the Perils of Riches, and Amazement of the Disciples. The Rewards of Forsaking All to Follow the Messiah Will Be Great, but Will Be Sovereign (Parable of the Laborers in the Vineyard)",
+  "refs": {
+   "MAT": "19:16-20:16",
+   "MRK": "10:17-31",
+   "LUK": "18:18-30",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     10,
+     17,
+     10,
+     31
+    ]
+   ],
+   "MAT": [
+    [
+     19,
+     16,
+     20,
+     16
+    ]
+   ],
+   "LUK": [
+    [
+     18,
+     18,
+     18,
+     30
+    ]
+   ]
+  },
+  "printedRefs": "Mark 10:17-31; Matt. 19:16-20:16; Luke 18:18-30",
+  "titlePrinted": "THE RICH YOUNG RULER, THE PERILS OF RICHES, AND AMAZEMENT OF THE DISCIPLES. THE REWARDS OF FORSAKING ALL TO FOLLOW THE MESSIAH WILL BE GREAT, BUT WILL BE SOVEREIGN (PARABLE OF THE LABORERS IN THE VINEYARD)"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 125,
+  "label": "125",
+  "order": 125,
+  "title": "Jesus Again Foretells to the Disciples His Death and Resurrection (comp. Sects. 83, 85, 86, 88), and Rebukes the Selfish Ambition of James and John",
+  "refs": {
+   "MAT": "20:17-28",
+   "MRK": "10:32-45",
+   "LUK": "18:31-34",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     10,
+     32,
+     10,
+     45
+    ]
+   ],
+   "MAT": [
+    [
+     20,
+     17,
+     20,
+     28
+    ]
+   ],
+   "LUK": [
+    [
+     18,
+     31,
+     18,
+     34
+    ]
+   ]
+  },
+  "printedRefs": "Mark 10:32-45; Matt. 20:17-28; Luke 18:31-34",
+  "titlePrinted": "JESUS AGAIN FORETELLS TO THE DISCIPLES HIS DEATH AND RESURRECTION (COMP. SECTS. 83, 85, 86, 88), AND REBUKES THE SELFISH AMBITION OF JAMES AND JOHN"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 126,
+  "label": "126",
+  "order": 126,
+  "title": "Blind Bartimaeus and His Companion Healed",
+  "refs": {
+   "MAT": "20:29-34",
+   "MRK": "10:46-52",
+   "LUK": "18:35-43",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     10,
+     46,
+     10,
+     52
+    ]
+   ],
+   "MAT": [
+    [
+     20,
+     29,
+     20,
+     34
+    ]
+   ],
+   "LUK": [
+    [
+     18,
+     35,
+     18,
+     43
+    ]
+   ]
+  },
+  "printedRefs": "Mark 10:46-52; Matt. 20:29-34; Luke 18:35-43",
+  "titlePrinted": "BLIND BARTIMAEUS AND HIS COMPANION HEALED"
+ },
+ {
+  "part": "Part X. The Later Perean Ministry",
+  "partNumber": 10,
+  "partPeriod": "Probably Dedication in A.D. 29 to Last Journey in A.D. 30",
+  "section": 127,
+  "label": "127",
+  "order": 127,
+  "title": "Jesus Visits Zacchaeus, and Speaks the Parable of the Pounds, and Sets Out for Jerusalem",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "19:1-28",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     19,
+     1,
+     19,
+     28
+    ]
+   ]
+  },
+  "printedRefs": "Luke 19:1-28",
+  "titlePrinted": "JESUS VISITS ZACCHAEUS, AND SPEAKS THE PARABLE OF THE POUNDS, AND SETS OUT FOR JERUSALEM"
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 128,
+  "label": "128a",
+  "order": 128,
+  "title": "Jesus Arrives at Bethany Near Jerusalem",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "11:55-12:1, 9-11"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     11,
+     55,
+     12,
+     1
+    ],
+    [
+     12,
+     9,
+     12,
+     11
+    ]
+   ]
+  },
+  "printedRefs": "John 11:55-12:1, 9-11",
+  "titlePrinted": "JESUS ARRIVES AT BETHANY NEAR JERUSALEM",
+  "note": "The 1922 printed outline punctuates \"John 11:55-12:1; 9-11\"; the body reads \"John 11:55 to 12:1, 9-11\" (12:9-11)."
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 128,
+  "label": "128b",
+  "order": 129,
+  "title": "His Triumphal Entry into Jerusalem as the Messiah",
+  "refs": {
+   "MAT": "21:1-11, 14-17",
+   "MRK": "11:1-11",
+   "LUK": "19:29-44",
+   "JHN": "12:12-19"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     11,
+     1,
+     11,
+     11
+    ]
+   ],
+   "MAT": [
+    [
+     21,
+     1,
+     21,
+     11
+    ],
+    [
+     21,
+     14,
+     21,
+     17
+    ]
+   ],
+   "LUK": [
+    [
+     19,
+     29,
+     19,
+     44
+    ]
+   ],
+   "JHN": [
+    [
+     12,
+     12,
+     12,
+     19
+    ]
+   ]
+  },
+  "printedRefs": "Mark 11:1-11; Matt. 21:1-11, 14-17; Luke 19:29-44; John 12:12-19",
+  "titlePrinted": "HIS TRIUMPHAL ENTRY INTO JERUSALEM AS THE MESSIAH"
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 129,
+  "label": "129",
+  "order": 130,
+  "title": "The Barren Fig Tree Cursed, and the Second Cleansing of the Temple (comp. Sect. 31)",
+  "refs": {
+   "MAT": "21:18-19, 12-13",
+   "MRK": "11:12-18",
+   "LUK": "19:45-48",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     11,
+     12,
+     11,
+     18
+    ]
+   ],
+   "MAT": [
+    [
+     21,
+     18,
+     21,
+     19
+    ],
+    [
+     21,
+     12,
+     21,
+     13
+    ]
+   ],
+   "LUK": [
+    [
+     19,
+     45,
+     19,
+     48
+    ]
+   ]
+  },
+  "printedRefs": "Mark 11:12-18; Matt. 21:18-19, 12-13; Luke 19:45-48",
+  "titlePrinted": "THE BARREN FIG TREE CURSED, AND THE SECOND CLEANSING OF THE TEMPLE (COMP. SECT. 31)",
+  "note": "Matthew order is as printed: 21:18-19 (the fig tree) then 21:12-13 (the cleansing)."
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 130,
+  "label": "130",
+  "order": 131,
+  "title": "The Desire of Some Greeks to See Jesus Puzzles the Disciples and Leads Jesus in Agitation of Soul to Interpret Life and Death as Sacrifice and to Show How by Being \"Lifted Up\" He Will Draw All Men to Him",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "12:20-50"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     12,
+     20,
+     12,
+     50
+    ]
+   ]
+  },
+  "printedRefs": "John 12:20-50",
+  "titlePrinted": "THE DESIRE OF SOME GREEKS TO SEE JESUS PUZZLES THE DISCIPLES AND LEADS JESUS IN AGITATION OF SOUL TO INTERPRET LIFE AND DEATH AS SACRIFICE AND TO SHOW HOW BY BEING \"LIFTED UP\" HE WILL DRAW ALL MEN TO HIM"
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 131,
+  "label": "131",
+  "order": 132,
+  "title": "The Barren Fig Tree Found to Have Withered",
+  "refs": {
+   "MAT": "21:19-22",
+   "MRK": "11:19-25",
+   "LUK": "21:37-38",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     11,
+     19,
+     11,
+     25
+    ]
+   ],
+   "MAT": [
+    [
+     21,
+     19,
+     21,
+     22
+    ]
+   ],
+   "LUK": [
+    [
+     21,
+     37,
+     21,
+     38
+    ]
+   ]
+  },
+  "printedRefs": "Mark 11:19-25; Matt. 21:19-22; Luke 21:37-38",
+  "titlePrinted": "THE BARREN FIG TREE FOUND TO HAVE WITHERED"
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 132,
+  "label": "132",
+  "order": 133,
+  "title": "The Rulers (Sanhedrin) Formally Challenge the Authority of Jesus as an Accredited Teacher (Rabbi)",
+  "refs": {
+   "MAT": "21:23-22:14",
+   "MRK": "11:27-12:12",
+   "LUK": "20:1-19",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     11,
+     27,
+     12,
+     12
+    ]
+   ],
+   "MAT": [
+    [
+     21,
+     23,
+     22,
+     14
+    ]
+   ],
+   "LUK": [
+    [
+     20,
+     1,
+     20,
+     19
+    ]
+   ]
+  },
+  "printedRefs": "Mark 11:27-12:12; Matt. 21:23-22:14; Luke 20:1-19",
+  "titlePrinted": "THE RULERS (SANHEDRIN) FORMALLY CHALLENGE THE AUTHORITY OF JESUS AS AN ACCREDITED TEACHER (RABBI)"
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 133,
+  "label": "133",
+  "order": 134,
+  "title": "The Pharisees and the Herodians Try to Ensnare Jesus about Paying Tribute to Caesar",
+  "refs": {
+   "MAT": "22:15-22",
+   "MRK": "12:13-17",
+   "LUK": "20:20-26",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     12,
+     13,
+     12,
+     17
+    ]
+   ],
+   "MAT": [
+    [
+     22,
+     15,
+     22,
+     22
+    ]
+   ],
+   "LUK": [
+    [
+     20,
+     20,
+     20,
+     26
+    ]
+   ]
+  },
+  "printedRefs": "Mark 12:13-17; Matt. 22:15-22; Luke 20:20-26",
+  "titlePrinted": "THE PHARISEES AND THE HERODIANS TRY TO ENSNARE JESUS ABOUT PAYING TRIBUTE TO CAESAR"
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 134,
+  "label": "134",
+  "order": 135,
+  "title": "The Sadducees Ask Him a Puzzling Question about the Resurrection",
+  "refs": {
+   "MAT": "22:23-33",
+   "MRK": "12:18-27",
+   "LUK": "20:27-40",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     12,
+     18,
+     12,
+     27
+    ]
+   ],
+   "MAT": [
+    [
+     22,
+     23,
+     22,
+     33
+    ]
+   ],
+   "LUK": [
+    [
+     20,
+     27,
+     20,
+     40
+    ]
+   ]
+  },
+  "printedRefs": "Mark 12:18-27; Matt. 22:23-33; Luke 20:27-40",
+  "titlePrinted": "THE SADDUCEES ASK HIM A PUZZLING QUESTION ABOUT THE RESURRECTION"
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 135,
+  "label": "135",
+  "order": 136,
+  "title": "The Pharisees Rejoice over the Rout of the Sadducees and a Pharisaic Lawyer Asks Jesus a Legal Question",
+  "refs": {
+   "MAT": "22:34-40",
+   "MRK": "12:28-34",
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     12,
+     28,
+     12,
+     34
+    ]
+   ],
+   "MAT": [
+    [
+     22,
+     34,
+     22,
+     40
+    ]
+   ]
+  },
+  "printedRefs": "Mark 12:28-34; Matt. 22:34-40",
+  "titlePrinted": "THE PHARISEES REJOICE OVER THE ROUT OF THE SADDUCEES AND A PHARISAIC LAWYER ASKS JESUS A LEGAL QUESTION"
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 136,
+  "label": "136",
+  "order": 137,
+  "title": "Jesus, to the Joy of the Multitude, Silences His Enemies by the Pertinent Question of the Messiah's Descent from David and Lordship over David",
+  "refs": {
+   "MAT": "22:41-46",
+   "MRK": "12:35-37",
+   "LUK": "20:41-44",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     12,
+     35,
+     12,
+     37
+    ]
+   ],
+   "MAT": [
+    [
+     22,
+     41,
+     22,
+     46
+    ]
+   ],
+   "LUK": [
+    [
+     20,
+     41,
+     20,
+     44
+    ]
+   ]
+  },
+  "printedRefs": "Mark 12:35-37; Matt. 22:41-46; Luke 20:41-44",
+  "titlePrinted": "JESUS, TO THE JOY OF THE MULTITUDE, SILENCES HIS ENEMIES BY THE PERTINENT QUESTION OF THE MESSIAH'S DESCENT FROM DAVID AND LORDSHIP OVER DAVID"
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 137,
+  "label": "137",
+  "order": 138,
+  "title": "In His Last Public Discourse, Jesus Solemnly Denounces the Scribes and Pharisees (comp. Sect. 107)",
+  "refs": {
+   "MAT": "23:1-39",
+   "MRK": "12:38-40",
+   "LUK": "20:45-47",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     12,
+     38,
+     12,
+     40
+    ]
+   ],
+   "MAT": [
+    [
+     23,
+     1,
+     23,
+     39
+    ]
+   ],
+   "LUK": [
+    [
+     20,
+     45,
+     20,
+     47
+    ]
+   ]
+  },
+  "printedRefs": "Mark 12:38-40; Matt. 23:1-39; Luke 20:45-47",
+  "titlePrinted": "IN HIS LAST PUBLIC DISCOURSE, JESUS SOLEMNLY DENOUNCES THE SCRIBES AND PHARISEES (COMP. SECT. 107)"
+ },
+ {
+  "part": "Part XI. The Last Public Ministry in Jerusalem",
+  "partNumber": 11,
+  "partPeriod": "Friday before the Passover to Tuesday of Passion Week, A.D. 30 or 29",
+  "section": 138,
+  "label": "138",
+  "order": 139,
+  "title": "Jesus Closely Observes the Contributions in the Temple, and Commends the Poor Widow's Gift",
+  "refs": {
+   "MAT": null,
+   "MRK": "12:41-44",
+   "LUK": "21:1-4",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     12,
+     41,
+     12,
+     44
+    ]
+   ],
+   "LUK": [
+    [
+     21,
+     1,
+     21,
+     4
+    ]
+   ]
+  },
+  "printedRefs": "Mark 12:41-44; Luke 21:1-4",
+  "titlePrinted": "JESUS CLOSELY OBSERVES THE CONTRIBUTIONS IN THE TEMPLE, AND COMMENDS THE POOR WIDOW'S GIFT"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 139,
+  "label": "139",
+  "order": 140,
+  "title": "Sitting on the Mount of Olives, Jesus Speaks to His Disciples about the Destruction of Jerusalem, and His Own Second Coming in Apocalyptic Language. The Great Eschatological Discourse",
+  "refs": {
+   "MAT": "24:1-51; 25:1-46",
+   "MRK": "13:1-37",
+   "LUK": "21:5-36",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     13,
+     1,
+     13,
+     37
+    ]
+   ],
+   "MAT": [
+    [
+     24,
+     1,
+     24,
+     51
+    ],
+    [
+     25,
+     1,
+     25,
+     46
+    ]
+   ],
+   "LUK": [
+    [
+     21,
+     5,
+     21,
+     36
+    ]
+   ]
+  },
+  "printedRefs": "Mark 13:1-37; Matt. 24, 25; Luke 21:5-36",
+  "titlePrinted": "SITTING ON THE MOUNT OF OLIVES, JESUS SPEAKS TO HIS DISCIPLES ABOUT THE DESTRUCTION OF JERUSALEM, AND HIS OWN SECOND COMING IN APOCALYPTIC LANGUAGE. THE GREAT ESCHATOLOGICAL DISCOURSE",
+  "note": "The 1922 printed outline reads \"Matt. 24: 25\"; the body reads \"Matt. 24 and 25\" (chapters 24-25)."
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 140,
+  "label": "140",
+  "order": 141,
+  "title": "Jesus Predicts His Crucifixion Two Days Hence (Jewish Friday)",
+  "refs": {
+   "MAT": "26:1-5",
+   "MRK": "14:1-2",
+   "LUK": "22:1-2",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     1,
+     14,
+     2
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     1,
+     26,
+     5
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     1,
+     22,
+     2
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:1-2; Matt. 26:1-5; Luke 22:1-2",
+  "titlePrinted": "JESUS PREDICTS HIS CRUCIFIXION TWO DAYS HENCE (JEWISH FRIDAY)"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 141,
+  "label": "141",
+  "order": 142,
+  "title": "At the Feast in the House of Simon the Leper Mary of Bethany Anoints Jesus for His Burial",
+  "refs": {
+   "MAT": "26:6-13",
+   "MRK": "14:3-9",
+   "LUK": null,
+   "JHN": "12:2-8"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     3,
+     14,
+     9
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     6,
+     26,
+     13
+    ]
+   ],
+   "JHN": [
+    [
+     12,
+     2,
+     12,
+     8
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:3-9; Matt. 26:6-13; John 12:2-8",
+  "titlePrinted": "AT THE FEAST IN THE HOUSE OF SIMON THE LEPER MARY OF BETHANY ANOINTS JESUS FOR HIS BURIAL"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 142,
+  "label": "142",
+  "order": 143,
+  "title": "Judas, Stung by the Rebuke of Jesus at the Feast, Bargains with the Rulers to Betray Jesus",
+  "refs": {
+   "MAT": "26:14-16",
+   "MRK": "14:10-11",
+   "LUK": "22:3-6",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     10,
+     14,
+     11
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     14,
+     26,
+     16
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     3,
+     22,
+     6
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:10-11; Matt. 26:14-16; Luke 22:3-6",
+  "titlePrinted": "JUDAS, STUNG BY THE REBUKE OF JESUS AT THE FEAST, BARGAINS WITH THE RULERS TO BETRAY JESUS"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 143,
+  "label": "143",
+  "order": 144,
+  "title": "The Preparation for the Paschal Meal at the Home of a Friend (Possibly that of John Mark's Father and Mother)",
+  "refs": {
+   "MAT": "26:17-19",
+   "MRK": "14:12-16",
+   "LUK": "22:7-13",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     12,
+     14,
+     16
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     17,
+     26,
+     19
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     7,
+     22,
+     13
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:12-16; Matt. 26:17-19; Luke 22:7-13",
+  "titlePrinted": "THE PREPARATION FOR THE PASCHAL MEAL AT THE HOME OF A FRIEND (POSSIBLY THAT OF JOHN MARK'S FATHER AND MOTHER)"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 144,
+  "label": "144",
+  "order": 145,
+  "title": "Jesus Partakes of the Paschal Meal with the Twelve Apostles and Rebukes Their Jealousy",
+  "refs": {
+   "MAT": "26:20",
+   "MRK": "14:17",
+   "LUK": "22:14-16, 24-30",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     17,
+     14,
+     17
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     20,
+     26,
+     20
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     14,
+     22,
+     16
+    ],
+    [
+     22,
+     24,
+     22,
+     30
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:17; Matt. 26:20; Luke 22:14-16, 24-30",
+  "titlePrinted": "JESUS PARTAKES OF THE PASCHAL MEAL WITH THE TWELVE APOSTLES AND REBUKES THEIR JEALOUSY"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 145,
+  "label": "145",
+  "order": 146,
+  "title": "During the Paschal Meal, Jesus Washes the Feet of His Disciples",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "13:1-20"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     13,
+     1,
+     13,
+     20
+    ]
+   ]
+  },
+  "printedRefs": "John 13:1-20",
+  "titlePrinted": "DURING THE PASCHAL MEAL, JESUS WASHES THE FEET OF HIS DISCIPLES"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 146,
+  "label": "146",
+  "order": 147,
+  "title": "At the Paschal Meal Jesus Points Out Judas as the Betrayer",
+  "refs": {
+   "MAT": "26:21-25",
+   "MRK": "14:18-21",
+   "LUK": "22:21-23",
+   "JHN": "13:21-30"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     18,
+     14,
+     21
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     21,
+     26,
+     25
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     21,
+     22,
+     23
+    ]
+   ],
+   "JHN": [
+    [
+     13,
+     21,
+     13,
+     30
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:18-21; Matt. 26:21-25; Luke 22:21-23; John 13:21-30",
+  "titlePrinted": "AT THE PASCHAL MEAL JESUS POINTS OUT JUDAS AS THE BETRAYER"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 147,
+  "label": "147",
+  "order": 148,
+  "title": "After the Departure of Judas Jesus Warns the Disciples (Peter in Particular) Against Desertion, While All Protest Their Loyalty",
+  "refs": {
+   "MAT": "26:31-35",
+   "MRK": "14:27-31",
+   "LUK": "22:31-38",
+   "JHN": "13:31-38"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     27,
+     14,
+     31
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     31,
+     26,
+     35
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     31,
+     22,
+     38
+    ]
+   ],
+   "JHN": [
+    [
+     13,
+     31,
+     13,
+     38
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:27-31; Matt. 26:31-35; Luke 22:31-38; John 13:31-38",
+  "titlePrinted": "AFTER THE DEPARTURE OF JUDAS JESUS WARNS THE DISCIPLES (PETER IN PARTICULAR) AGAINST DESERTION, WHILE ALL PROTEST THEIR LOYALTY"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 148,
+  "label": "148",
+  "order": 149,
+  "title": "Jesus Institutes the Memorial of Eating Bread and Drinking Wine",
+  "refs": {
+   "MAT": "26:26-29",
+   "MRK": "14:22-25",
+   "LUK": "22:17-20",
+   "JHN": null
+  },
+  "otherRefs": {
+   "1CO": "11:23-26"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     22,
+     14,
+     25
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     26,
+     26,
+     29
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     17,
+     22,
+     20
+    ]
+   ],
+   "1CO": [
+    [
+     11,
+     23,
+     11,
+     26
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:22-25; Matt. 26:26-29; Luke 22:17-20; 1 Cor. 11:23-26",
+  "titlePrinted": "JESUS INSTITUTES THE MEMORIAL OF EATING BREAD AND DRINKING WINE"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 149,
+  "label": "149",
+  "order": 150,
+  "title": "The Farewell Discourse to His Disciples in the Upper Room",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "14:1-31"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     14,
+     1,
+     14,
+     31
+    ]
+   ]
+  },
+  "printedRefs": "John 14",
+  "titlePrinted": "THE FAREWELL DISCOURSE TO HIS DISCIPLES IN THE UPPER ROOM"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 150,
+  "label": "150",
+  "order": 151,
+  "title": "The Discourse on the Way to Gethsemane",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "15:1-27; 16:1-33"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     15,
+     1,
+     15,
+     27
+    ],
+    [
+     16,
+     1,
+     16,
+     33
+    ]
+   ]
+  },
+  "printedRefs": "John 15, 16",
+  "titlePrinted": "THE DISCOURSE ON THE WAY TO GETHSEMANE",
+  "note": "The 1922 printed outline reads \"John 15: 16.\"; the body reads \"John 15 and 16\" (chapters 15-16)."
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 151,
+  "label": "151",
+  "order": 152,
+  "title": "Christ's Intercessory Prayer",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "17:1-26"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     17,
+     1,
+     17,
+     26
+    ]
+   ]
+  },
+  "printedRefs": "John 17",
+  "titlePrinted": "CHRIST'S INTERCESSORY PRAYER"
+ },
+ {
+  "part": "Part XII. In the Shadow with Jesus",
+  "partNumber": 12,
+  "partPeriod": "Tuesday afternoon to Thursday night of Passion Week, A.D. 30 or 29",
+  "section": 152,
+  "label": "152",
+  "order": 153,
+  "title": "Going Forth to Gethsemane, Jesus Suffers Long in Agony",
+  "refs": {
+   "MAT": "26:30, 36-46",
+   "MRK": "14:26, 32-42",
+   "LUK": "22:39-46",
+   "JHN": "18:1"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     26,
+     14,
+     26
+    ],
+    [
+     14,
+     32,
+     14,
+     42
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     30,
+     26,
+     30
+    ],
+    [
+     26,
+     36,
+     26,
+     46
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     39,
+     22,
+     46
+    ]
+   ],
+   "JHN": [
+    [
+     18,
+     1,
+     18,
+     1
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:26, 32-42; Matt. 26:30, 36-46; Luke 22:39-46; John 18:1",
+  "titlePrinted": "GOING FORTH TO GETHSEMANE, JESUS SUFFERS LONG IN AGONY"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 153,
+  "label": "153",
+  "order": 154,
+  "title": "Jesus Is Betrayed, Arrested, and Forsaken",
+  "refs": {
+   "MAT": "26:47-56",
+   "MRK": "14:43-52",
+   "LUK": "22:47-53",
+   "JHN": "18:2-12"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     43,
+     14,
+     52
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     47,
+     26,
+     56
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     47,
+     22,
+     53
+    ]
+   ],
+   "JHN": [
+    [
+     18,
+     2,
+     18,
+     12
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:43-52; Matt. 26:47-56; Luke 22:47-53; John 18:2-12",
+  "titlePrinted": "JESUS IS BETRAYED, ARRESTED, AND FORSAKEN"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 154,
+  "label": "154",
+  "order": 155,
+  "title": "Jesus First Examined by Annas, the Ex-High Priest",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "18:12-14, 19-23"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     18,
+     12,
+     18,
+     14
+    ],
+    [
+     18,
+     19,
+     18,
+     23
+    ]
+   ]
+  },
+  "printedRefs": "John 18:12-14, 19-23",
+  "titlePrinted": "JESUS FIRST EXAMINED BY ANNAS, THE EX-HIGH PRIEST"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 155,
+  "label": "155",
+  "order": 156,
+  "title": "Jesus Hurriedly Tried and Condemned by Caiaphas and the Sanhedrin, Who Mock and Buffet Him",
+  "refs": {
+   "MAT": "26:57, 59-68",
+   "MRK": "14:53, 55-65",
+   "LUK": "22:54, 63-65",
+   "JHN": "18:24"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     53,
+     14,
+     53
+    ],
+    [
+     14,
+     55,
+     14,
+     65
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     57,
+     26,
+     57
+    ],
+    [
+     26,
+     59,
+     26,
+     68
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     54,
+     22,
+     54
+    ],
+    [
+     22,
+     63,
+     22,
+     65
+    ]
+   ],
+   "JHN": [
+    [
+     18,
+     24,
+     18,
+     24
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:53, 55-65; Matt. 26:57, 59-68; Luke 22:54, 63-65; John 18:24",
+  "titlePrinted": "JESUS HURRIEDLY TRIED AND CONDEMNED BY CAIAPHAS AND THE SANHEDRIN, WHO MOCK AND BUFFET HIM"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 156,
+  "label": "156",
+  "order": 157,
+  "title": "Peter Thrice Denies His Lord",
+  "refs": {
+   "MAT": "26:58, 69-75",
+   "MRK": "14:54, 66-72",
+   "LUK": "22:54-62",
+   "JHN": "18:15-18, 25-27"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     14,
+     54,
+     14,
+     54
+    ],
+    [
+     14,
+     66,
+     14,
+     72
+    ]
+   ],
+   "MAT": [
+    [
+     26,
+     58,
+     26,
+     58
+    ],
+    [
+     26,
+     69,
+     26,
+     75
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     54,
+     22,
+     62
+    ]
+   ],
+   "JHN": [
+    [
+     18,
+     15,
+     18,
+     18
+    ],
+    [
+     18,
+     25,
+     18,
+     27
+    ]
+   ]
+  },
+  "printedRefs": "Mark 14:54, 66-72; Matt. 26:58, 69-75; Luke 22:54-62; John 18:15-18, 25-27",
+  "titlePrinted": "PETER THRICE DENIES HIS LORD"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 157,
+  "label": "157",
+  "order": 158,
+  "title": "After Dawn, Jesus Is Formally Condemned by the Sanhedrin",
+  "refs": {
+   "MAT": "27:1",
+   "MRK": "15:1",
+   "LUK": "22:66-71",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     15,
+     1,
+     15,
+     1
+    ]
+   ],
+   "MAT": [
+    [
+     27,
+     1,
+     27,
+     1
+    ]
+   ],
+   "LUK": [
+    [
+     22,
+     66,
+     22,
+     71
+    ]
+   ]
+  },
+  "printedRefs": "Mark 15:1; Matt. 27:1; Luke 22:66-71",
+  "titlePrinted": "AFTER DAWN, JESUS IS FORMALLY CONDEMNED BY THE SANHEDRIN"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 158,
+  "label": "158",
+  "order": 159,
+  "title": "Remorse and Suicide of Judas the Betrayer",
+  "refs": {
+   "MAT": "27:3-10",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "otherRefs": {
+   "ACT": "1:18-19"
+  },
+  "ranges": {
+   "MAT": [
+    [
+     27,
+     3,
+     27,
+     10
+    ]
+   ],
+   "ACT": [
+    [
+     1,
+     18,
+     1,
+     19
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 27:3-10; Acts 1:18-19",
+  "titlePrinted": "REMORSE AND SUICIDE OF JUDAS THE BETRAYER"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 159,
+  "label": "159",
+  "order": 160,
+  "title": "Jesus Before Pilate the First Time",
+  "refs": {
+   "MAT": "27:2, 11-14",
+   "MRK": "15:1-5",
+   "LUK": "23:1-5",
+   "JHN": "18:28-38"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     15,
+     1,
+     15,
+     5
+    ]
+   ],
+   "MAT": [
+    [
+     27,
+     2,
+     27,
+     2
+    ],
+    [
+     27,
+     11,
+     27,
+     14
+    ]
+   ],
+   "LUK": [
+    [
+     23,
+     1,
+     23,
+     5
+    ]
+   ],
+   "JHN": [
+    [
+     18,
+     28,
+     18,
+     38
+    ]
+   ]
+  },
+  "printedRefs": "Mark 15:1-5; Matt. 27:2, 11-14; Luke 23:1-5; John 18:28-38",
+  "titlePrinted": "JESUS BEFORE PILATE THE FIRST TIME"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 160,
+  "label": "160",
+  "order": 161,
+  "title": "Jesus Before Herod Antipas the Tetrarch",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "23:6-12",
+   "JHN": null
+  },
+  "ranges": {
+   "LUK": [
+    [
+     23,
+     6,
+     23,
+     12
+    ]
+   ]
+  },
+  "printedRefs": "Luke 23:6-12",
+  "titlePrinted": "JESUS BEFORE HEROD ANTIPAS THE TETRARCH"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 161,
+  "label": "161",
+  "order": 162,
+  "title": "Jesus the Second Time Before Pilate",
+  "refs": {
+   "MAT": "27:15-26",
+   "MRK": "15:6-15",
+   "LUK": "23:13-25",
+   "JHN": "18:39-19:16"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     15,
+     6,
+     15,
+     15
+    ]
+   ],
+   "MAT": [
+    [
+     27,
+     15,
+     27,
+     26
+    ]
+   ],
+   "LUK": [
+    [
+     23,
+     13,
+     23,
+     25
+    ]
+   ],
+   "JHN": [
+    [
+     18,
+     39,
+     19,
+     16
+    ]
+   ]
+  },
+  "printedRefs": "Mark 15:6-15; Matt. 27:15-26; Luke 23:13-25; John 18:39-19:16",
+  "titlePrinted": "JESUS THE SECOND TIME BEFORE PILATE"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 162,
+  "label": "162",
+  "order": 163,
+  "title": "The Roman Soldiers Mock Jesus",
+  "refs": {
+   "MAT": "27:27-30",
+   "MRK": "15:16-19",
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     15,
+     16,
+     15,
+     19
+    ]
+   ],
+   "MAT": [
+    [
+     27,
+     27,
+     27,
+     30
+    ]
+   ]
+  },
+  "printedRefs": "Mark 15:16-19; Matt. 27:27-30",
+  "titlePrinted": "THE ROMAN SOLDIERS MOCK JESUS"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 163,
+  "label": "163",
+  "order": 164,
+  "title": "Jesus on the Way to the Cross (Via Dolorosa) on Golgotha",
+  "refs": {
+   "MAT": "27:31-34",
+   "MRK": "15:20-23",
+   "LUK": "23:26-33",
+   "JHN": "19:16-17"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     15,
+     20,
+     15,
+     23
+    ]
+   ],
+   "MAT": [
+    [
+     27,
+     31,
+     27,
+     34
+    ]
+   ],
+   "LUK": [
+    [
+     23,
+     26,
+     23,
+     33
+    ]
+   ],
+   "JHN": [
+    [
+     19,
+     16,
+     19,
+     17
+    ]
+   ]
+  },
+  "printedRefs": "Mark 15:20-23; Matt. 27:31-34; Luke 23:26-33; John 19:16-17",
+  "titlePrinted": "JESUS ON THE WAY TO THE CROSS (VIA DOLOROSA) ON GOLGOTHA"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 164,
+  "label": "164",
+  "order": 165,
+  "title": "The First Three Hours on the Cross",
+  "refs": {
+   "MAT": "27:35-44",
+   "MRK": "15:24-32",
+   "LUK": "23:33-43",
+   "JHN": "19:18-27"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     15,
+     24,
+     15,
+     32
+    ]
+   ],
+   "MAT": [
+    [
+     27,
+     35,
+     27,
+     44
+    ]
+   ],
+   "LUK": [
+    [
+     23,
+     33,
+     23,
+     43
+    ]
+   ],
+   "JHN": [
+    [
+     19,
+     18,
+     19,
+     27
+    ]
+   ]
+  },
+  "printedRefs": "Mark 15:24-32; Matt. 27:35-44; Luke 23:33-43; John 19:18-27",
+  "titlePrinted": "THE FIRST THREE HOURS ON THE CROSS"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 165,
+  "label": "165",
+  "order": 166,
+  "title": "The Three Hours of Darkness from Noon to Three P.M.",
+  "refs": {
+   "MAT": "27:45-50",
+   "MRK": "15:33-37",
+   "LUK": "23:44-46",
+   "JHN": "19:28-30"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     15,
+     33,
+     15,
+     37
+    ]
+   ],
+   "MAT": [
+    [
+     27,
+     45,
+     27,
+     50
+    ]
+   ],
+   "LUK": [
+    [
+     23,
+     44,
+     23,
+     46
+    ]
+   ],
+   "JHN": [
+    [
+     19,
+     28,
+     19,
+     30
+    ]
+   ]
+  },
+  "printedRefs": "Mark 15:33-37; Matt. 27:45-50; Luke 23:44-46; John 19:28-30",
+  "titlePrinted": "THE THREE HOURS OF DARKNESS FROM NOON TO THREE P.M."
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 166,
+  "label": "166",
+  "order": 167,
+  "title": "The Phenomena Accompanying the Death of Christ",
+  "refs": {
+   "MAT": "27:51-56",
+   "MRK": "15:38-41",
+   "LUK": "23:45, 47-49",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     15,
+     38,
+     15,
+     41
+    ]
+   ],
+   "MAT": [
+    [
+     27,
+     51,
+     27,
+     56
+    ]
+   ],
+   "LUK": [
+    [
+     23,
+     45,
+     23,
+     45
+    ],
+    [
+     23,
+     47,
+     23,
+     49
+    ]
+   ]
+  },
+  "printedRefs": "Mark 15:38-41; Matt. 27:51-56; Luke 23:45, 47-49",
+  "titlePrinted": "THE PHENOMENA ACCOMPANYING THE DEATH OF CHRIST"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 167,
+  "label": "167",
+  "order": 168,
+  "title": "The Burial of the Body of Jesus in the Tomb of Joseph of Arimathea After Proof of His Death",
+  "refs": {
+   "MAT": "27:57-60",
+   "MRK": "15:42-46",
+   "LUK": "23:50-54",
+   "JHN": "19:31-42"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     15,
+     42,
+     15,
+     46
+    ]
+   ],
+   "MAT": [
+    [
+     27,
+     57,
+     27,
+     60
+    ]
+   ],
+   "LUK": [
+    [
+     23,
+     50,
+     23,
+     54
+    ]
+   ],
+   "JHN": [
+    [
+     19,
+     31,
+     19,
+     42
+    ]
+   ]
+  },
+  "printedRefs": "Mark 15:42-46; Matt. 27:57-60; Luke 23:50-54; John 19:31-42",
+  "titlePrinted": "THE BURIAL OF THE BODY OF JESUS IN THE TOMB OF JOSEPH OF ARIMATHEA AFTER PROOF OF HIS DEATH"
+ },
+ {
+  "part": "Part XIII. The Arrest, Trial, Crucifixion, and Burial of Jesus",
+  "partNumber": 13,
+  "partPeriod": "Early Friday morning to Saturday of Passion Week, A.D. 30 or 29",
+  "section": 168,
+  "label": "168",
+  "order": 169,
+  "title": "The Watch of the Women by the Tomb of Jesus",
+  "refs": {
+   "MAT": "27:61-66",
+   "MRK": "15:47",
+   "LUK": "23:55-56",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     15,
+     47,
+     15,
+     47
+    ]
+   ],
+   "MAT": [
+    [
+     27,
+     61,
+     27,
+     66
+    ]
+   ],
+   "LUK": [
+    [
+     23,
+     55,
+     23,
+     56
+    ]
+   ]
+  },
+  "printedRefs": "Mark 15:47; Matt. 27:61-66; Luke 23:55-56",
+  "titlePrinted": "THE WATCH OF THE WOMEN BY THE TOMB OF JESUS"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 169,
+  "label": "169",
+  "order": 170,
+  "title": "The Visit of the Women to the Tomb of Jesus",
+  "refs": {
+   "MAT": "28:1",
+   "MRK": "16:1",
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     16,
+     1,
+     16,
+     1
+    ]
+   ],
+   "MAT": [
+    [
+     28,
+     1,
+     28,
+     1
+    ]
+   ]
+  },
+  "printedRefs": "Mark 16:1; Matt. 28:1",
+  "titlePrinted": "THE VISIT OF THE WOMEN TO THE TOMB OF JESUS",
+  "note": "The 1922 printed outline reads \"Mark 16: 1: Matt. 28: 1.\" (colon for semicolon)."
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 170,
+  "label": "170",
+  "order": 171,
+  "title": "The Earthquake, the Rolling Away of the Stone by an Angel, and the Fright of the Roman Watchers",
+  "refs": {
+   "MAT": "28:2-4",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     28,
+     2,
+     28,
+     4
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 28:2-4",
+  "titlePrinted": "THE EARTHQUAKE, THE ROLLING AWAY OF THE STONE BY AN ANGEL, AND THE FRIGHT OF THE ROMAN WATCHERS"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 171,
+  "label": "171",
+  "order": 172,
+  "title": "The Visit of the Women to the Tomb of Jesus about Sunrise Sunday Morning and the Message of the Angels about the Empty Tomb",
+  "refs": {
+   "MAT": "28:5-8",
+   "MRK": "16:2-8",
+   "LUK": "24:1-8",
+   "JHN": "20:1"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     16,
+     2,
+     16,
+     8
+    ]
+   ],
+   "MAT": [
+    [
+     28,
+     5,
+     28,
+     8
+    ]
+   ],
+   "LUK": [
+    [
+     24,
+     1,
+     24,
+     8
+    ]
+   ],
+   "JHN": [
+    [
+     20,
+     1,
+     20,
+     1
+    ]
+   ]
+  },
+  "printedRefs": "Mark 16:2-8; Matt. 28:5-8; Luke 24:1-8; John 20:1",
+  "titlePrinted": "THE VISIT OF THE WOMEN TO THE TOMB OF JESUS ABOUT SUNRISE SUNDAY MORNING AND THE MESSAGE OF THE ANGELS ABOUT THE EMPTY TOMB"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 172,
+  "label": "172",
+  "order": 173,
+  "title": "Mary Magdalene and the Other Women Report to the Apostles, and Peter and John Visit the Empty Tomb",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "24:9-12",
+   "JHN": "20:2-10"
+  },
+  "ranges": {
+   "LUK": [
+    [
+     24,
+     9,
+     24,
+     12
+    ]
+   ],
+   "JHN": [
+    [
+     20,
+     2,
+     20,
+     10
+    ]
+   ]
+  },
+  "printedRefs": "Luke 24:9-12; John 20:2-10",
+  "titlePrinted": "MARY MAGDALENE AND THE OTHER WOMEN REPORT TO THE APOSTLES, AND PETER AND JOHN VISIT THE EMPTY TOMB"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 173,
+  "label": "173",
+  "order": 174,
+  "title": "The Appearance of Jesus to Mary Magdalene and the Message to the Disciples",
+  "refs": {
+   "MAT": null,
+   "MRK": "16:9-11",
+   "LUK": null,
+   "JHN": "20:11-18"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     16,
+     9,
+     16,
+     11
+    ]
+   ],
+   "JHN": [
+    [
+     20,
+     11,
+     20,
+     18
+    ]
+   ]
+  },
+  "printedRefs": "Mark 16:9-11; John 20:11-18",
+  "titlePrinted": "THE APPEARANCE OF JESUS TO MARY MAGDALENE AND THE MESSAGE TO THE DISCIPLES"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 174,
+  "label": "174",
+  "order": 175,
+  "title": "The Appearance of Jesus to the Other Women",
+  "refs": {
+   "MAT": "28:9-10",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     28,
+     9,
+     28,
+     10
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 28:9-10",
+  "titlePrinted": "THE APPEARANCE OF JESUS TO THE OTHER WOMEN"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 175,
+  "label": "175",
+  "order": 176,
+  "title": "Some of the Guard Report to the Jewish Rulers",
+  "refs": {
+   "MAT": "28:11-15",
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "ranges": {
+   "MAT": [
+    [
+     28,
+     11,
+     28,
+     15
+    ]
+   ]
+  },
+  "printedRefs": "Matt. 28:11-15",
+  "titlePrinted": "SOME OF THE GUARD REPORT TO THE JEWISH RULERS"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 176,
+  "label": "176",
+  "order": 177,
+  "title": "The Appearance to Two Disciples (Cleopas and Another) on the Way to Emmaus",
+  "refs": {
+   "MAT": null,
+   "MRK": "16:12-13",
+   "LUK": "24:13-32",
+   "JHN": null
+  },
+  "ranges": {
+   "MRK": [
+    [
+     16,
+     12,
+     16,
+     13
+    ]
+   ],
+   "LUK": [
+    [
+     24,
+     13,
+     24,
+     32
+    ]
+   ]
+  },
+  "printedRefs": "Mark 16:12-13; Luke 24:13-32",
+  "titlePrinted": "THE APPEARANCE TO TWO DISCIPLES (CLEOPAS AND ANOTHER) ON THE WAY TO EMMAUS"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 177,
+  "label": "177",
+  "order": 178,
+  "title": "The Report of the Two Disciples and the News of the Appearance to Simon Peter",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "24:33-35",
+   "JHN": null
+  },
+  "otherRefs": {
+   "1CO": "15:5"
+  },
+  "ranges": {
+   "LUK": [
+    [
+     24,
+     33,
+     24,
+     35
+    ]
+   ],
+   "1CO": [
+    [
+     15,
+     5,
+     15,
+     5
+    ]
+   ]
+  },
+  "printedRefs": "Luke 24:33-35; 1 Cor. 15:5",
+  "titlePrinted": "THE REPORT OF THE TWO DISCIPLES AND THE NEWS OF THE APPEARANCE TO SIMON PETER"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 178,
+  "label": "178",
+  "order": 179,
+  "title": "The Appearance to the Astonished Disciples (Thomas Absent) with a Commission and Their Failure to Convince Thomas",
+  "refs": {
+   "MAT": null,
+   "MRK": "16:14",
+   "LUK": "24:36-43",
+   "JHN": "20:19-25"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     16,
+     14,
+     16,
+     14
+    ]
+   ],
+   "LUK": [
+    [
+     24,
+     36,
+     24,
+     43
+    ]
+   ],
+   "JHN": [
+    [
+     20,
+     19,
+     20,
+     25
+    ]
+   ]
+  },
+  "printedRefs": "Mark 16:14; Luke 24:36-43; John 20:19-25",
+  "titlePrinted": "THE APPEARANCE TO THE ASTONISHED DISCIPLES (THOMAS ABSENT) WITH A COMMISSION AND THEIR FAILURE TO CONVINCE THOMAS"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 179,
+  "label": "179",
+  "order": 180,
+  "title": "The Appearance to the Disciples the Next Sunday Night and the Convincing of Thomas",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "20:26-31"
+  },
+  "otherRefs": {
+   "1CO": "15:5"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     20,
+     26,
+     20,
+     31
+    ]
+   ],
+   "1CO": [
+    [
+     15,
+     5,
+     15,
+     5
+    ]
+   ]
+  },
+  "printedRefs": "John 20:26-31; 1 Cor. 15:5",
+  "titlePrinted": "THE APPEARANCE TO THE DISCIPLES THE NEXT SUNDAY NIGHT AND THE CONVINCING OF THOMAS"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 180,
+  "label": "180",
+  "order": 181,
+  "title": "The Appearance to Seven Disciples Beside the Sea of Galilee. The Miraculous Draught of Fishes",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": "21:1-25"
+  },
+  "ranges": {
+   "JHN": [
+    [
+     21,
+     1,
+     21,
+     25
+    ]
+   ]
+  },
+  "printedRefs": "John 21",
+  "titlePrinted": "THE APPEARANCE TO SEVEN DISCIPLES BESIDE THE SEA OF GALILEE. THE MIRACULOUS DRAUGHT OF FISHES"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 181,
+  "label": "181",
+  "order": 182,
+  "title": "The Appearance to about Five Hundred on an Appointed Mountain in Galilee, and a Commission Given",
+  "refs": {
+   "MAT": "28:16-20",
+   "MRK": "16:15-18",
+   "LUK": null,
+   "JHN": null
+  },
+  "otherRefs": {
+   "1CO": "15:6"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     16,
+     15,
+     16,
+     18
+    ]
+   ],
+   "MAT": [
+    [
+     28,
+     16,
+     28,
+     20
+    ]
+   ],
+   "1CO": [
+    [
+     15,
+     6,
+     15,
+     6
+    ]
+   ]
+  },
+  "printedRefs": "Mark 16:15-18; Matt. 28:16-20; 1 Cor. 15:6",
+  "titlePrinted": "THE APPEARANCE TO ABOUT FIVE HUNDRED ON AN APPOINTED MOUNTAIN IN GALILEE, AND A COMMISSION GIVEN"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 182,
+  "label": "182",
+  "order": 183,
+  "title": "The Appearance to James the Brother of Jesus",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": null,
+   "JHN": null
+  },
+  "otherRefs": {
+   "1CO": "15:7"
+  },
+  "ranges": {
+   "1CO": [
+    [
+     15,
+     7,
+     15,
+     7
+    ]
+   ]
+  },
+  "printedRefs": "1 Cor. 15:7",
+  "titlePrinted": "THE APPEARANCE TO JAMES THE BROTHER OF JESUS"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 183,
+  "label": "183",
+  "order": 184,
+  "title": "The Appearance to the Disciples with Another Commission",
+  "refs": {
+   "MAT": null,
+   "MRK": null,
+   "LUK": "24:44-49",
+   "JHN": null
+  },
+  "otherRefs": {
+   "ACT": "1:3-8"
+  },
+  "ranges": {
+   "LUK": [
+    [
+     24,
+     44,
+     24,
+     49
+    ]
+   ],
+   "ACT": [
+    [
+     1,
+     3,
+     1,
+     8
+    ]
+   ]
+  },
+  "printedRefs": "Luke 24:44-49; Acts 1:3-8",
+  "titlePrinted": "THE APPEARANCE TO THE DISCIPLES WITH ANOTHER COMMISSION"
+ },
+ {
+  "part": "Part XIV. The Resurrection, Appearances, and Ascension of Christ",
+  "partNumber": 14,
+  "partPeriod": "Forty days from Sunday of Passion Week, A.D. 30 or 29",
+  "section": 184,
+  "label": "184",
+  "order": 185,
+  "title": "The Last Appearance and the Ascension",
+  "refs": {
+   "MAT": null,
+   "MRK": "16:19-20",
+   "LUK": "24:50-53",
+   "JHN": null
+  },
+  "otherRefs": {
+   "ACT": "1:9-12"
+  },
+  "ranges": {
+   "MRK": [
+    [
+     16,
+     19,
+     16,
+     20
+    ]
+   ],
+   "LUK": [
+    [
+     24,
+     50,
+     24,
+     53
+    ]
+   ],
+   "ACT": [
+    [
+     1,
+     9,
+     1,
+     12
+    ]
+   ]
+  },
+  "printedRefs": "Mark 16:19-20; Luke 24:50-53; Acts 1:9-12",
+  "titlePrinted": "THE LAST APPEARANCE AND THE ASCENSION"
+ }
+]
