@@ -35,12 +35,18 @@
         background-color: #FFFAE1;
         color: #1C1A17;
       }
+      /* Dark follows the device unless light or dark is picked in the menu (html[data-theme]). */
       @media (prefers-color-scheme: dark) {
-        html,
-        body {
+        html:not([data-theme='light']),
+        html:not([data-theme='light']) body {
           background-color: #14120F;
           color: #FFFAE1;
         }
+      }
+      html[data-theme='dark'],
+      html[data-theme='dark'] body {
+        background-color: #14120F;
+        color: #FFFAE1;
       }
       body {
         overflow: hidden;
@@ -57,9 +63,12 @@
         outline-offset: 2px;
       }
       @media (prefers-color-scheme: dark) {
-        :focus-visible {
+        html:not([data-theme='light']) :focus-visible {
           outline-color: #E0B75C;
         }
+      }
+      html[data-theme='dark'] :focus-visible {
+        outline-color: #E0B75C;
       }
     </style>
   </head>

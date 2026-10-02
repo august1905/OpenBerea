@@ -116,3 +116,20 @@ Where the spec was unclear, the simplest option that fits the Guiding principles
 
 64. **Route code splitting on the web** (`asyncRoutes` in app.json) plus on-demand loading of the Hebrew/Greek view, word panel, audio player, and verse-tool panels keeps the startup bundle to the framework and the reader.
 65. **A same-origin boot script** (`public/boot.js`) starts downloading the current chapter's data while the app's scripts load, and the Scripture font is preloaded. Chapters open in under a second in the app and on repeat visits. A first-ever visit on a slow mobile network still waits for the scripts (about 3.6 s on throttled 4G). Pre-rendering chapter HTML would be the next step if that matters.
+
+## Added after launch
+
+Requests from the site owner after the first release.
+
+66. **Light / dark toggle under Resources** (the site owner's request after launch). The spec's themes follow the device setting; the toggle flips whichever theme is showing, for this visit only. Like font size and high contrast it's held in memory, so nothing is saved and a reload returns to the device setting. The page behind the app (background, scrollbars, the browser's bar color) follows the choice through `html[data-theme]`.
+67. **Corner menus are richly animated** (the site owner's request after launch; everything else stays still). On the web, a small engine (`src/components/radial/engine.web.ts`) springs every dot, line, and label:
+    - Closed: the corner dot breathes, pings faintly every 7 s, and swells and leans toward a pointer or finger that comes within about 240 px, while preview dots fan out along the arc.
+    - Open: items fly out from the preview dots with a staggered spring, lines stretch with them, labels slide in, and dotted ring guides grow from the corner. Items drift gently, and items near the pointer magnify like a dock. The item a release would choose fills with gold, glows, and shows its icon. Light runs along the lines of the open path, and a swipe leaves a trail.
+    - Closing: the chosen item bursts and the rest fall back into the corner.
+    - Tab spheres trail a drag with a tilt, shake when far enough out to close, pop when closed, and glide when the arc re-spreads.
+68. **How the motion stays out of the way.**
+    - Test ids sit on still anchors at each item's resting place, and removed pieces animate out as clones on an `aria-hidden` layer without ids. The menus behave exactly as before for gestures, tests, and assistive technology.
+    - The loop runs only while something is moving, and the idle loops are compositor-only CSS animations.
+    - With `prefers-reduced-motion`, nothing moves or loops; menus simply fade.
+    - Labels now count as part of their item: hovering one lights its dot, and tapping one chooses it, but a dot directly under the pointer always wins.
+    - Releasing the corner dot without swiping leaves the menu open for tapping, however long it was held.

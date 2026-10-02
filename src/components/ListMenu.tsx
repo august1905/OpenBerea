@@ -102,7 +102,7 @@ function ListMenuContent({ title, nodes, onClose, footer, testID }: Props) {
                   accessibilityRole="button"
                   accessibilityState={{ disabled: !!node.disabled }}
                   aria-current={node.active ? 'true' : undefined}
-                  accessibilityLabel={node.children?.length ? t('menu.opensSubmenu', { label: node.label }) : node.label}
+                  accessibilityLabel={node.children?.length ? t('menu.opensSubmenu', { label: node.label }) : (node.a11yLabel ?? node.label)}
                   onPress={() => choose(node)}
                   style={pressStyle(({ pressed, hovered, focused }) => [
                     styles.item,

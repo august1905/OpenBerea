@@ -52,6 +52,22 @@ export function isTypingTarget(e: KeyboardEvent): boolean {
   return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || t.isContentEditable;
 }
 
+/**
+ * Points the page itself (background behind the app, scrollbars, form controls, the browser's bar
+ * color) at the chosen theme. `null` hands it back to the device setting.
+ */
+export function applyDocumentTheme(scheme: 'light' | 'dark' | null, background: string) {
+  if (Platform.OS !== 'web' || typeof document === 'undefined') return;
+  const root = document.documentElement;
+  if (scheme) root.dataset.theme = scheme;
+  else delete root.dataset.theme;
+  root.style.colorScheme = scheme ?? '';
+  document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]').forEach((meta) => {
+    if (!meta.dataset.device) meta.dataset.device = meta.content;
+    meta.content = scheme ? background : meta.dataset.device;
+  });
+}
+
 export function focusNode(ref: unknown) {
   const el = domNode(ref);
   if (el) el.focus();

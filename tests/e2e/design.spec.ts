@@ -28,7 +28,7 @@ test.describe('design system', () => {
     await page.evaluate(() => document.fonts.ready);
     expect(await page.evaluate(() => document.fonts.check('20px Literata'))).toBe(true);
     // Gold for the corner dots; never for text.
-    const dot = await page.getByTestId('main-menu-hint').evaluate((el) => getComputedStyle(el.firstElementChild!).backgroundColor);
+    const dot = await page.getByTestId('main-menu-hint-dot').evaluate((el) => getComputedStyle(el).backgroundColor);
     expect(dot).toBe(rgb('#A87A22'));
   });
 
@@ -39,7 +39,7 @@ test.describe('design system', () => {
     expect(await appBackground(page)).toBe(rgb('#14120F'));
     const color = await page.getByTestId('verse-1').evaluate((el) => getComputedStyle(el.parentElement!).color);
     expect(color).toBe(rgb('#FFFAE1'));
-    const dot = await page.getByTestId('main-menu-hint').evaluate((el) => getComputedStyle(el.firstElementChild!).backgroundColor);
+    const dot = await page.getByTestId('main-menu-hint-dot').evaluate((el) => getComputedStyle(el).backgroundColor);
     expect(dot).toBe(rgb('#A87A22'));
     await expectAccessible(page, 'dark reader');
     await context.close();
@@ -72,6 +72,46 @@ test.describe('design system', () => {
     expect(await size()).toBe(before);
     expect(await page.getByTestId('verse-1').evaluate((el) => getComputedStyle(el.parentElement!).fontFamily)).toContain('Literata');
     expect(await appBackground(page)).toBe(rgb('#FFFAE1'));
+  });
+
+  test('Resources › Light / dark switches the theme for this visit only', async ({ page }) => {
+    await gotoApp(page, '/read/jhn/3');
+    expect(await appBackground(page)).toBe(rgb('#FFFAE1'));
+    await swipe(page, 'main-menu', ['resources', 'res.theme']);
+    await expect.poll(() => appBackground(page)).toBe(rgb('#14120F'));
+    // The page behind the app follows too.
+    expect(await page.evaluate(() => getComputedStyle(document.body).backgroundColor)).toBe(rgb('#14120F'));
+    expect(await page.evaluate(() => document.documentElement.dataset.theme)).toBe('dark');
+    expect(await page.getByTestId('verse-1').evaluate((el) => getComputedStyle(el.parentElement!).color)).toBe(rgb('#FFFAE1'));
+    await expectAccessible(page, 'dark by choice');
+    // And back.
+    await openMenu(page, 'main-menu');
+    await tapItem(page, 'main-menu', 'resources');
+    await tapItem(page, 'main-menu', 'res.theme');
+    await expect.poll(() => appBackground(page)).toBe(rgb('#FFFAE1'));
+    // Nothing is saved: dark again, then a reload is back to the device setting.
+    await swipe(page, 'main-menu', ['resources', 'res.theme']);
+    await expect.poll(() => appBackground(page)).toBe(rgb('#14120F'));
+    await page.reload();
+    await page.getByTestId('verse-1').waitFor();
+    expect(await appBackground(page)).toBe(rgb('#FFFAE1'));
+    expect(await page.evaluate(() => document.documentElement.dataset.theme)).toBeUndefined();
+  });
+
+  test('on a dark device, Light / dark switches to light; the list menu says which way it goes', async ({ browser }) => {
+    const context = await browser.newContext({ colorScheme: 'dark' });
+    const page = await context.newPage();
+    await gotoApp(page, '/read/jhn/3');
+    expect(await appBackground(page)).toBe(rgb('#14120F'));
+    await page.keyboard.press('m');
+    await page.getByRole('button', { name: 'Resources, opens submenu' }).click();
+    await page.getByRole('button', { name: 'Light / dark: switch to light' }).click();
+    await expect.poll(() => appBackground(page)).toBe(rgb('#FFFAE1'));
+    expect(await page.evaluate(() => getComputedStyle(document.body).backgroundColor)).toBe(rgb('#FFFAE1'));
+    await page.keyboard.press('m');
+    await page.getByRole('button', { name: 'Resources, opens submenu' }).click();
+    await expect(page.getByRole('button', { name: 'Light / dark: switch to dark' })).toBeVisible();
+    await context.close();
   });
 
   test('tabs last for the current visit only', async ({ page }) => {

@@ -4,6 +4,8 @@ import type { IconName } from '../Icon';
 export interface RadialNode {
   id: string;
   label: string;
+  /** Spoken label in the list menu, when the visible label alone doesn't say what happens. */
+  a11yLabel?: string;
   /** Short text shown inside a sphere (tabs menu), e.g. "Jn 3". */
   short?: string;
   icon?: IconName;

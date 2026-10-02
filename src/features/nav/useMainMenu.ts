@@ -6,6 +6,7 @@ import { t } from '@/i18n';
 import { bookInfo, toBookCode } from '@/lib/bible/books';
 import { setDisplay, stepFontScale, useDisplay } from '@/lib/state/display';
 import { useCurrentPassage } from '@/lib/state/passage';
+import { useTheme } from '@/theme';
 
 import { interlinearHref, readHref, type ReadVersion } from './hrefs';
 import { go } from './navigate';
@@ -39,6 +40,7 @@ export function useMainMenu(): RadialNode[] {
   const params = useGlobalSearchParams<{ tr?: string }>();
   const passage = useCurrentPassage();
   const display = useDisplay();
+  const scheme = useTheme().palette.scheme;
 
   return useMemo(() => {
     const onRead = /^\/read\//.test(pathname);
@@ -115,15 +117,24 @@ export function useMainMenu(): RadialNode[] {
     ].slice(0, 5);
 
     const memorize = extra('memorize', ctx);
-    const resources = extra('resources', ctx);
+    // Light / dark sits last under Resources (the site owner's choice). It flips whichever theme is
+    // showing, starting from the device setting; like every display option it resets each visit.
+    const themeNode: RadialNode = {
+      id: 'res.theme',
+      label: t('menu.lightDark'),
+      a11yLabel: t(scheme === 'dark' ? 'menu.switchToLight' : 'menu.switchToDark'),
+      icon: scheme === 'dark' ? 'sun' : 'moon',
+      onSelect: () => setDisplay({ theme: scheme === 'dark' ? 'light' : 'dark' }),
+    };
+    const resources = [...extra('resources', ctx).slice(0, 4), themeNode];
 
     const top: RadialNode[] = [
       read,
       { id: 'search', label: t('menu.search'), icon: 'search', onSelect: () => go('/search') },
       { id: 'study', label: t('menu.study'), icon: 'study', ...(studyChildren.length ? { children: studyChildren } : { onSelect: () => go('/study') }) },
       { id: 'memorize', label: t('menu.memorize'), icon: 'memorize', ...(memorize.length ? { children: memorize.slice(0, 5) } : { onSelect: () => go('/memorize') }) },
-      { id: 'resources', label: t('menu.resources'), icon: 'resources', ...(resources.length ? { children: resources.slice(0, 5) } : { onSelect: () => go('/about') }) },
+      { id: 'resources', label: t('menu.resources'), icon: 'resources', children: resources },
     ];
     return top;
-  }, [pathname, params.tr, passage, display]);
+  }, [pathname, params.tr, passage, display, scheme]);
 }

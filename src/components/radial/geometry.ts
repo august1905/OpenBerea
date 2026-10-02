@@ -170,3 +170,31 @@ export function labelSide(corner: Corner, dotX: number, labelWidth: number, scre
   const room = corner === 'bottom-right' ? dotX - dotRadius - 8 : screenWidth - dotX - dotRadius - 8;
   return room >= labelWidth + 8 ? 'inward' : 'outward';
 }
+
+export interface LabelBox {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  /** +1 when the pill sits right of its dot, −1 left. */
+  side: 1 | -1;
+}
+
+/** Height of a label pill (Inter 14px with padding). */
+export const LABEL_HEIGHT = 28;
+
+/**
+ * The label pill's box beside a dot: on the side facing the middle of the screen unless that runs
+ * off the edge (see labelSide), `dotRadius + 6` px from the dot's center, vertically centered.
+ */
+export function labelBox(corner: Corner, dot: Point, text: string, screenWidth: number, dotRadius: number): LabelBox {
+  const w = estimateLabelWidth(text);
+  const inward = labelSide(corner, dot.x, w, screenWidth, dotRadius) === 'inward';
+  const left = corner === 'bottom-right' ? inward : !inward;
+  const gap = dotRadius + 6;
+  return { x: left ? dot.x - gap - w : dot.x + gap, y: dot.y - LABEL_HEIGHT / 2, w, h: LABEL_HEIGHT, side: left ? -1 : 1 };
+}
+
+export function inBox(box: { x: number; y: number; w: number; h: number }, p: Point, slack = 4): boolean {
+  return p.x >= box.x - slack && p.x <= box.x + box.w + slack && p.y >= box.y - slack && p.y <= box.y + box.h + slack;
+}

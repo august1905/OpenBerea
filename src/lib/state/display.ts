@@ -7,6 +7,8 @@ export interface DisplayOptions {
   /** Swaps Scripture to a plain sans-serif with wider letter, word, and line spacing. */
   dyslexiaFont: boolean;
   highContrast: boolean;
+  /** Light or dark, chosen from the menu; "device" follows the device setting. */
+  theme: 'device' | 'light' | 'dark';
   redLetter: boolean;
   layout: 'verse' | 'paragraph';
 }
@@ -17,6 +19,7 @@ export const defaultDisplay: DisplayOptions = {
   fontScale: 1,
   dyslexiaFont: false,
   highContrast: false,
+  theme: 'device',
   redLetter: true,
   layout: 'verse',
 };

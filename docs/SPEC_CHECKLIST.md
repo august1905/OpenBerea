@@ -4,7 +4,7 @@ One line per requirement in the spec ("Bible Study App — Requirements Spec.md"
 
 Legend: ✅ yes · ⚠️ partly (see note) · ⏳ waiting on the owner (listed in the hand-off)
 
-Final run: 447 unit tests and 220 end-to-end runs passed (6 skipped by design: phone-only or desktop-only cases), axe reported no serious or critical violations, 394 of 394 external links resolved, the data checks passed on 2,000 sampled verses per source, and Lighthouse scored 100 for accessibility, best practices, and SEO on the key pages.
+Latest run (after the owner's light/dark and menu-motion requests): 462 unit tests and 240 end-to-end runs passed (6 skipped by design: phone-only or desktop-only cases), axe reported no serious or critical violations, 394 of 394 external links resolved, the data checks passed on 2,000 sampled verses per source, and Lighthouse scored 100 for accessibility, best practices, and SEO on the key pages.
 
 ## Guiding principles
 
@@ -109,9 +109,9 @@ Final run: 447 unit tests and 220 end-to-end runs passed (6 skipped by design: p
 | D4 | Colors: background #FFFAE1, text #1C1A17, gold #A87A22, peach #F2A06B | ✅ | ✅ | `palette.test`, `design.spec` |
 | D5 | Gold for menu dots, lines, and active states; peach for soft highlights behind text | ✅ | ✅ | `design.spec` (gold dots); `reader.spec` (peach verse highlight); screenshots |
 | D6 | Accents never used for body text | ✅ | ✅ | Gold appears only on dots, lines, rules, and the loading spinner (source check); `palette.test` (text colors meet WCAG contrast) |
-| D7 | Light and dark themes following the device setting (dark: near-black background, #FFFAE1 text, same accents) | ✅ | ✅ | `design.spec` "dark theme follows the device setting" |
+| D7 | Light and dark themes following the device setting (dark: near-black background, #FFFAE1 text, same accents) | ✅ | ✅ | `design.spec` "dark theme follows the device setting"; owner addition: Resources › Light / dark toggles it for the visit (`design.spec`, decision 66) |
 | N1 | Two corner menus: bottom-right main menu, bottom-left tabs | ✅ | ✅ | `menus.spec` |
-| N2 | Press and hold a corner: a dot appears with up to 5 dots fanned in a quarter circle, connected by lines | ✅ | ✅ | `menus.spec`; `geometry.test` |
+| N2 | Press and hold a corner: a dot appears with up to 5 dots fanned in a quarter circle, connected by lines | ✅ | ✅ | `menus.spec`; `geometry.test`; owner addition: animated menus (`motion.spec`, `motion.test`, decisions 67–68) |
 | N3 | Swipe toward a dot to choose it; dots with sub-items open their own arc | ✅ | ✅ | `menus.spec` (three-level swipe); `geometry.test` (ring-aware targeting) |
 | N4 | Main menu top level: Read, Search, Study, Memorize, Resources (up to 3 levels deep) | ✅ | ✅ | `menus.spec` |
 | N5 | Tabs menu: each open tab is a sphere with a short label (e.g., "Jn 3") and a view icon (passage, interlinear, word study) | ✅ | ✅ | `menus.spec`, `original.spec` ("G25" tab) |

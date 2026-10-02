@@ -179,9 +179,11 @@ export function Button({
 
 export function Loading({ label }: { label?: string }) {
   const { palette } = useTheme();
+  const name = label ?? t('common.loading');
   return (
-    <View style={styles.center} accessibilityLabel={label ?? t('common.loading')} role="status">
-      <ActivityIndicator color={palette.gold} />
+    <View style={styles.center} accessibilityLabel={name} role="status">
+      {/* react-native-web renders the spinner as a progressbar, which needs its own name. */}
+      <ActivityIndicator color={palette.gold} accessibilityLabel={name} />
     </View>
   );
 }
