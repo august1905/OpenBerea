@@ -1,18 +1,34 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
+import { StyleSheet, Text } from 'react-native';
+
+import { Body, Screen, TextButton } from '@/components/ui';
+import { go } from '@/features/nav/navigate';
+import { BookBrowser } from '@/features/home/BookBrowser';
+import { QuickJump } from '@/features/home/QuickJump';
+import { VerseOfDay } from '@/features/home/VerseOfDay';
+import { t } from '@/i18n';
+import { useTheme } from '@/theme';
 
 export default function Home() {
+  const { palette, fonts } = useTheme();
+  const { jump } = useLocalSearchParams<{ jump?: string }>();
   return (
-    <View style={styles.container}>
-      <Text accessibilityRole="header" style={styles.title}>
-        OpenBerea
+    <Screen title={t('app.tagline')}>
+      <Text role="heading" aria-level={1} style={[styles.title, { color: palette.text, fontFamily: fonts.scripture }]}>
+        {t('home.title')}
       </Text>
-      <Text style={styles.body}>A free, open-source Bible study website.</Text>
-    </View>
+      <Body muted>{t('app.tagline')}</Body>
+      <QuickJump autoFocus={jump === '1'} />
+      <VerseOfDay />
+      <BookBrowser />
+      <Body muted style={{ marginTop: 40, fontSize: 14 }}>
+        {t('home.footer')}
+      </Body>
+      <TextButton testID="home-about" label={t('home.about')} onPress={() => go('/about')} style={{ alignSelf: 'flex-start', marginLeft: -8, marginTop: 4 }} size={14} />
+    </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#FFFAE1', padding: 24 },
-  title: { fontSize: 32, color: '#1C1A17', marginBottom: 8 },
-  body: { fontSize: 18, color: '#1C1A17' },
+  title: { fontSize: 40, fontWeight: '500', marginBottom: 4 },
 });

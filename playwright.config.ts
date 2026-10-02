@@ -8,7 +8,9 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
   workers: process.env.PW_WORKERS ? Number(process.env.PW_WORKERS) : 4,
-  reporter: [['list'], ['html', { open: 'never' }]],
+  // Separate folders let several builds be tested at once (DIST_DIR + PORT + PW_OUT).
+  outputDir: process.env.PW_OUT ?? 'test-results',
+  reporter: [['list'], ['html', { open: 'never', outputFolder: `${process.env.PW_OUT ?? 'playwright'}-report` }]],
   timeout: 30_000,
   use: {
     baseURL: `http://localhost:${port}`,

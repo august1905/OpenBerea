@@ -3,34 +3,67 @@
   <head>
     <meta charset="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="OpenBerea: a free, open-source Bible study website. KJV and ASV, Hebrew and Greek, lexicons, study tools, and memorization. No account, no ads, no tracking." />
+    <meta name="theme-color" content="#FFFAE1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#14120F" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <title>%WEB_TITLE%</title>
+    <!-- Self-hosted, open-licensed fonts (SIL OFL 1.1); licenses in /fonts/licenses/. -->
+    <style id="fonts">
+      @font-face { font-family: 'Literata'; src: url('/fonts/Literata-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Literata'; src: url('/fonts/Literata-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+      @font-face { font-family: 'Literata'; src: url('/fonts/Literata-Bold.woff2') format('woff2'); font-weight: 600 700; font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Literata'; src: url('/fonts/Literata-BoldItalic.woff2') format('woff2'); font-weight: 600 700; font-style: italic; font-display: swap; }
+      @font-face { font-family: 'Inter'; src: url('/fonts/Inter-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+      @font-face { font-family: 'Inter'; src: url('/fonts/Inter-Medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+      @font-face { font-family: 'Inter'; src: url('/fonts/Inter-SemiBold.woff2') format('woff2'); font-weight: 600 700; font-display: swap; }
+      @font-face { font-family: 'Ezra SIL'; src: url('/fonts/SILEOT.woff') format('woff'); font-display: swap; }
+      @font-face { font-family: 'Gentium Plus'; src: url('/fonts/GentiumPlus-Regular.woff2') format('woff2'); font-style: normal; font-display: swap; }
+      @font-face { font-family: 'Gentium Plus'; src: url('/fonts/GentiumPlus-Italic.woff2') format('woff2'); font-style: italic; font-display: swap; }
+    </style>
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
-      /* These styles make the body full-height */
       html,
       body {
         height: 100%;
+        background-color: #FFFAE1;
+        color: #1C1A17;
       }
-      /* These styles disable body scrolling if you are using <ScrollView> */
+      @media (prefers-color-scheme: dark) {
+        html,
+        body {
+          background-color: #14120F;
+          color: #FFFAE1;
+        }
+      }
       body {
         overflow: hidden;
+        margin: 0;
+        -webkit-text-size-adjust: 100%;
       }
-      /* These styles make the root element full-height */
       #root {
         display: flex;
         height: 100%;
         flex: 1;
       }
+      :focus-visible {
+        outline: 2px solid #7A5510;
+        outline-offset: 2px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :focus-visible {
+          outline-color: #E0B75C;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <!-- The root element for your Expo app. -->
+    <noscript>OpenBerea needs JavaScript to run.</noscript>
     <div id="root"></div>
   </body>
 </html>

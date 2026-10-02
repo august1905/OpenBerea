@@ -1,0 +1,22 @@
+// Interface text shared across the app. Feature areas keep their strings in sibling files.
+export const common = {
+  'app.name': 'OpenBerea',
+  'app.tagline': 'A free, open-source Bible study website',
+  'common.loading': 'Loading…',
+  'common.close': 'Close',
+  'common.back': 'Back',
+  'common.open': 'Open',
+  'common.openNewTab': 'Open in new tab',
+  'common.go': 'Go',
+  'common.cancel': 'Cancel',
+  'common.more': 'Show more',
+  'common.less': 'Show less',
+  'common.none': 'Nothing here yet.',
+  'common.error': 'Something went wrong loading this. Check your connection and try again.',
+  'common.retry': 'Try again',
+  'common.externalLink': '{label} (opens in a new window)',
+  'common.offlineUnavailable': "This isn't available offline yet. Connect to the internet to load it.",
+  'notFound.title': 'Page not found',
+  'notFound.body': "That page doesn't exist.",
+  'notFound.home': 'Go to the home page',
+} as const;
