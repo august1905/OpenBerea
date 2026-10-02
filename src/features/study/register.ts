@@ -1,14 +1,17 @@
+import { createElement } from 'react';
+
 import { t } from '@/i18n';
+import { lazyComponent } from '@/lib/lazy';
 
 import { go } from '../nav/navigate';
 import { registerMenuItems } from '../nav/useMainMenu';
 import { registerVerseAction, registerVersePanel } from '../reader/verseActions';
 import { commentaryHref, crossrefsHref, dictionaryHref, inductiveHref, topicsHref, variantsHref } from './hrefs';
-import { renderCrossRefPanel } from './CrossRefPanel';
 
 // Study tools: verse tools sheet entries and corner-menu items.
 
-registerVersePanel({ id: 'study.crossrefs', render: renderCrossRefPanel });
+const CrossRefPanel = lazyComponent(() => import('./CrossRefPanel').then((m) => m.CrossRefPanel));
+registerVersePanel({ id: 'study.crossrefs', render: (ctx, close) => createElement(CrossRefPanel, { ctx, close }) });
 
 registerVerseAction((ctx) => ({
   id: 'commentary',

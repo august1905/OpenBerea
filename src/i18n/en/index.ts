@@ -1,3 +1,4 @@
+import { about } from './about';
 import { audio } from './audio';
 import { books } from './books';
 import { common } from './common';
@@ -13,6 +14,7 @@ import { study } from './study';
 
 export const en = {
   ...common,
+  ...about,
   ...audio,
   ...nav,
   ...home,

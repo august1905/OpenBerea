@@ -17,6 +17,8 @@
     "serve": "node scripts/serve-dist.mjs",
     "e2e": "playwright test",
     "check:links": "tsx scripts/check-links.ts",
+    "verify": "tsx scripts/verify-data.ts",
+    "perf": "node scripts/perf.mjs",
     "check": "npm run typecheck && npm run lint && npm run test && npm run build && npm run e2e",
     "deploy": "wrangler deploy"
   },

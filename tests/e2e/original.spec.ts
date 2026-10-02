@@ -57,6 +57,17 @@ test.describe('original languages', () => {
     await expect(panel).toContainText('love (');
   });
 
+  test('the word panel shows the root word as a link', async ({ page }) => {
+    await gotoApp(page, '/read/1jn/4');
+    await page.getByTestId('verse-8').getByRole('button', { name: 'love', exact: true }).first().click();
+    const panel = page.getByTestId('word-panel');
+    await expect(panel.getByTestId('word-strongs')).toHaveText('Strong’s G26');
+    const root = panel.getByTestId('word-root');
+    await expect(root).toContainText('G25');
+    await root.getByRole('link', { name: 'G25' }).click();
+    await expect(page).toHaveURL(/\/word\/G25/);
+  });
+
   test('interlinear shows the original word under each English word', async ({ page }) => {
     await gotoApp(page, '/interlinear/jhn/3?v=16');
     const verse = page.getByTestId('il-verse-16');

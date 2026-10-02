@@ -17,7 +17,17 @@
       "themeColor": "#FFFAE1",
       "backgroundColor": "#FFFAE1"
     },
-    "plugins": ["expo-router"],
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "asyncRoutes": {
+            "web": true,
+            "default": false
+          }
+        }
+      ]
+    ],
     "experiments": {
       "typedRoutes": true
     }

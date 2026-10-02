@@ -2,11 +2,13 @@ import { createElement } from 'react';
 
 import { t } from '@/i18n';
 import { bookInfo } from '@/lib/bible/books';
+import { lazyComponent } from '@/lib/lazy';
 
 import { go } from '../nav/navigate';
 import { registerMenuItems } from '../nav/useMainMenu';
 import { registerVerseAction, registerVersePanel } from '../reader/verseActions';
-import { StudyLinks } from './components';
+
+const StudyLinks = lazyComponent(() => import('./components').then((m) => m.StudyLinks));
 
 registerMenuItems(
   'resources',

@@ -24,6 +24,7 @@ const shellFiles = [
   '/index.html',
   '/manifest.webmanifest',
   '/favicon.ico',
+  '/boot.js',
   ...walk(join(dist, '_expo')).map(url),
   ...walk(join(dist, 'fonts')).filter((p) => /\.(woff2?|ttf)$/.test(p)).map(url),
   ...walk(join(dist, 'icons')).map(url),

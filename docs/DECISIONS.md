@@ -111,3 +111,8 @@ Where the spec was unclear, the simplest option that fits the Guiding principles
 61. **Maps** open fitted to the frame. `?ch=` shows a chapter's places and `?place=` selects one. Tapping the same spot again cycles through places stacked at one point (e.g. Jerusalem, Zion).
 62. **Harmony columns** sit side by side only when each would be at least 230px wide; on phones the accounts stack under gospel headings. The verse tool "Harmony" appears only for Gospel verses that a section covers.
 63. **Family trees** run down a single spine of generations (grandparents to grandchildren) with every name a link, so they stay readable at phone width without a graph library.
+
+## Performance
+
+64. **Route code splitting on the web** (`asyncRoutes` in app.json) plus on-demand loading of the Hebrew/Greek view, word panel, audio player, and verse-tool panels keeps the startup bundle to the framework and the reader.
+65. **A same-origin boot script** (`public/boot.js`) starts downloading the current chapter's data while the app's scripts load, and the Scripture font is preloaded. Chapters open in under a second in the app and on repeat visits. A first-ever visit on a slow mobile network still waits for the scripts (about 3.6 s on throttled 4G). Pre-rendering chapter HTML would be the next step if that matters.

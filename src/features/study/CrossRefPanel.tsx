@@ -9,7 +9,7 @@ import { Credit, InlineLink } from './parts';
 import { VerseXrefs } from './XrefList';
 
 /** Cross-references in the verse tools sheet (opened by tapping a verse number). */
-function CrossRefPanel({ ctx, close }: { ctx: VerseContext; close: () => void }) {
+export function CrossRefPanel({ ctx, close }: { ctx: VerseContext; close: () => void }) {
   const label = `${bookName(ctx.book)} ${ctx.chapter}`;
   return (
     <View testID="verse-xref-panel" style={styles.panel}>

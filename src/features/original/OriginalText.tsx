@@ -90,5 +90,6 @@ export function OriginalText({
 const styles = StyleSheet.create({
   hint: { fontSize: 13, marginBottom: 14 },
   verse: { marginBottom: 12, borderRadius: 6 },
-  num: { fontWeight: '600' },
+  // Padding gives the small verse-number button a 24px touch target (WCAG 2.5.8).
+  num: { fontWeight: '600', paddingHorizontal: 8, paddingVertical: 6 },
 });
