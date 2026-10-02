@@ -1,0 +1,673 @@
+{
+  "_note": "OpenBerea resource library. Edit freely: add, remove, or change items, then run `npm run data` and `npm run build`. Each item: id (unique), title (exactly as on the page), teacher, ministry, type (sermon | article | video | audio | book | tool), url (https), refs (compact refs like JHN.3.16 or ROM.8.28-30 or PSA.23), books (book codes), topics (lowercase words), embed: null, or {kind: 'youtube', id} / {kind: 'audio', src} for John Piper media only (Desiring God allows embedding whole, unaltered audio and video; Grace to You allows links only; HeartCry links are used). verified: date the link was checked.",
+  "items": [
+    {
+      "id": "dg-the-sale-of-joseph-and-the-son-of-god",
+      "title": "The Sale of Joseph and the Son of God",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "audio",
+      "url": "https://www.desiringgod.org/messages/the-sale-of-joseph-and-the-son-of-god",
+      "refs": [
+        "GEN.37"
+      ],
+      "books": [
+        "GEN"
+      ],
+      "topics": [
+        "suffering",
+        "sovereignty",
+        "gospel"
+      ],
+      "embed": {
+        "kind": "audio",
+        "src": "https://audio.desiringgod.org/20070909-en-the-sale-of-joseph-and-the-son-of-god.mp3"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-our-deepest-prayer-hallowed-be-your-name",
+      "title": "Our Deepest Prayer: Hallowed Be Your Name",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "audio",
+      "url": "https://www.desiringgod.org/messages/our-deepest-prayer-hallowed-be-your-name",
+      "refs": [
+        "MAT.6.5-15"
+      ],
+      "books": [
+        "MAT"
+      ],
+      "topics": [
+        "prayer"
+      ],
+      "embed": {
+        "kind": "audio",
+        "src": "https://audio.desiringgod.org/20110109-en-our-deepest-prayer-hallowed-be-your-name.mp3"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-god-so-loved-the-world",
+      "title": "God So Loved the World",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "audio",
+      "url": "https://www.desiringgod.org/messages/god-so-loved-the-world-part-2",
+      "refs": [
+        "JHN.3.14-18"
+      ],
+      "books": [
+        "JHN"
+      ],
+      "topics": [
+        "gospel",
+        "love-of-god"
+      ],
+      "embed": {
+        "kind": "audio",
+        "src": "https://audio.desiringgod.org/20090510-en-god-so-loved-the-world-part-2.mp3"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-this-illness-is-for-the-glory-of-god",
+      "title": "This Illness Is for the Glory of God",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "audio",
+      "url": "https://www.desiringgod.org/messages/this-illness-is-for-the-glory-of-god",
+      "refs": [
+        "JHN.11.1-16"
+      ],
+      "books": [
+        "JHN"
+      ],
+      "topics": [
+        "suffering",
+        "glory-of-god"
+      ],
+      "embed": {
+        "kind": "audio",
+        "src": "https://audio.desiringgod.org/20110910-en-this-illness-is-for-the-glory-of-god.mp3"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-free-from-judgment-fighting-sin-full-assurance",
+      "title": "Free from Judgment, Fighting Sin, Full Assurance",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "audio",
+      "url": "https://www.desiringgod.org/messages/free-from-judgment-fighting-sin-full-assurance",
+      "refs": [
+        "ROM.8.1-8"
+      ],
+      "books": [
+        "ROM"
+      ],
+      "topics": [
+        "assurance",
+        "holiness",
+        "gospel"
+      ],
+      "embed": {
+        "kind": "audio",
+        "src": "https://audio.desiringgod.org/20140927-en-free-from-judgment-fighting-sin-full-assurance.mp3"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-spiritual-depression-in-the-psalms",
+      "title": "Spiritual Depression in the Psalms",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "audio",
+      "url": "https://www.desiringgod.org/messages/spiritual-depression-in-the-psalms",
+      "refs": [
+        "PSA.42"
+      ],
+      "books": [
+        "PSA"
+      ],
+      "topics": [
+        "suffering",
+        "joy",
+        "hope"
+      ],
+      "embed": {
+        "kind": "audio",
+        "src": "https://audio.desiringgod.org/20080601-en-spiritual-depression-in-the-psalms.mp3"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-the-beast-the-book-and-the-beauty-of-the-lamb",
+      "title": "The Beast, the Book, and the Beauty of the Lamb",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "video",
+      "url": "https://www.desiringgod.org/messages/the-beast-the-book-and-the-beauty-of-the-lamb",
+      "refs": [
+        "REV.13.1-10"
+      ],
+      "books": [
+        "REV"
+      ],
+      "topics": [
+        "suffering",
+        "perseverance",
+        "glory-of-christ"
+      ],
+      "embed": {
+        "kind": "youtube",
+        "id": "lGS3yxRhKkY"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-lionhearted-and-lamblike",
+      "title": "Lionhearted and Lamblike",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "sermon",
+      "url": "https://www.desiringgod.org/messages/lionhearted-and-lamblike-the-christian-husband-as-head-part-2",
+      "refs": [
+        "EPH.5.21-33"
+      ],
+      "books": [
+        "EPH"
+      ],
+      "topics": [
+        "marriage",
+        "manhood"
+      ],
+      "embed": {
+        "kind": "youtube",
+        "id": "slpMWBop3Bo"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-jesus-a-priest-after-the-order-of-melchizedek",
+      "title": "Jesus: A Priest After the Order of Melchizedek",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "sermon",
+      "url": "https://www.desiringgod.org/messages/jesus-a-priest-after-the-order-of-melchizedek",
+      "refs": [
+        "HEB.7.1-10"
+      ],
+      "books": [
+        "HEB"
+      ],
+      "topics": [
+        "christ",
+        "priesthood"
+      ],
+      "embed": {
+        "kind": "youtube",
+        "id": "H2Ksf-OpaXY"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-latb-gloom-to-glory-by-a-great-light",
+      "title": "Isaiah 9:1–7, Part 1: Gloom to Glory by a Great Light",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "video",
+      "url": "https://www.desiringgod.org/labs/gloom-to-glory-by-a-great-light",
+      "refs": [
+        "ISA.9.1-7"
+      ],
+      "books": [
+        "ISA"
+      ],
+      "topics": [
+        "hope",
+        "christ",
+        "prophecy"
+      ],
+      "embed": {
+        "kind": "youtube",
+        "id": "t3FE0iL3sfk"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-latb-does-god-rule-over-sin",
+      "title": "Genesis 50:16–21: Does God Rule over Sin?",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "video",
+      "url": "https://www.desiringgod.org/labs/does-god-rule-over-sin",
+      "refs": [
+        "GEN.50.16-21"
+      ],
+      "books": [
+        "GEN"
+      ],
+      "topics": [
+        "sovereignty",
+        "suffering"
+      ],
+      "embed": {
+        "kind": "youtube",
+        "id": "2aVtL04y71g"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-latb-is-god-testing-me",
+      "title": "James 1:12–15: Is God Testing Me?",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "video",
+      "url": "https://www.desiringgod.org/labs/is-god-testing-me",
+      "refs": [
+        "JAS.1.12-15"
+      ],
+      "books": [
+        "JAS"
+      ],
+      "topics": [
+        "trials",
+        "temptation",
+        "suffering"
+      ],
+      "embed": {
+        "kind": "youtube",
+        "id": "vij3KiKt0x8"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "dg-latb-our-favorite-verse-in-the-bible",
+      "title": "Our Favorite Verse in the Bible",
+      "teacher": "John Piper",
+      "ministry": "Desiring God",
+      "type": "video",
+      "url": "https://www.desiringgod.org/labs/our-favorite-verse-in-the-bible",
+      "refs": [
+        "JHN.3.16"
+      ],
+      "books": [
+        "JHN"
+      ],
+      "topics": [
+        "gospel",
+        "faith"
+      ],
+      "embed": {
+        "kind": "youtube",
+        "id": "djdEsZzEuRk"
+      },
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "gty-creation-believe-it-or-not-part-1",
+      "title": "Creation: Believe It or Not, Part 1",
+      "teacher": "John MacArthur",
+      "ministry": "Grace to You",
+      "type": "sermon",
+      "url": "https://www.gty.org/sermons/90-208/creation-believe-it-or-not-part-1",
+      "refs": [
+        "GEN.1.1"
+      ],
+      "books": [
+        "GEN"
+      ],
+      "topics": [
+        "creation",
+        "scripture"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "gty-scripture-is-sufficient",
+      "title": "Scripture Is Sufficient",
+      "teacher": "John MacArthur",
+      "ministry": "Grace to You",
+      "type": "sermon",
+      "url": "https://www.gty.org/sermons/80-420/scripture-is-sufficient",
+      "refs": [
+        "PSA.19"
+      ],
+      "books": [
+        "PSA"
+      ],
+      "topics": [
+        "scripture"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "gty-the-substituted-servant-part-1",
+      "title": "The Substituted Servant, Part 1",
+      "teacher": "John MacArthur",
+      "ministry": "Grace to You",
+      "type": "sermon",
+      "url": "https://www.gty.org/sermons/90-439/the-substituted-servant-part-1",
+      "refs": [
+        "ISA.53.4-6"
+      ],
+      "books": [
+        "ISA"
+      ],
+      "topics": [
+        "gospel",
+        "atonement"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "gty-the-only-way-to-happiness-be-poor-in-spirit",
+      "title": "The Only Way to Happiness: Be Poor in Spirit",
+      "teacher": "John MacArthur",
+      "ministry": "Grace to You",
+      "type": "sermon",
+      "url": "https://www.gty.org/sermons/90-189/the-only-way-to-happiness-be-poor-in-spirit",
+      "refs": [
+        "MAT.5.3"
+      ],
+      "books": [
+        "MAT"
+      ],
+      "topics": [
+        "humility",
+        "joy"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "gty-you-must-be-born-again",
+      "title": "You Must Be Born Again",
+      "teacher": "John MacArthur",
+      "ministry": "Grace to You",
+      "type": "sermon",
+      "url": "https://www.gty.org/sermons/81-97/you-must-be-born-again",
+      "refs": [
+        "JHN.3.1-18"
+      ],
+      "books": [
+        "JHN"
+      ],
+      "topics": [
+        "gospel",
+        "new-birth"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "gty-the-promise-of-security-part-1",
+      "title": "The Promise of Security, Part 1",
+      "teacher": "John MacArthur",
+      "ministry": "Grace to You",
+      "type": "sermon",
+      "url": "https://www.gty.org/sermons/45-64/the-promise-of-security-part-1",
+      "refs": [
+        "ROM.8.28"
+      ],
+      "books": [
+        "ROM"
+      ],
+      "topics": [
+        "suffering",
+        "assurance",
+        "sovereignty"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "gty-gospel-grace-from-death-to-life",
+      "title": "Gospel Grace: From Death to Life",
+      "teacher": "John MacArthur",
+      "ministry": "Grace to You",
+      "type": "sermon",
+      "url": "https://www.gty.org/sermons/49-7/gospel-grace-from-death-to-life",
+      "refs": [
+        "EPH.2.1-10"
+      ],
+      "books": [
+        "EPH"
+      ],
+      "topics": [
+        "gospel",
+        "grace"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "gty-the-substance-of-faith",
+      "title": "The Substance of Faith",
+      "teacher": "John MacArthur",
+      "ministry": "Grace to You",
+      "type": "sermon",
+      "url": "https://www.gty.org/sermons/90-381/the-substance-of-faith",
+      "refs": [
+        "HEB.11.1-3"
+      ],
+      "books": [
+        "HEB"
+      ],
+      "topics": [
+        "faith"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "gty-how-to-endure-trials-part-1",
+      "title": "How to Endure Trials, Part 1",
+      "teacher": "John MacArthur",
+      "ministry": "Grace to You",
+      "type": "sermon",
+      "url": "https://www.gty.org/sermons/90-205/how-to-endure-trials-part-1",
+      "refs": [
+        "JAS.1.2-12"
+      ],
+      "books": [
+        "JAS"
+      ],
+      "topics": [
+        "suffering",
+        "trials",
+        "joy"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "gty-the-history-of-the-future",
+      "title": "The History of the Future",
+      "teacher": "John MacArthur",
+      "ministry": "Grace to You",
+      "type": "sermon",
+      "url": "https://www.gty.org/sermons/81-157/the-history-of-the-future",
+      "refs": [
+        "REV.1.1-8"
+      ],
+      "books": [
+        "REV"
+      ],
+      "topics": [
+        "hope",
+        "second-coming"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "washer-examine-yourself",
+      "title": "Examine Yourself",
+      "teacher": "Paul Washer",
+      "ministry": "HeartCry Missionary Society",
+      "type": "sermon",
+      "url": "https://www.sermonaudio.com/sermons/31191654334497",
+      "refs": [
+        "2CO.13.5"
+      ],
+      "books": [
+        "2CO"
+      ],
+      "topics": [
+        "assurance",
+        "faith"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "washer-the-depth-of-the-gospel-part-1",
+      "title": "The Depth of the Gospel - Part 1",
+      "teacher": "Paul Washer",
+      "ministry": "HeartCry Missionary Society",
+      "type": "sermon",
+      "url": "https://www.sermonaudio.com/sermons/1611117171",
+      "refs": [
+        "2CO.5.21"
+      ],
+      "books": [
+        "2CO"
+      ],
+      "topics": [
+        "gospel",
+        "atonement"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "washer-the-impossibility-of-the-christian-life",
+      "title": "The Impossibility of the Christian Life",
+      "teacher": "Paul Washer",
+      "ministry": "HeartCry Missionary Society",
+      "type": "sermon",
+      "url": "https://www.sermonaudio.com/sermons/927121556150",
+      "refs": [
+        "JHN.15.1"
+      ],
+      "books": [
+        "JHN"
+      ],
+      "topics": [
+        "abiding",
+        "holiness"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "washer-the-gospel-of-jesus-christ",
+      "title": "The Gospel of Jesus Christ",
+      "teacher": "Paul Washer",
+      "ministry": "HeartCry Missionary Society",
+      "type": "sermon",
+      "url": "https://www.sermonaudio.com/sermons/10112131902",
+      "refs": [
+        "EXO.34.5-8",
+        "PRO.17.15",
+        "ROM.4.7-8"
+      ],
+      "books": [
+        "EXO",
+        "PRO",
+        "ROM"
+      ],
+      "topics": [
+        "gospel",
+        "justification"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "washer-ephesians-1-part-1",
+      "title": "Ephesians 1 - (Part 1)",
+      "teacher": "Paul Washer",
+      "ministry": "HeartCry Missionary Society",
+      "type": "sermon",
+      "url": "https://www.sermonaudio.com/sermons/51413130147",
+      "refs": [
+        "EPH.1"
+      ],
+      "books": [
+        "EPH"
+      ],
+      "topics": [
+        "grace",
+        "sovereignty"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "washer-a-liar-and-a-coward",
+      "title": "A Liar and a Coward",
+      "teacher": "Paul Washer",
+      "ministry": "HeartCry Missionary Society",
+      "type": "sermon",
+      "url": "https://www.sermonaudio.com/sermons/10212135897",
+      "refs": [
+        "PSA.103.15-16"
+      ],
+      "books": [
+        "PSA"
+      ],
+      "topics": [
+        "mortality",
+        "humility"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "washer-final-judgement",
+      "title": "Final Judgement",
+      "teacher": "Paul Washer",
+      "ministry": "HeartCry Missionary Society",
+      "type": "sermon",
+      "url": "https://www.sermonaudio.com/sermons/713181331205",
+      "refs": [
+        "REV.4",
+        "REV.20"
+      ],
+      "books": [
+        "REV"
+      ],
+      "topics": [
+        "judgment",
+        "gospel"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    },
+    {
+      "id": "washer-pray-and-be-alone-with-god",
+      "title": "Pray and Be Alone With God",
+      "teacher": "Paul Washer",
+      "ministry": "HeartCry Missionary Society",
+      "type": "sermon",
+      "url": "https://www.sermonaudio.com/sermons/53119927568044",
+      "refs": [
+        "LUK.11.1-13"
+      ],
+      "books": [
+        "LUK"
+      ],
+      "topics": [
+        "prayer"
+      ],
+      "embed": null,
+      "verified": "2026-10-02"
+    }
+  ]
+}

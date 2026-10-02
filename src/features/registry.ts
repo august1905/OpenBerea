@@ -4,3 +4,4 @@ import './original/register';
 import './study/register';
 import './history/register';
 import './memorize/register';
+import './resources/register';
