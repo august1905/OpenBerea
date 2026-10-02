@@ -5,3 +5,4 @@ import './study/register';
 import './history/register';
 import './memorize/register';
 import './resources/register';
+import './audio/register';
