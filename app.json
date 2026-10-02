@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "OpenBerea",
+    "slug": "openberea",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "scheme": "openberea",
+    "userInterfaceStyle": "automatic",
+    "web": {
+      "output": "single",
+      "bundler": "metro",
+      "favicon": "./assets/images/favicon.png",
+      "name": "OpenBerea",
+      "shortName": "OpenBerea",
+      "description": "A free, open-source Bible study website.",
+      "themeColor": "#FFFAE1",
+      "backgroundColor": "#FFFAE1"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

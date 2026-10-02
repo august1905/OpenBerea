@@ -1,0 +1,10 @@
+{
+  // Static site on Cloudflare Workers (static assets only; no server code).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "openberea",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}

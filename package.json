@@ -1,0 +1,52 @@
+{
+  "name": "openberea",
+  "description": "OpenBerea: a free, open-source Bible study website.",
+  "main": "expo-router/entry",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "lint": "expo lint",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest",
+    "data": "tsx scripts/pipeline/run.ts",
+    "build": "expo export --platform web && node scripts/postbuild.mjs",
+    "serve": "node scripts/serve-dist.mjs",
+    "e2e": "playwright test",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run build && npm run e2e",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "expo": "~57.0.26",
+    "expo-constants": "~57.0.20",
+    "expo-linking": "~57.0.11",
+    "expo-router": "~57.0.24",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "~0.21.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
+    "@types/react": "~19.2.2",
+    "eslint": "^9.39.5",
+    "eslint-config-expo": "^57.0.2",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.3",
+    "wrangler": "^4.147.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "esbuild@0.28.1": true,
+    "workerd@1.20261001.1": true
+  }
+}
