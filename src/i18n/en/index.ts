@@ -5,6 +5,7 @@ import { nav } from './nav';
 import { original } from './original';
 import { reader } from './reader';
 import { resources } from './resources';
+import { search } from './search';
 
 export const en = {
   ...common,
@@ -13,6 +14,7 @@ export const en = {
   ...reader,
   ...resources,
   ...original,
+  ...search,
 };
 
 export const enBooks = books;
