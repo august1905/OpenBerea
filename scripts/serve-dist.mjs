@@ -1,11 +1,11 @@
-// Minimal static server for the exported site (dist/), used by end-to-end tests
+// Minimal static server for the exported site (dist/, or DIST_DIR), used by end-to-end tests
 // and Lighthouse. Mirrors Cloudflare's single-page-application fallback.
-import { createReadStream, statSync } from 'node:fs';
+import { createReadStream, readFileSync, statSync } from 'node:fs';
 import { createServer } from 'node:http';
 import { extname, join, normalize } from 'node:path';
 import { createGzip } from 'node:zlib';
 
-const root = join(process.cwd(), 'dist');
+const root = join(process.cwd(), process.env.DIST_DIR ?? 'dist');
 const port = Number(process.env.PORT ?? 4173);
 
 const types = {
@@ -35,6 +35,29 @@ function fileFor(urlPath) {
   return null;
 }
 
+// Cloudflare-style _headers: "pattern" lines (with optional trailing *) followed by indented headers.
+function loadHeaders() {
+  try {
+    const rules = [];
+    let current = null;
+    for (const line of readFileSync(join(root, '_headers'), 'utf8').split('\n')) {
+      if (!line.trim()) continue;
+      if (!/^\s/.test(line)) {
+        current = { pattern: line.trim(), headers: {} };
+        rules.push(current);
+      } else if (current) {
+        const i = line.indexOf(':');
+        current.headers[line.slice(0, i).trim().toLowerCase()] = line.slice(i + 1).trim();
+      }
+    }
+    return rules;
+  } catch {
+    return [];
+  }
+}
+const headerRules = loadHeaders();
+const matches = (pattern, path) => (pattern.endsWith('*') ? path.startsWith(pattern.slice(0, -1)) : path === pattern);
+
 createServer((req, res) => {
   const urlPath = req.url ?? '/';
   let file = fileFor(urlPath);
@@ -50,6 +73,9 @@ createServer((req, res) => {
   }
   const ext = extname(file);
   const headers = { 'content-type': types[ext] ?? 'application/octet-stream', 'cache-control': 'no-cache' };
+  const pathOnly = urlPath.split('?')[0];
+  for (const rule of headerRules) if (matches(rule.pattern, pathOnly)) Object.assign(headers, rule.headers);
+  headers['cache-control'] = 'no-cache';
   const gzip = compressible.has(ext) && /\bgzip\b/.test(req.headers['accept-encoding'] ?? '');
   if (gzip) headers['content-encoding'] = 'gzip';
   res.writeHead(status, headers);

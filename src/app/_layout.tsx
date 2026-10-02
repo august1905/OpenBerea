@@ -1,14 +1,17 @@
 import { Slot, Stack } from 'expo-router';
+import { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import '@/features/registry';
 import { CornerMenus } from '@/features/nav/CornerMenus';
+import { startOffline } from '@/lib/platform/offline';
 import { ThemeProvider, useTheme } from '@/theme';
 
 function Shell() {
   const { palette } = useTheme();
+  useEffect(() => startOffline(), []);
   return (
     <View style={[styles.root, { backgroundColor: palette.bg }]}>
       <StatusBar style={palette.scheme === 'dark' ? 'light' : 'dark'} />

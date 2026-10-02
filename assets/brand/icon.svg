@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- OpenBerea mark: a quarter-radial menu fanning from a corner dot. -->
+  <rect width="512" height="512" fill="#FFFAE1"/>
+  <g stroke="#A87A22" stroke-width="10" stroke-linecap="round">
+    <line x1="380" y1="380" x2="150" y2="362"/>
+    <line x1="380" y1="380" x2="181" y2="261"/>
+    <line x1="380" y1="380" x2="262" y2="180"/>
+    <line x1="380" y1="380" x2="362" y2="150"/>
+  </g>
+  <circle cx="380" cy="380" r="34" fill="#A87A22"/>
+  <g fill="#FFFAE1" stroke="#A87A22" stroke-width="12">
+    <circle cx="150" cy="362" r="26"/>
+    <circle cx="181" cy="261" r="26"/>
+    <circle cx="262" cy="180" r="26"/>
+    <circle cx="362" cy="150" r="26"/>
+  </g>
+  <circle cx="181" cy="261" r="20" fill="#F2A06B"/>
+</svg>
