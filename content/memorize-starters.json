@@ -1,0 +1,28 @@
+{
+  "_note": "Memorization starter sets shown on the Memorize dashboard. Edit freely. Each set needs a unique id, a short title, and a compact ref (a chapter like PSA.23 or a range like ROM.12.1-2). Keep notes short, neutral, and descriptive.",
+  "sets": [
+    { "id": "psalm-23", "title": "The Lord is my shepherd", "ref": "PSA.23", "note": "A psalm of David." },
+    { "id": "romans-8", "title": "No condemnation", "ref": "ROM.8", "note": "Chapter 8 of Paul’s letter to the Romans." },
+    { "id": "psalm-1", "title": "Blessed is the man", "ref": "PSA.1", "note": "The first psalm of the Psalter." },
+    { "id": "psalm-100", "title": "Make a joyful noise", "ref": "PSA.100", "note": "A psalm of praise." },
+    { "id": "psalm-121", "title": "I will lift up mine eyes", "ref": "PSA.121", "note": "A song of degrees." },
+    { "id": "john-1", "title": "In the beginning was the Word", "ref": "JHN.1.1-14", "note": "The opening of John’s Gospel." },
+    { "id": "1-corinthians-13", "title": "Charity never faileth", "ref": "1CO.13", "note": "Chapter 13 of Paul’s first letter to the Corinthians." },
+    { "id": "beatitudes", "title": "The Beatitudes", "ref": "MAT.5.3-12", "note": "From the Sermon on the Mount." },
+    { "id": "lords-prayer", "title": "The Lord’s Prayer", "ref": "MAT.6.9-13", "note": "From the Sermon on the Mount." },
+    { "id": "isaiah-53", "title": "He was wounded for our transgressions", "ref": "ISA.53", "note": "Chapter 53 of the book of Isaiah." },
+    { "id": "ephesians-2", "title": "By grace are ye saved", "ref": "EPH.2.1-10", "note": "From Paul’s letter to the Ephesians." },
+    { "id": "romans-12", "title": "A living sacrifice", "ref": "ROM.12.1-2", "note": "From Paul’s letter to the Romans." },
+    { "id": "philippians-4", "title": "Rejoice in the Lord alway", "ref": "PHP.4.4-8", "note": "From Paul’s letter to the Philippians." },
+    { "id": "proverbs-3", "title": "Trust in the Lord", "ref": "PRO.3.5-6", "note": "From the book of Proverbs." },
+    { "id": "hebrews-11", "title": "Now faith is", "ref": "HEB.11.1-6", "note": "From the letter to the Hebrews." },
+    { "id": "galatians-5", "title": "The fruit of the Spirit", "ref": "GAL.5.22-23", "note": "From Paul’s letter to the Galatians." },
+    { "id": "colossians-3", "title": "Let the peace of God rule", "ref": "COL.3.12-17", "note": "From Paul’s letter to the Colossians." },
+    { "id": "john-15", "title": "I am the true vine", "ref": "JHN.15.1-11", "note": "Words of Jesus to his disciples in John’s Gospel." },
+    { "id": "2-timothy-3", "title": "All scripture is given by inspiration", "ref": "2TI.3.16-17", "note": "From Paul’s second letter to Timothy." },
+    { "id": "lamentations-3", "title": "His compassions fail not", "ref": "LAM.3.22-24", "note": "From the book of Lamentations." },
+    { "id": "micah-6", "title": "Do justly, love mercy, walk humbly", "ref": "MIC.6.8", "note": "From the book of Micah." },
+    { "id": "joshua-1", "title": "Be strong and of a good courage", "ref": "JOS.1.8-9", "note": "Words to Joshua in the book of Joshua." },
+    { "id": "isaiah-40", "title": "They that wait upon the Lord", "ref": "ISA.40.28-31", "note": "From the book of Isaiah." }
+  ]
+}

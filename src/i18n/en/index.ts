@@ -2,6 +2,7 @@ import { books } from './books';
 import { common } from './common';
 import { history } from './history';
 import { home } from './home';
+import { memorize } from './memorize';
 import { nav } from './nav';
 import { original } from './original';
 import { reader } from './reader';
@@ -19,6 +20,7 @@ export const en = {
   ...search,
   ...study,
   ...history,
+  ...memorize,
 };
 
 export const enBooks = books;
