@@ -131,8 +131,8 @@ Latest run (after the owner's light/dark and menu-motion requests): 462 unit tes
 | P1 | Launch: website only | ✅ | ✅ | Static web export only |
 | P2 | Later iOS and Android from the same codebase, with no rewrite needed | ✅ | ⚠️ | Expo/React Native throughout, with native versions of web-only pieces (type-checked). Not run on devices, since no apps are built yet. |
 | P3 | Framework: React Native with Expo, one TypeScript codebase | ✅ | ✅ | Expo SDK 57, TypeScript strict |
-| P4 | Hosting: everything on Cloudflare (website plus Bible and study data) | ⏳ | ⏳ | `wrangler.jsonc` and `npm run deploy` are ready; deploying needs the owner's Cloudflare login |
-| P5 | Open source: MIT license, public code repository | ⚠️ | ⏳ | MIT license in place; the public repository needs the owner to create it and push |
+| P4 | Hosting: everything on Cloudflare (website plus Bible and study data) | ✅ | ✅ | Deployed with `npm run deploy` to https://openberea.openberea.workers.dev (site and data, 9,860 files); menu, motion, design, and About tests pass against the live site |
+| P5 | Open source: MIT license, public code repository | ✅ | ✅ | MIT license; public at https://github.com/august1905/OpenBerea, linked from the About page |
 | P6 | Funding: donations only; no ads, no paid tiers | ✅ | ✅ | As G1; donation link ⏳ |
 | P7 | No account: no sign-up, no login, no user data on a server | ✅ | ✅ | Static site, no server code |
 | P8 | Nothing saved: no settings or history stored; only app data cached | ✅ | ✅ | `offline.spec`, `design.spec`, `policy.test` |
@@ -202,7 +202,7 @@ Latest run (after the owner's light/dark and menu-motion requests): 462 unit tes
 | B9 | External resources: link-outs, featured teachers, curated library, Piper embeds | ✅ | ✅ | Step 9 commit |
 | B10 | Audio Bible | ✅ | ✅ | Step 10 commit |
 | B11 | Polish: offline, accessibility, performance, interface-language structure | ✅ | ✅ | Step 11 commit, plus performance work in step 12 |
-| B12 | Launch: About page with every attribution, full test pass, production deploy to Cloudflare | ⏳ | ✅ | About and full test pass done; the production deploy needs the owner's Cloudflare login |
+| B12 | Launch: About page with every attribution, full test pass, production deploy to Cloudflare | ✅ | ✅ | About and full test pass done; deployed to https://openberea.openberea.workers.dev |
 
 ## Out of scope (must be absent)
 
