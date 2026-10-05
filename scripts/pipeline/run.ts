@@ -2,6 +2,7 @@
 // (plus anything they depend on when `--deps` is given). Stages live in ./stages/*.ts and export `stage`.
 import { readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 import { log, writtenStats } from './lib/context';
 
@@ -20,7 +21,7 @@ async function loadStages(): Promise<Map<string, Stage>> {
   const stages = new Map<string, Stage>();
   for (const file of readdirSync(dir).sort()) {
     if (!file.endsWith('.ts') || file.endsWith('.test.ts')) continue;
-    const mod = (await import(join(dir, file))) as { stage?: Stage; stages?: Stage[] };
+    const mod = (await import(pathToFileURL(join(dir, file)).href)) as { stage?: Stage; stages?: Stage[] };
     for (const s of mod.stages ?? (mod.stage ? [mod.stage] : [])) {
       if (stages.has(s.id)) throw new Error(`Duplicate stage id ${s.id} in ${file}`);
       stages.set(s.id, s);

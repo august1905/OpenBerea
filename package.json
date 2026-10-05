@@ -13,7 +13,7 @@
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest",
     "data": "tsx scripts/pipeline/run.ts",
-    "build": "expo export --platform web --output-dir ${DIST_DIR:-dist} && node scripts/postbuild.mjs",
+    "build": "node scripts/build.mjs",
     "serve": "node scripts/serve-dist.mjs",
     "e2e": "playwright test",
     "check:links": "tsx scripts/check-links.ts",

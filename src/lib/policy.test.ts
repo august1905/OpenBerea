@@ -24,7 +24,8 @@ function code(path: string): string {
     .replace(/(^|[^:'"`])\/\/.*$/gm, '$1');
 }
 
-const all = files(SRC).map((p) => ({ p: p.slice(SRC.length + 1), src: code(p) }));
+// Paths relative to src/, with forward slashes on every OS.
+const all = files(SRC).map((p) => ({ p: p.slice(SRC.length + 1).replace(/\\/g, '/'), src: code(p) }));
 
 describe('privacy and scope rules', () => {
   it('never uses storage for user state (no cookies, localStorage, sessionStorage, IndexedDB)', () => {
