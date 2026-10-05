@@ -47,6 +47,98 @@ export function stepSpring(s: Spring, target: number, cfg: SpringConfig, dt: num
 export const clamp = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, n));
 export const clamp01 = (n: number) => clamp(n, 0, 1);
 
+/** CSS `cubic-bezier(x1, y1, x2, y2)` as a function of progress (0–1). */
+export function cubicBezier(x1: number, y1: number, x2: number, y2: number): (u: number) => number {
+  const cx = 3 * x1;
+  const bx = 3 * (x2 - x1) - cx;
+  const ax = 1 - cx - bx;
+  const cy = 3 * y1;
+  const by = 3 * (y2 - y1) - cy;
+  const ay = 1 - cy - by;
+  const sx = (t: number) => ((ax * t + bx) * t + cx) * t;
+  const sy = (t: number) => ((ay * t + by) * t + cy) * t;
+  const dx = (t: number) => (3 * ax * t + 2 * bx) * t + cx;
+  return (u: number) => {
+    if (u <= 0) return 0;
+    if (u >= 1) return 1;
+    // Newton's method for the curve parameter at x = u, falling back to bisection.
+    let t = u;
+    for (let i = 0; i < 8; i++) {
+      const err = sx(t) - u;
+      if (Math.abs(err) < 1e-7) return sy(t);
+      const d = dx(t);
+      if (Math.abs(d) < 1e-6) break;
+      t -= err / d;
+      if (t < 0 || t > 1) break;
+    }
+    let lo = 0;
+    let hi = 1;
+    t = u;
+    for (let i = 0; i < 40 && hi - lo > 1e-7; i++) {
+      if (sx(t) < u) lo = t;
+      else hi = t;
+      t = (lo + hi) / 2;
+    }
+    return sy(t);
+  };
+}
+
+/** Exits: items fall back into the corner, speeding up as they go. */
+export const EXIT = cubicBezier(0.45, 0, 0.9, 0.6);
+/** The chosen item bursting, a closed tab popping. */
+export const BURST = cubicBezier(0.2, 0.7, 0.3, 1);
+/** The veil lifting. */
+export const EASE_OUT = cubicBezier(0, 0, 0.58, 1);
+
+/** Where an exiting element is: offset from rest (px), scale, rotation (deg), opacity. */
+export interface Pose {
+  x: number;
+  y: number;
+  s: number;
+  r: number;
+  o: number;
+}
+
+export const lerpPose = (a: Pose, b: Pose, k: number): Pose => ({
+  x: a.x + (b.x - a.x) * k,
+  y: a.y + (b.y - a.y) * k,
+  s: a.s + (b.s - a.s) * k,
+  r: a.r + (b.r - a.r) * k,
+  o: a.o + (b.o - a.o) * k,
+});
+
+/** A timed exit from one pose to another. */
+export interface Tween {
+  t0: number;
+  /** Seconds. */
+  dur: number;
+  ease: (u: number) => number;
+  from: Pose;
+  to: Pose;
+}
+
+export const tweenDone = (tw: Tween, t: number) => t - tw.t0 >= tw.dur;
+
+/** The pose at time `t` (s). */
+export const poseAt = (tw: Tween, t: number): Pose => lerpPose(tw.from, tw.to, tw.ease(clamp01((t - tw.t0) / tw.dur)));
+
+/** The pose at time `t` (s), and its velocity (per second), so an interrupted exit can be reversed. */
+export function tweenAt(tw: Tween, t: number): { pose: Pose; vel: Pose } {
+  const h = 1 / 120;
+  const pose = poseAt(tw, t);
+  const prev = poseAt(tw, t - h);
+  return {
+    pose,
+    vel: {
+      x: (pose.x - prev.x) / h,
+      y: (pose.y - prev.y) / h,
+      s: (pose.s - prev.s) / h,
+      r: (pose.r - prev.r) / h,
+      o: (pose.o - prev.o) / h,
+    },
+  };
+}
+
 export function smoothstep(t: number): number {
   const u = clamp01(t);
   return u * u * (3 - 2 * u);
@@ -168,6 +260,13 @@ export interface MotionState {
   drag: { id: string; off: boolean } | null;
   /** Angles of the first ring, where the corner dot's preview dots point. */
   previewAngles: number[];
+  /** The corner dot isn't shown (touch screens open the menus with an edge swipe instead). */
+  hintHidden: boolean;
+  /**
+   * A finger that opened the menu with an edge swipe is still down and steering it, which counts as
+   * a press (the browser may have cancelled its pointer events to watch for scrolling).
+   */
+  tracking: boolean;
 }
 
 export interface MotionRoots {

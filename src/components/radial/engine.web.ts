@@ -16,16 +16,24 @@
 // property. Removed elements are cloned into a ghost layer and animated out there; React drops the
 // originals at once, so tests and assistive tech never see them.
 //
+// Hovering opens and closes menus and arcs often, so any of this can be cut short. An element that
+// comes back while its ghost is still leaving (the menu reopened, an arc hovered again) takes over
+// from the ghost: it carries on from where the ghost is, at the speed it was going, and springs
+// back to its place, rather than starting its entrance over beside a fading copy.
+//
 // prefers-reduced-motion: no drift, magnetism, scaling, trails, or looping animations; fades only.
 
 import { domNode } from '@/lib/platform/dom';
 
 import type { Point } from './geometry';
 import {
+  BURST,
   clamp,
   clamp01,
   DRAG,
   drift,
+  EASE_OUT,
+  EXIT,
   FOLLOW,
   followTrail,
   itemTransform,
@@ -35,6 +43,8 @@ import {
   type MotionRoots,
   type MotionState,
   POP,
+  type Pose,
+  poseAt,
   previewPoints,
   proximity,
   type RadialMotion,
@@ -42,6 +52,9 @@ import {
   type Spring,
   spring,
   stepSpring,
+  type Tween,
+  tweenAt,
+  tweenDone,
   withAlpha,
 } from './motion';
 
@@ -102,7 +115,29 @@ interface Entry {
   ends?: { a: Point; b: Point };
   shimmer: boolean;
   started: boolean;
+  /** Rings: when the slow spin began, so a ring that takes over from its ghost keeps its angle. */
+  since: number;
 }
+
+/** A removed element animating out on the ghost layer. */
+interface Ghost {
+  /** `${kind}:${key}`: a new element with the same id takes over from here (see adopt). */
+  id: string;
+  kind: Kind;
+  el: HTMLElement;
+  tw: Tween;
+  /** The transform for a pose; null keeps the one the element had. */
+  transform: ((p: Pose) => string) | null;
+  /** Dots: the resting place the pose is relative to, and how lit the dot was. */
+  rest?: Point;
+  heat?: number;
+  /** Breadcrumbs: only the same text takes over (a different path cross-fades). */
+  text?: string;
+  since: number;
+}
+
+/** Kinds whose new element takes over from its ghost. */
+const ADOPT = new Set<Kind>(['veil', 'origin', 'ring', 'line', 'dot', 'label', 'crumb']);
 
 function ensureKeyframes() {
   if (typeof document === 'undefined' || document.getElementById('ob-motion')) return;
@@ -139,6 +174,8 @@ export function createMotion(): RadialMotion {
   let overlay: HTMLElement | null = null;
   let pointer: Point | null = null;
   let down = false;
+  /** A press, or a finger steering a menu it opened with an edge swipe. */
+  const pressed = () => down || !!state?.tracking;
   const vel = { x: 0, y: 0 };
   let lastPointer: { p: Point; t: number } | null = null;
   let raf = 0;
@@ -149,8 +186,9 @@ export function createMotion(): RadialMotion {
   let attached = false;
   const media = typeof window.matchMedia === 'function' ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
   let reduced = !!media?.matches;
-  const hint = { p: spring(0), hv: spring(0), press: spring(0), mx: spring(0), my: spring(0) };
+  const hint = { p: spring(0), hv: spring(0), press: spring(0), mx: spring(0), my: spring(0), vis: spring(1) };
   const trail: Point[] = [];
+  const leaving: Ghost[] = [];
   const now = () => performance.now() / 1000;
 
   // Pointer input, from the whole page: the corner dot reacts before anything is pressed.
@@ -281,12 +319,27 @@ export function createMotion(): RadialMotion {
     parts: {},
     shimmer: false,
     started: false,
+    since: now(),
   });
 
   const loopAnim = (el: HTMLElement | null | undefined, value: string) => {
     if (!el) return;
     el.dataset.obAnim = '';
     el.style.animation = reduced ? 'none' : value;
+  };
+
+  /** A ring's slow spin, `elapsed` seconds in (a copy of a ring starts its CSS animation over). */
+  const spinRing = (root: HTMLElement, index: number, elapsed: number) =>
+    loopAnim(
+      root.querySelector<HTMLElement>('[data-m="spin"], [data-ob-spin]'),
+      `ob-spin ${index % 2 ? 140 : 100}s linear ${(-elapsed).toFixed(2)}s infinite${index % 2 ? ' reverse' : ''}`,
+    );
+
+  /** The corner dot's breathing and occasional ping, unless it's hidden. */
+  const hintLoops = (e: Entry) => {
+    const hidden = !!state?.hintHidden;
+    if (e.kind === 'hint-breath') loopAnim(e.el, hidden ? 'none' : 'ob-breathe 4.6s ease-in-out infinite');
+    else if (e.kind === 'hint-ping') loopAnim(e.el, hidden ? 'none' : 'ob-ping 7s cubic-bezier(0.2, 0.6, 0.35, 1) 1.5s infinite');
   };
 
   const init = (e: Entry) => {
@@ -311,7 +364,8 @@ export function createMotion(): RadialMotion {
         put(e.el, 'transform-origin', o);
         const spin = part('spin');
         put(spin, 'transform-origin', o);
-        loopAnim(spin, `ob-spin ${e.index % 2 ? 140 : 100}s linear infinite${e.index % 2 ? ' reverse' : ''}`);
+        if (spin) spin.dataset.obSpin = '';
+        spinRing(e.el, e.index, 0);
         break;
       }
       case 'dot': {
@@ -351,10 +405,8 @@ export function createMotion(): RadialMotion {
         e.o = spring(0);
         break;
       case 'hint-breath':
-        loopAnim(e.el, 'ob-breathe 4.6s ease-in-out infinite');
-        break;
       case 'hint-ping':
-        loopAnim(e.el, 'ob-ping 7s cubic-bezier(0.2, 0.6, 0.35, 1) 1.5s infinite');
+        hintLoops(e);
         break;
     }
   };
@@ -373,7 +425,21 @@ export function createMotion(): RadialMotion {
     const e = makeEntry(kind, key, el);
     entries.set(id, e);
     init(e);
-    paint(e, now(), 0);
+    const t = now();
+    if (ADOPT.has(kind)) {
+      for (let i = leaving.length - 1; i >= 0; i--) {
+        if (leaving[i].id !== id) continue;
+        adopt(e, leaving[i], t);
+        break;
+      }
+    }
+    paint(e, t, 0);
+  };
+
+  const dropGhost = (g: Ghost) => {
+    g.el.remove();
+    const i = leaving.indexOf(g);
+    if (i >= 0) leaving.splice(i, 1);
   };
 
   /** Animates a removed element out from a clone in the ghost layer. */
@@ -390,50 +456,111 @@ export function createMotion(): RadialMotion {
     }
     clone.style.pointerEvents = 'none';
     layer.appendChild(clone);
-    const fromT = e.el.style.transform || 'none';
-    const fromO = e.el.style.opacity || '1';
+    if (e.kind === 'ring') spinRing(clone, e.index, now() - e.since);
     const closing = !st.open;
     const id = e.item?.id;
-    let toT = fromT;
-    let ms = 200;
-    let easing = 'cubic-bezier(0.45, 0, 0.9, 0.6)';
-    if (reduced) ms = 140;
+    const still: Pose = { x: 0, y: 0, s: 1, r: 0, o: clamp01(Number.parseFloat(e.el.style.opacity || '1')) };
+    let from = still;
+    let to: Pose = { ...still, o: 0 };
+    let dur = 0.2;
+    let ease = EXIT;
+    let transform: Ghost['transform'] = null;
+    const ghost: Omit<Ghost, 'tw' | 'transform'> = { id: `${e.kind}:${e.key}`, kind: e.kind, el: clone, since: e.since };
+    if (e.kind === 'dot') {
+      ghost.rest = e.item?.rest ?? st.origin;
+      ghost.heat = e.h.x;
+    }
+    if (e.kind === 'crumb') ghost.text = e.el.textContent ?? '';
+    if (reduced) dur = 0.14;
     else if (e.kind === 'dot') {
-      const rest = e.item?.rest ?? st.origin;
+      const rest = ghost.rest!;
+      from = { x: e.x.x, y: e.y.x, s: e.s.x, r: e.r.x, o: e.o.x };
+      transform = (p) => itemTransform(p.x, p.y, p.s, p.r);
       if (id && (id === chosen || id === popped)) {
-        toT = itemTransform(e.x.x, e.y.x, e.s.x * (id === chosen ? 2.4 : 1.7), e.r.x);
-        ms = id === chosen ? 420 : 300;
-        easing = 'cubic-bezier(0.2, 0.7, 0.3, 1)';
+        to = { ...from, s: from.s * (id === chosen ? 2.4 : 1.7), o: 0 };
+        dur = id === chosen ? 0.42 : 0.3;
+        ease = BURST;
       } else {
-        const to = closing || !e.item?.parent ? st.origin : live(e.item.parent);
-        toT = itemTransform(to.x - rest.x, to.y - rest.y, 0.15);
-        ms = 200 + (e.item?.order ?? 0) * 16;
+        const target = closing || !e.item?.parent ? st.origin : live(e.item.parent);
+        to = { x: target.x - rest.x, y: target.y - rest.y, s: 0.15, r: 0, o: 0 };
+        dur = 0.2 + (e.item?.order ?? 0) * 0.016;
       }
     } else if (e.kind === 'line') {
       if (e.ends && !(id && id === chosen)) {
+        // The pose's x/y is the line's far end, which draws back to its start.
         const { a, b } = e.ends;
-        toT = lineTransform(a, { x: a.x + (b.x - a.x) * 0.001, y: a.y + (b.y - a.y) * 0.001 });
+        from = { ...still, x: b.x, y: b.y };
+        to = { ...from, x: a.x + (b.x - a.x) * 0.001, y: a.y + (b.y - a.y) * 0.001, o: 0 };
+        transform = (p) => lineTransform(a, p);
       }
-      ms = id && id === chosen ? 360 : 200;
-    } else if (e.kind === 'label') ms = 110;
-    else if (e.kind === 'origin') toT = 'scale(0)';
-    else if (e.kind === 'ring') toT = 'scale(0.7)';
-    else if (e.kind === 'veil') {
-      ms = 260;
-      easing = 'ease-out';
-    } else if (e.kind === 'crumb') ms = 120;
-    const done = () => clone.remove();
-    if (typeof clone.animate !== 'function') return done();
-    const anim = clone.animate([{ transform: fromT, opacity: fromO }, { transform: toT, opacity: '0' }], { duration: ms, easing, fill: 'forwards' });
-    anim.onfinish = done;
-    anim.oncancel = done;
-    setTimeout(done, ms + 250);
+      dur = id && id === chosen ? 0.36 : 0.2;
+    } else if (e.kind === 'label') dur = 0.11;
+    else if (e.kind === 'origin' || e.kind === 'ring') {
+      from = { ...still, s: e.s.x };
+      to = { ...from, s: e.kind === 'origin' ? 0 : 0.7, o: 0 };
+      transform = (p) => `scale(${Math.max(0, p.s).toFixed(4)})`;
+    } else if (e.kind === 'veil') {
+      dur = 0.26;
+      ease = EASE_OUT;
+    } else if (e.kind === 'crumb') dur = 0.12;
+    leaving.push({ ...ghost, tw: { t0: now(), dur, ease, from, to }, transform });
+  };
+
+  /**
+   * A new element takes over from its own ghost (the same item coming back while it was still
+   * leaving): it starts where the ghost is, moving as the ghost was, and the ghost goes. Its
+   * entrance needs no delay, since it's already on screen.
+   */
+  const adopt = (e: Entry, g: Ghost, t: number) => {
+    if (e.kind === 'crumb' && g.text !== (e.el.textContent ?? '')) return;
+    const { pose, vel } = tweenAt(g.tw, t);
+    switch (e.kind) {
+      case 'dot': {
+        const item = byKey.get(e.key);
+        if (!item || !g.rest) return;
+        // Relative to the new resting place, in case it moved.
+        e.x = { x: pose.x + g.rest.x - item.rest.x, v: vel.x };
+        e.y = { x: pose.y + g.rest.y - item.rest.y, v: vel.y };
+        e.s = { x: pose.s, v: vel.s };
+        e.r = { x: pose.r, v: vel.r };
+        e.h = spring(g.heat ?? 0);
+        break;
+      }
+      case 'origin':
+        e.s = { x: pose.s, v: vel.s };
+        // The ripple marks an opening; this is the same opening carrying on.
+        loopAnim(e.el.querySelector<HTMLElement>('[data-m="ripple"]'), 'none');
+        break;
+      case 'ring':
+        e.s = { x: pose.s, v: vel.s };
+        e.since = g.since;
+        spinRing(e.el, e.index, t - g.since);
+        break;
+      case 'label':
+      case 'crumb':
+        e.x = spring(0);
+        e.y = spring(0);
+        break;
+    }
+    e.o = spring(pose.o);
+    e.delay = 0;
+    e.started = true;
+    dropGhost(g);
+  };
+
+  const paintGhost = (g: Ghost, t: number): boolean => {
+    const p = poseAt(g.tw, t);
+    if (g.transform) put(g.el, 'transform', g.transform(p));
+    put(g.el, 'opacity', fmt(p.o));
+    if (!tweenDone(g.tw, t)) return true;
+    dropGhost(g);
+    return false;
   };
 
   /** The item the pointer is on: the gesture's target while pressed; nearest dot or label on hover. */
   const findHot = (st: MotionState, p: Point | null): string | null => {
     if (!st.open) return null;
-    if (down || st.drag) return st.items.find((i) => i.id === st.hover)?.key ?? null;
+    if (pressed() || st.drag) return st.items.find((i) => i.id === st.hover)?.key ?? null;
     if (!p) return null;
     let best: string | null = null;
     let bestD = Infinity;
@@ -563,8 +690,10 @@ export function createMotion(): RadialMotion {
         put(e.el, 'opacity', fmt(e.o.x));
         return busy;
       case 'origin':
-        step(e.s, down && !reduced ? 1.2 : 1, POP);
+        step(e.s, pressed() && !reduced ? 1.2 : 1, POP);
+        step(e.o, 1, SOFT);
         put(e.el, 'transform', `scale(${e.s.x.toFixed(3)})`);
+        put(e.el, 'opacity', fmt(e.o.x));
         return busy;
       case 'ring':
         if (t - e.born >= e.delay) {
@@ -582,7 +711,7 @@ export function createMotion(): RadialMotion {
         return busy;
       case 'trail': {
         const p = trail[e.index];
-        const on = st.open && down && !!P && !reduced && !!p;
+        const on = st.open && pressed() && !!P && !reduced && !!p;
         step(e.o, on ? (1 - e.index / 12) * 0.6 : 0, SOFT);
         if (p) put(e.el, 'transform', `translate(${(p.x - e.size / 2).toFixed(1)}px, ${(p.y - e.size / 2).toFixed(1)}px)`);
         put(e.el, 'opacity', fmt(e.o.x));
@@ -590,6 +719,8 @@ export function createMotion(): RadialMotion {
       }
       case 'hint-core':
         put(e.el, 'transform', itemTransform(hint.mx.x, hint.my.x, reduced ? 1 : 1 + 0.85 * hint.p.x + 0.55 * hint.hv.x - 0.28 * hint.press.x));
+        // Hands over to the open menu's own corner dot, and back.
+        put(e.el, 'opacity', fmt(hint.vis.x));
         return false;
       case 'hint-halo':
         put(e.el, 'transform', itemTransform(hint.mx.x * 0.5, hint.my.x * 0.5, reduced ? 1 : 0.7 + 0.55 * hint.p.x + 0.35 * hint.hv.x));
@@ -628,7 +759,7 @@ export function createMotion(): RadialMotion {
 
     // The corner dot: swells and leans toward a pointer that comes near, squishes when pressed.
     const o = st.origin;
-    const d = P ? Math.hypot(P.x - o.x, P.y - o.y) : Infinity;
+    const d = P && !st.hintHidden ? Math.hypot(P.x - o.x, P.y - o.y) : Infinity;
     const alive = !st.open && !reduced;
     const hs = (s: Spring, target: number, cfg = SOFT, eps = 0.001) => {
       if (stepSpring(s, target, cfg, dt, eps)) busy = true;
@@ -636,12 +767,13 @@ export function createMotion(): RadialMotion {
     hs(hint.p, alive ? proximity(d, 240, 26) : 0);
     hs(hint.hv, !st.open && d < 30 ? 1 : 0);
     hs(hint.press, down && d < 32 && !reduced ? 1 : 0, FOLLOW);
+    hs(hint.vis, st.open ? 0 : 1);
     const m = alive && P ? magnet(o, P, hint.p.x, 10) : { x: 0, y: 0 };
     hs(hint.mx, m.x, FOLLOW, 0.02);
     hs(hint.my, m.y, FOLLOW, 0.02);
     previewDist = 9 + 26 * hint.p.x + 18 * hint.hv.x;
 
-    if (st.open && down && P) {
+    if (st.open && pressed() && P) {
       while (trail.length < 12) trail.push({ ...P });
       followTrail(trail, P, 0.36, dt);
     }
@@ -649,13 +781,16 @@ export function createMotion(): RadialMotion {
     // Dots first: lines and labels read their springs.
     for (const e of entries.values()) if (e.kind === 'dot' && paint(e, t, dt)) busy = true;
     for (const e of entries.values()) if (e.kind !== 'dot' && paint(e, t, dt)) busy = true;
+    for (const g of [...leaving]) if (paintGhost(g, t)) busy = true;
     return busy;
   };
 
   return {
     sync(next: MotionState, roots: MotionRoots) {
       attach();
+      const hintWas = state?.hintHidden;
       state = next;
+      if (hintWas !== undefined && hintWas !== next.hintHidden) for (const e of entries.values()) hintLoops(e);
       byKey = new Map(next.items.map((i) => [i.key, i]));
       // An item whose resting place moved (tabs re-spread after one closes) glides there from where
       // it was, rather than jumping with its new layout.
@@ -693,6 +828,7 @@ export function createMotion(): RadialMotion {
       detach();
       if (raf) cancelAnimationFrame(raf);
       raf = 0;
+      for (const g of [...leaving]) dropGhost(g);
     },
   };
 }

@@ -1,6 +1,6 @@
 import { expect, type Page, test } from '@playwright/test';
 
-import { center, gotoApp, openMenu } from './helpers';
+import { center, edgeSwipeOpen, gotoApp, isTouchOnly, openMenu } from './helpers';
 
 // The corner menus' motion (src/components/radial/engine.web.ts). Animated parts carry data-m/data-k;
 // test ids stay on still anchors at each item's resting place.
@@ -24,7 +24,8 @@ async function openAndPark(page: Page) {
 }
 
 test.describe('corner menu motion', () => {
-  test('the corner dot swells and leans toward a pointer that comes near, and previews the arc', async ({ page }) => {
+  test('the corner dot swells and leans toward a pointer that comes near, and previews the arc', async ({ page }, info) => {
+    test.skip(info.project.name === 'phone', 'touch screens hide the corner dot');
     await gotoApp(page, '/read/jhn/3');
     await page.mouse.move(150, 150);
     const zone = await center(page, 'main-menu-hint');
@@ -62,8 +63,8 @@ test.describe('corner menu motion', () => {
       };
       requestAnimationFrame(sample);
     });
-    await page.getByTestId('main-menu-hint').click();
-    await page.mouse.move(40, 40);
+    await openMenu(page, 'main-menu');
+    if (!(await isTouchOnly(page))) await page.mouse.move(40, 40);
     await page.waitForFunction(() => (window as unknown as { offsets: number[] }).offsets.length >= 90);
     const offsets = await page.evaluate(() => (window as unknown as { offsets: number[] }).offsets);
     expect(offsets[0]).toBeGreaterThan(80); // starts near the corner…
@@ -105,20 +106,33 @@ test.describe('corner menu motion', () => {
 
   test('a swipe leaves a comet trail behind the pointer', async ({ page }) => {
     await gotoApp(page, '/');
+    const trail = page.locator('[data-m="trail"]');
+    if (await isTouchOnly(page)) {
+      // The finger that swiped the menu open steers it, trail and all.
+      const t = await edgeSwipeOpen(page, 'main-menu');
+      const vw = page.viewportSize()!;
+      await t.move({ x: vw.width - 150, y: vw.height - 220 }, 10);
+      await expect(trail).toHaveCount(12);
+      await expect.poll(() => trail.first().evaluate((el) => Number(getComputedStyle(el).opacity))).toBeGreaterThan(0.2);
+      await t.end();
+      return;
+    }
     const start = await center(page, 'main-menu-hint');
     await page.mouse.move(start.x, start.y);
     await page.mouse.down();
     for (let i = 1; i <= 8; i++) await page.mouse.move(start.x - i * 12, start.y - i * 9);
-    const trail = page.locator('[data-m="trail"]');
     await expect(trail).toHaveCount(12);
     await expect.poll(() => trail.first().evaluate((el) => Number(getComputedStyle(el).opacity))).toBeGreaterThan(0.2);
     await page.mouse.up();
   });
 
   test('closing animates out on a ghost layer that tests and screen readers never see', async ({ page }) => {
+    // Time stands still while the copies are checked (a busy machine could otherwise finish them first).
+    await page.clock.install();
     await gotoApp(page, '/');
     await openAndPark(page);
     await page.waitForTimeout(500);
+    await page.clock.pauseAt(Date.now() + 2000);
     await page.keyboard.press('Escape');
     // The menu itself is gone at once…
     await expect(page.getByTestId('main-menu-overlay')).toHaveCount(0);
@@ -128,7 +142,45 @@ test.describe('corner menu motion', () => {
     expect(await ghosts.locator(':scope > *').count()).toBeGreaterThan(0);
     expect(await ghosts.getAttribute('aria-hidden')).toBe('true');
     expect(await ghosts.locator('[data-testid]').count()).toBe(0);
+    await page.clock.runFor(600);
     await expect(ghosts.locator(':scope > *')).toHaveCount(0);
+  });
+
+  test('a menu reopened while it is still closing carries on from where its items are', async ({ page }, info) => {
+    test.skip(info.project.name === 'phone', 'reopened from the corner dot');
+    // A fake clock (timers, animation frames, performance.now) so the reopening lands at an exact
+    // moment of the close.
+    await page.clock.install();
+    await gotoApp(page, '/');
+    await openAndPark(page);
+    await page.waitForTimeout(700);
+    await expect(dot(page, '0-resources')).toBeVisible();
+    const hint = await center(page, 'main-menu-hint');
+    const state = () =>
+      dot(page, '0-resources').evaluate((el) => {
+        const m = /translate\(([-\d.]+)px, ([-\d.]+)px\)/.exec(el.style.transform)!;
+        return { d: Math.hypot(Number(m[1]), Number(m[2])), o: Number(el.style.opacity) };
+      });
+    await page.clock.pauseAt(Date.now() + 2000);
+    await page.keyboard.press('Escape');
+    await expect(dot(page, '0-resources')).toHaveCount(0);
+    // 100 ms into Resources' 264 ms fall back into the corner…
+    await page.clock.runFor(100);
+    expect(await page.getByTestId('main-menu-ghosts').locator(':scope > *').count()).toBeGreaterThan(0);
+    await page.mouse.move(hint.x, hint.y);
+    await page.mouse.down();
+    await page.mouse.up();
+    await expect(dot(page, '0-resources')).toHaveCount(1);
+    // …the menu reopens: the returning items take over from their falling copies, so none are left…
+    await expect(page.getByTestId('main-menu-ghosts').locator(':scope > *')).toHaveCount(0);
+    // …and Resources carries on from partway down, still showing. A fresh entrance would start
+    // unseen, more than 80 px out by the corner.
+    const back = await state();
+    expect(back.o).toBeGreaterThan(0.6);
+    expect(back.d).toBeGreaterThan(4);
+    expect(back.d).toBeLessThan(50);
+    await page.clock.runFor(1500);
+    expect((await state()).d).toBeLessThan(3);
   });
 
   test('a sphere glides to its new place when another tab closes', async ({ page }) => {

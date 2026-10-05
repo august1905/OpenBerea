@@ -111,7 +111,7 @@ Latest run (after the owner's light/dark and menu-motion requests): 462 unit tes
 | D6 | Accents never used for body text | ✅ | ✅ | Gold appears only on dots, lines, rules, and the loading spinner (source check); `palette.test` (text colors meet WCAG contrast) |
 | D7 | Light and dark themes following the device setting (dark: near-black background, #FFFAE1 text, same accents) | ✅ | ✅ | `design.spec` "dark theme follows the device setting"; owner addition: Resources › Light / dark toggles it for the visit (`design.spec`, decision 66) |
 | N1 | Two corner menus: bottom-right main menu, bottom-left tabs | ✅ | ✅ | `menus.spec` |
-| N2 | Press and hold a corner: a dot appears with up to 5 dots fanned in a quarter circle, connected by lines | ✅ | ✅ | `menus.spec`; `geometry.test`; owner addition: animated menus (`motion.spec`, `motion.test`, decisions 67–68) |
+| N2 | Press and hold a corner: a dot appears with up to 5 dots fanned in a quarter circle, connected by lines | ✅ | ✅ | `menus.spec`; `geometry.test`; owner additions: animated menus (`motion.spec`, `motion.test`, decisions 67–68); with a mouse, resting on the dot opens it; on touch screens, an edge swipe (`menus.spec`, `edge.test`, decision 69) |
 | N3 | Swipe toward a dot to choose it; dots with sub-items open their own arc | ✅ | ✅ | `menus.spec` (three-level swipe); `geometry.test` (ring-aware targeting) |
 | N4 | Main menu top level: Read, Search, Study, Memorize, Resources (up to 3 levels deep) | ✅ | ✅ | `menus.spec` |
 | N5 | Tabs menu: each open tab is a sphere with a short label (e.g., "Jn 3") and a view icon (passage, interlinear, word study) | ✅ | ✅ | `menus.spec`, `original.spec` ("G25" tab) |
@@ -119,8 +119,8 @@ Latest run (after the owner's light/dark and menu-motion requests): 462 unit tes
 | N7 | A "+" sphere opens a new tab | ✅ | ✅ | `menus.spec` |
 | N8 | Drag a sphere off the arc to close it | ✅ | ✅ | `menus.spec` |
 | N9 | Up to 5 tabs fit in the first arc; more go into an outer arc | ✅ | ✅ | `menus.spec` |
-| N10 | A small, always-visible dot in each active corner hints at the menus | ✅ | ✅ | `menus.spec`, `design.spec` |
-| N11 | Desktop: click a corner dot, or use keyboard shortcuts (including switching tabs) | ✅ | ✅ | `menus.spec` (click; M, T, N, X, [, ], 1–9) |
+| N10 | A small, always-visible dot in each active corner hints at the menus | ✅ | ✅ | `menus.spec`, `design.spec`; owner change: hidden on touch screens, where edge swipes open the menus (decision 69) |
+| N11 | Desktop: click a corner dot, or use keyboard shortcuts (including switching tabs) | ✅ | ✅ | `menus.spec` (click; M, T, N, X, [, ], 1–9); owner addition: hover opens menus and arcs (`menus.spec`, decision 69) |
 | N12 | Accessibility fallback: standard list menus for screen readers and keyboard users | ✅ | ✅ | `menus.spec` (list menu by keyboard; hidden buttons that appear on focus) |
 | N13 | Web: block text selection and the browser's long-press menu inside the corner zones | ✅ | ✅ | `menus.spec` |
 

@@ -120,13 +120,13 @@ export interface PlacedItem<T> {
  * of an inner ring. Within that ring the nearest item inside `hitRadius` wins; failing that, the item
  * with the closest angle (marking-menu tolerance), so a flick toward a dot selects it.
  */
-export function hitTest<T>(
-  placed: PlacedItem<T>[],
+export function hitTest<P extends PlacedItem<unknown>>(
+  placed: P[],
   pointer: Point,
   polar: Polar,
   radii: number[],
   hitRadius = 38,
-): PlacedItem<T> | null {
+): P | null {
   if (!placed.length || polar.dist < 36) return null;
   // Once past an inner ring (with some slack), aim at the next ring out: moving outward toward a
   // child arc must not snag inner items.
@@ -134,7 +134,7 @@ export function hitTest<T>(
   let band = rings[0];
   for (const r of rings) if (r > rings[0] && polar.dist > radii[r - 1] + BAND_SLACK) band = r;
   const candidates = placed.filter((p) => p.ring === band);
-  let best: PlacedItem<T> | null = null;
+  let best: P | null = null;
   let bestDist = Infinity;
   for (const p of candidates) {
     const d = Math.hypot(p.point.x - pointer.x, p.point.y - pointer.y);
@@ -145,7 +145,7 @@ export function hitTest<T>(
   }
   if (best && bestDist <= hitRadius) return best;
   if (polar.dist > radii[band] + BAND_SLACK + 20) return null;
-  let pick: PlacedItem<T> | null = null;
+  let pick: P | null = null;
   let diff = Infinity;
   for (const p of candidates) {
     const a = Math.abs(p.angle - polar.angle);

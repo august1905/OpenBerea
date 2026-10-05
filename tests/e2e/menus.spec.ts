@@ -1,9 +1,12 @@
-import { expect, test } from '@playwright/test';
+import { expect, type Page, test } from '@playwright/test';
 
-import { center, expectAccessible, gotoApp, openMenu, swipe, tapItem } from './helpers';
+import { center, edgeSwipeOpen, expectAccessible, gotoApp, openMenu, swipe, tapItem, touches } from './helpers';
+
+const overlay = (page: Page, menu: 'main-menu' | 'tabs-menu') => page.getByTestId(`${menu}-overlay`);
 
 test.describe('corner menus', () => {
-  test('shows a small dot in each active corner', async ({ page }) => {
+  test('shows a small dot in each active corner', async ({ page }, info) => {
+    test.skip(info.project.name === 'phone', 'touch screens hide the dots (see the edge-swipe tests)');
     await gotoApp(page, '/');
     const vw = page.viewportSize()!;
     const main = await center(page, 'main-menu-hint');
@@ -58,6 +61,13 @@ test.describe('corner menus', () => {
     await expect(page.getByTestId('main-menu-overlay')).toContainText('Paragraphs ✓');
   });
 
+  test('only one menu is open at a time', async ({ page }) => {
+    await gotoApp(page, '/');
+    await openMenu(page, 'main-menu');
+    await openMenu(page, 'tabs-menu');
+    await expect(overlay(page, 'main-menu')).toHaveCount(0);
+  });
+
   test('blocks text selection and the context menu in the corner zones', async ({ page }) => {
     await gotoApp(page, '/');
     const styles = await page.getByTestId('main-menu-hint').evaluate((el) => {
@@ -72,6 +82,128 @@ test.describe('corner menus', () => {
       return e.defaultPrevented;
     });
     expect(prevented).toBe(true);
+  });
+});
+
+test.describe('corner menus with a mouse: hover to open', () => {
+  test.skip(({ isMobile }) => isMobile, 'mouse only');
+
+  /** Moves the mouse to a point in a few steps, as a hand would. */
+  const glide = (page: Page, p: { x: number; y: number }) => page.mouse.move(p.x, p.y, { steps: 5 });
+
+  test('resting on the corner dot opens the menu; moving away closes it', async ({ page }) => {
+    await gotoApp(page, '/read/jhn/3');
+    await glide(page, await center(page, 'main-menu-hint'));
+    await expect(overlay(page, 'main-menu')).toBeVisible();
+    await expect(page.getByTestId('main-menu-item-read')).toBeVisible();
+    // Moving over the menu keeps it open…
+    await glide(page, await center(page, 'main-menu-item-study'));
+    await page.waitForTimeout(500);
+    await expect(overlay(page, 'main-menu')).toBeVisible();
+    // …and leaving it closes it after a short grace period.
+    await glide(page, { x: 200, y: 200 });
+    await expect(overlay(page, 'main-menu')).toHaveCount(0);
+  });
+
+  test('passing quickly across the corner dot does not open the menu', async ({ page }) => {
+    await gotoApp(page, '/');
+    const dot = await center(page, 'main-menu-hint');
+    await page.mouse.move(dot.x - 100, dot.y - 100);
+    await page.mouse.move(dot.x, dot.y);
+    await page.mouse.move(dot.x - 100, dot.y - 100);
+    await page.waitForTimeout(300);
+    await expect(overlay(page, 'main-menu')).toHaveCount(0);
+  });
+
+  test('resting on an item with children opens its arc, and on a child its own; one click chooses', async ({ page }) => {
+    await gotoApp(page, '/read/jhn/3');
+    await glide(page, await center(page, 'main-menu-hint'));
+    await glide(page, await center(page, 'main-menu-item-read'));
+    await glide(page, await center(page, 'main-menu-item-read.version'));
+    const par = await center(page, 'main-menu-item-read.par');
+    await glide(page, par);
+    await page.mouse.down();
+    await page.mouse.up();
+    await expect(page).toHaveURL(/\/read\/jhn\/3\?tr=par/);
+    await expect(overlay(page, 'main-menu')).toHaveCount(0);
+  });
+
+  test('clicking the corner dot keeps the menu open after the mouse leaves; clicking again closes it', async ({ page }) => {
+    await gotoApp(page, '/');
+    await page.getByTestId('main-menu-hint').hover();
+    await expect(overlay(page, 'main-menu')).toBeVisible();
+    await page.getByTestId('main-menu-hint').click();
+    await glide(page, { x: 200, y: 200 });
+    await page.waitForTimeout(600);
+    await expect(overlay(page, 'main-menu')).toBeVisible();
+    await page.getByTestId('main-menu-hint').click();
+    await expect(overlay(page, 'main-menu')).toHaveCount(0);
+  });
+
+  test('the tabs menu opens on hover too', async ({ page }) => {
+    await gotoApp(page, '/read/jhn/3');
+    await glide(page, await center(page, 'tabs-menu-hint'));
+    await expect(overlay(page, 'tabs-menu')).toContainText('Jn 3');
+    await glide(page, { x: 600, y: 200 });
+    await expect(overlay(page, 'tabs-menu')).toHaveCount(0);
+  });
+});
+
+test.describe('corner menus on touch screens: edge swipes', () => {
+  test.skip(({ isMobile }) => !isMobile, 'touch only');
+
+  test('the corner dots are hidden and let taps through', async ({ page }) => {
+    await gotoApp(page, '/');
+    for (const menu of ['main-menu', 'tabs-menu']) {
+      const style = await page.getByTestId(`${menu}-hint`).evaluate((el) => ({ opacity: getComputedStyle(el).opacity, events: getComputedStyle(el).pointerEvents }));
+      expect(style).toEqual({ opacity: '0', events: 'none' });
+    }
+    // Nothing at the edges makes the page pan sideways.
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  });
+
+  test('a swipe in from the right edge opens the main menu; from the left, tabs', async ({ page }) => {
+    await gotoApp(page, '/read/jhn/3');
+    await openMenu(page, 'main-menu');
+    await expect(page.getByTestId('main-menu-item-read')).toBeVisible();
+    await tapItem(page, 'main-menu', 'read');
+    await expect(page.getByTestId('main-menu-item-read.version')).toBeVisible();
+    await page.touchscreen.tap(200, 200);
+    await expect(overlay(page, 'main-menu')).toHaveCount(0);
+    await openMenu(page, 'tabs-menu');
+    await expect(overlay(page, 'tabs-menu')).toContainText('Jn 3');
+  });
+
+  test('sliding on to an item and lifting chooses it, through nested arcs', async ({ page }) => {
+    await gotoApp(page, '/read/jhn/3');
+    await swipe(page, 'main-menu', ['read', 'read.version', 'read.par']);
+    await expect(page).toHaveURL(/\/read\/jhn\/3\?tr=par/);
+    await expect(overlay(page, 'main-menu')).toHaveCount(0);
+  });
+
+  test('a quick swipe that ends on an item leaves the menu open rather than choosing it', async ({ page }) => {
+    await gotoApp(page, '/');
+    const t = await edgeSwipeOpen(page, 'main-menu');
+    await t.move(await center(page, 'main-menu-item-search'), 3);
+    await t.end();
+    await expect(page).toHaveURL(/\/$/);
+    await expect(overlay(page, 'main-menu')).toBeVisible();
+  });
+
+  test('vertical scrolls and swipes that start away from the edge do not open the menus', async ({ page }) => {
+    await gotoApp(page, '/read/jhn/3');
+    const vw = page.viewportSize()!;
+    const t = await touches(page);
+    await t.start({ x: vw.width - 8, y: 500 });
+    await t.move({ x: vw.width - 14, y: 300 });
+    await t.end();
+    const t2 = await touches(page);
+    await t2.start({ x: vw.width / 2, y: 400 });
+    await t2.move({ x: vw.width / 2 - 120, y: 400 });
+    await t2.end();
+    await page.waitForTimeout(200);
+    await expect(overlay(page, 'main-menu')).toHaveCount(0);
+    await expect(overlay(page, 'tabs-menu')).toHaveCount(0);
   });
 });
 

@@ -37,5 +37,6 @@ export default function RootLayout() {
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1 },
+  // Clipped, so nothing at the screen edges (the corner dots' touch zones) makes the page pan sideways.
+  root: { flex: 1, overflow: 'hidden' },
 });

@@ -2,8 +2,11 @@ import { describe, expect, it } from 'vitest';
 
 import { labelBox, inBox } from './geometry';
 import {
+  BURST,
   clamp01,
+  cubicBezier,
   drift,
+  EXIT,
   FOLLOW,
   followTrail,
   itemTransform,
@@ -11,11 +14,15 @@ import {
   lineTransform,
   magnet,
   POP,
+  poseAt,
   previewPoints,
   proximity,
   SOFT,
   spring,
   stepSpring,
+  type Tween,
+  tweenAt,
+  tweenDone,
   withAlpha,
 } from './motion';
 
@@ -163,5 +170,60 @@ describe('label boxes', () => {
     expect(inBox(box, { x: 8, y: 20 })).toBe(true);
     expect(inBox(box, { x: 0, y: 20 })).toBe(false);
     expect(inBox(box, { x: 50, y: 45 })).toBe(false);
+  });
+});
+
+describe('exits', () => {
+  it('ease like the CSS curves they name', () => {
+    const linear = cubicBezier(0, 0, 1, 1);
+    for (const u of [0, 0.1, 0.25, 0.5, 0.8, 1]) expect(linear(u)).toBeCloseTo(u, 5);
+    // CSS ease-in-out is symmetric about the middle.
+    const inOut = cubicBezier(0.42, 0, 0.58, 1);
+    expect(inOut(0.5)).toBeCloseTo(0.5, 5);
+    expect(inOut(0.2) + inOut(0.8)).toBeCloseTo(1, 5);
+    // Exits start slowly and speed up; bursts start fast.
+    expect(EXIT(0.25)).toBeLessThan(0.1);
+    expect(BURST(0.25)).toBeGreaterThan(0.5);
+    for (const ease of [EXIT, BURST, inOut]) {
+      let prev = 0;
+      for (let u = 0; u <= 1.0001; u += 0.01) {
+        const y = ease(u);
+        expect(y).toBeGreaterThanOrEqual(prev - 1e-9);
+        prev = y;
+      }
+      expect(ease(0)).toBe(0);
+      expect(ease(1)).toBe(1);
+    }
+  });
+
+  const tw: Tween = {
+    t0: 10,
+    dur: 0.2,
+    ease: cubicBezier(0, 0, 1, 1),
+    from: { x: 0, y: 0, s: 1, r: 0, o: 1 },
+    to: { x: -100, y: 50, s: 0.15, r: 0, o: 0 },
+  };
+
+  it('move from one pose to the other over their duration', () => {
+    expect(poseAt(tw, 9)).toEqual(tw.from);
+    expect(poseAt(tw, 10.1).x).toBeCloseTo(-50, 5);
+    expect(poseAt(tw, 10.1).o).toBeCloseTo(0.5, 5);
+    const end = poseAt(tw, 11);
+    for (const k of ['x', 'y', 's', 'r', 'o'] as const) expect(end[k]).toBeCloseTo(tw.to[k], 9);
+    expect(tweenDone(tw, 10.19)).toBe(false);
+    expect(tweenDone(tw, 10.201)).toBe(true);
+  });
+
+  it('report how fast they are going, so an element taking over carries on smoothly', () => {
+    const { pose, vel } = tweenAt(tw, 10.1);
+    expect(pose.x).toBeCloseTo(-50, 5);
+    expect(vel.x).toBeCloseTo(-500, 3); // 100 px in 0.2 s
+    expect(vel.o).toBeCloseTo(-5, 3);
+    // A spring started from that pose and velocity keeps moving the same way at first, then returns.
+    const s = { x: pose.x, v: vel.x };
+    stepSpring(s, 0, POP, 1 / 60);
+    expect(s.x).toBeLessThan(pose.x);
+    for (let i = 0; i < 120; i++) stepSpring(s, 0, POP, 1 / 60);
+    expect(Math.abs(s.x)).toBeLessThan(0.05);
   });
 });
