@@ -15,7 +15,7 @@ Where the spec was unclear, the simplest option that fits the Guiding principles
 ## Data
 
 8. **KJV markup license.** CrossWire's KJV module conf says `DistributionLicense=GPL` while granting use "for any purpose"; the 1769 text itself is public domain outside the UK. The converted KJV stays in its own `data/kjv/` folder with that notice, separate from the MIT code.
-9. **Red letter is KJV-only.** The ASV module has no words-of-Christ markup (and its Strong's tags are misaligned), so the red-letter toggle applies to the KJV; the reader says so when the ASV is shown.
+9. **Red letter is KJV-only.** The ASV module has no words-of-Christ markup, so the red-letter toggle applies to the KJV; the reader says so when the ASV is shown. Word taps work in both: the ASV module's Strong's tags are misaligned, so the ASV's numbers are carried over from the matching KJV words (88% of ASV words; added or reworded words stay untappable). Details are in DATA_SOURCES.md.
 10. **TBESH definitions skipped.** STEPBible's Hebrew brief-lexicon definitions need Online Bible's permission. Its lemmas, transliterations, and glosses (CC BY 4.0) are used; Hebrew definitions come from Strong's and BDB.
 11. **The whole STEPBible lexicon folder is CC BY-SA 4.0**, because TBESG's Middle Liddell entries are share-alike. That is simpler than splitting entries across folders and keeps share-alike data share-alike.
 12. **Theographic is share-alike** (spec): its repository says CC BY-SA 4.0 although its website says CC BY 4.0.

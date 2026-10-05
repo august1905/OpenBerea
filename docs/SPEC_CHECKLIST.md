@@ -4,7 +4,7 @@ One line per requirement in the spec ("Bible Study App — Requirements Spec.md"
 
 Legend: ✅ yes · ⚠️ partly (see note) · ⏳ waiting on the owner (listed in the hand-off)
 
-Latest run (after the owner's light/dark and menu-motion requests): 462 unit tests and 240 end-to-end runs passed (6 skipped by design: phone-only or desktop-only cases), axe reported no serious or critical violations, 394 of 394 external links resolved, the data checks passed on 2,000 sampled verses per source, and Lighthouse scored 100 for accessibility, best practices, and SEO on the key pages.
+Latest run (after the owner's hover and edge-swipe menus and ASV word taps): 504 unit tests and 255 end-to-end runs passed (19 skipped by design: phone-only or desktop-only cases), axe reported no serious or critical violations, and the data checks passed. From the run before (light/dark and menu motion): 394 of 394 external links resolved, and Lighthouse scored 100 for accessibility, best practices, and SEO on the key pages.
 
 ## Guiding principles
 
@@ -38,7 +38,7 @@ Latest run (after the owner's light/dark and menu-motion requests): 462 unit tes
 | C2 | Read either translation and switch instantly | ✅ | ✅ | `reader.spec` "switches between KJV and ASV instantly" |
 | C3 | Side-by-side parallel view | ✅ | ✅ | `reader.spec` (two columns on desktop; stacked per verse on phones, DECISIONS #25) |
 | C4 | Hebrew/Aramaic OT and Greek NT text; Hebrew right-to-left with vowel points | ✅ | ✅ | `original.spec` (RTL direction, Ezra SIL, vowel points); `npm run verify` (TAHOT/TAGNT words) |
-| C5 | Tap any word: Strong's number, root word, transliteration, pronunciation, definition, grammar parsing | ✅ | ✅ | `original.spec` (Hebrew tap; KJV "loved"; root link G26→G25) |
+| C5 | Tap any word: Strong's number, root word, transliteration, pronunciation, definition, grammar parsing | ✅ | ✅ | `original.spec` (Hebrew tap; KJV "loved"; ASV "loved", "eternal", "Jehovah", in the ASV view and the parallel view's ASV column; root link G26→G25); `asv-strongs.test` (88% of ASV words carry the KJV's Strong's numbers; DATA_SOURCES) |
 | C6 | Pronunciation as phonetic spelling; audio only if a free, licensed source exists | ✅ | ✅ | Phonetic from Strong's (`original.spec`: "ag-ap-ah'-o"); no licensed audio exists (DATA_SOURCES) |
 | C7 | Interlinear view (original word under each English word) | ✅ | ✅ | `original.spec` (John 3:16 and Genesis 1:1); alignment unit tests (≥95% of tagged words in John, Romans, Genesis, Psalms) |
 | C8 | Lexicons: Strong's, Thayer's (Greek), Brown-Driver-Briggs and Gesenius (Hebrew), STEPBible brief lexicons | ⚠️ | ✅ | Strong's, BDB, and STEPBible brief lexicons (Abbott-Smith, Middle Liddell) are built (`original.spec`). **Thayer's and Gesenius are skipped:** no freely licensed, reliable digital edition exists (DATA_SOURCES), and the app says so. |
@@ -166,7 +166,7 @@ Latest run (after the owner's light/dark and menu-motion requests): 462 unit tes
 | ID | Requirement | Done | Tested | Evidence |
 | --- | --- | --- | --- | --- |
 | DS1 | KJV with Strong's tags and red-letter markup (public domain; Crown rights noted for the UK) | ✅ | ✅ | `npm run verify` (text and Strong's equal the module) |
-| DS2 | ASV (public domain) | ✅ | ✅ | `npm run verify` |
+| DS2 | ASV (public domain) | ✅ | ✅ | `npm run verify` (text equals the module; Strong's numbers carried over from the KJV are KJV tags of the same verse) |
 | DS3 | STEPBible TAHOT and TAGNT (CC BY 4.0; credit "STEP Bible" linked to STEPBible.org) | ✅ | ✅ | `npm run verify`; `about.spec` |
 | DS4 | Lexicons: STEPBible TBESH/TBESG (TBESH terms checked); Strong's, Thayer's, BDB, Gesenius | ⚠️ | ✅ | TBESH definitions skipped (Online Bible permission needed); Thayer's and Gesenius skipped (no free source). Strong's, BDB, TBESG, and TBESH glosses are used. |
 | DS5 | STEPBible TEHMC/TEGMC, TVTMS, TIPNR (CC BY 4.0) | ✅ | ✅ | Pipeline verification; `morph.test` |

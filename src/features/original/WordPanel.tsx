@@ -32,12 +32,13 @@ function idsFor(tap: WordTap, forms: OrigWord[]): { id: string; form?: OrigWord 
 /** Tap any word: Strong's number, root, transliteration, pronunciation, definition, grammar. */
 export function WordPanel({ word, book, chapter, onClose }: { word: WordTap; book: BookCode; chapter: number; onClose: () => void }) {
   const needsAlign = !word.orig && word.verse !== undefined && word.segIndex !== undefined;
-  const kjv = useData<ChapterText>(needsAlign ? `kjv/${book}/${chapter}.json` : null);
+  // The tapped word's own chapter (KJV or ASV): both carry the KJV's Strong's numbers in order.
+  const text = useData<ChapterText>(needsAlign ? `${word.tr ?? 'kjv'}/${book}/${chapter}.json` : null);
   const orig = useData<OrigChapter>(needsAlign ? paths.orig(book, chapter) : null);
-  const loading = needsAlign && (kjv.status === 'loading' || orig.status === 'loading');
+  const loading = needsAlign && (text.status === 'loading' || orig.status === 'loading');
   let forms: OrigWord[] = [];
-  if (needsAlign && kjv.data && orig.data) {
-    const verse = kjv.data.v.find((v) => v.n === word.verse);
+  if (needsAlign && text.data && orig.data) {
+    const verse = text.data.v.find((v) => v.n === word.verse);
     const ov = orig.data.v.find((v) => v.n === word.verse);
     if (verse && ov) forms = wordsForSegment(verse.s, word.segIndex!, ov.w);
   }

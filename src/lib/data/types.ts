@@ -44,7 +44,7 @@ export type Seg =
   | string
   | {
       t: string;
-      /** Strong's numbers, base form without leading zeros: ["G25"], ["H430"] (KJV only). */
+      /** Strong's numbers, base form without leading zeros: ["G25"], ["H430"]. The ASV's are carried over from the KJV word it matches. */
       s?: string[];
       /** Morphology codes as given by the source (KJV NT uses Robinson codes). */
       m?: string[];

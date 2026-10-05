@@ -3,7 +3,7 @@ import { join } from 'node:path';
 
 import { describe, expect, it } from 'vitest';
 
-import type { ChapterText, OrigChapter } from '@/lib/data/types';
+import type { ChapterText, OrigChapter, OrigWord } from '@/lib/data/types';
 
 import { alignVerse } from './align';
 import { baseStrongs } from './data';
@@ -27,6 +27,22 @@ describe('baseStrongs', () => {
     expect(baseStrongs('h7225')).toBe('H7225');
     expect(baseStrongs('G25')).toBe('G25');
     expect(baseStrongs('love')).toBeNull();
+  });
+});
+
+describe('alignVerse', () => {
+  const word = (s: string, m: string): OrigWord => ({ t: s, x: s, g: s, s, m });
+
+  it('gives the rest of a split word the same original word (John 3:16 “should … perish”)', () => {
+    const segs = [{ t: 'should', s: ['G622'], m: ['V-2AMS-3S'] }, ' ', { t: 'not', s: ['G3361'], m: ['PRT-N'] }, ' ', { t: 'perish', s: ['G622'], m: ['V-2AMS-3S'] }];
+    const { bySeg } = alignVerse(segs, [word('G3361', 'PRT-N'), word('G622', 'V-2AMS-3S')]);
+    expect(bySeg.get(0)).toEqual([1]);
+    expect(bySeg.get(4)).toEqual([1]);
+  });
+
+  it('keeps repeated words with their own original words while any are left', () => {
+    const segs = [{ t: 'Holy', s: ['H6918'] }, ', ', { t: 'holy', s: ['H6918'] }];
+    expect([...alignVerse(segs, [word('H6918', 'HAampsa'), word('H6918', 'HAampsa')]).bySeg.values()]).toEqual([[0], [1]]);
   });
 });
 
@@ -72,17 +88,21 @@ describe.skipIf(!has)('alignment with real data', () => {
   });
 
   it.each([
-    ['JHN', 21],
-    ['ROM', 16],
-    ['GEN', 50],
-    ['PSA', 150],
-  ] as const)('aligns at least 95%% of tagged words in %s', (book, chapters) => {
+    ['kjv', 'JHN', 21],
+    ['kjv', 'ROM', 16],
+    ['kjv', 'GEN', 50],
+    ['kjv', 'PSA', 150],
+    ['asv', 'JHN', 21],
+    ['asv', 'ROM', 16],
+    ['asv', 'GEN', 50],
+    ['asv', 'PSA', 150],
+  ] as const)('%s %s: at least 95 percent of tagged words align (%i chapters)', (tr, book, chapters) => {
     let tagged = 0;
     let aligned = 0;
     for (let c = 1; c <= chapters; c++) {
-      const kjv = load<ChapterText>(`kjv/${book}/${c}.json`);
+      const text = load<ChapterText>(`${tr}/${book}/${c}.json`);
       const orig = load<OrigChapter>(`stepbible/orig/${book}/${c}.json`);
-      for (const v of kjv.v) {
+      for (const v of text.v) {
         const ov = orig.v.find((o) => o.n === v.n);
         if (!ov) continue;
         const { bySeg } = alignVerse(v.s, ov.w);
@@ -90,6 +110,23 @@ describe.skipIf(!has)('alignment with real data', () => {
         aligned += bySeg.size;
       }
     }
+    expect(tagged).toBeGreaterThan(0);
     expect(aligned / tagged).toBeGreaterThan(0.95);
+  });
+
+  it('pairs ASV words with the original words their KJV counterparts translate', () => {
+    const pairsOf = (book: string, c: number, v: number) => {
+      const asv = load<ChapterText>(`asv/${book}/${c}.json`).v[v - 1];
+      const orig = load<OrigChapter>(`stepbible/orig/${book}/${c}.json`).v.find((o) => o.n === v)!;
+      const { bySeg } = alignVerse(asv.s, orig.w);
+      return new Map([...bySeg].map(([si, wi]) => [(asv.s[si] as { t: string }).t, wi.map((i) => orig.w[i].s).join('+')]));
+    };
+    const j316 = pairsOf('JHN', 3, 16);
+    expect(j316.get('loved')).toBe('G25');
+    expect(j316.get('eternal')).toBe('G166'); // KJV "everlasting"
+    expect(pairsOf('PSA', 23, 1).get('Jehovah')).toBe('H3068'); // KJV "The LORD"
+    const gen = pairsOf('GEN', 1, 1);
+    expect(gen.get('God')).toBe('H430');
+    expect(gen.get('the heavens')).toBe('H8064'); // KJV "the heaven"
   });
 });

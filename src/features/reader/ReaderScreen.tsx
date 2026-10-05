@@ -145,7 +145,7 @@ function Reader({ book, chapter, version, verse }: { book: BookCode; chapter: nu
           verse={verse}
           onVerseLayout={onVerseLayout}
           onVersePress={setSheetVerse}
-          onWord={WordPanel && version === 'kjv' ? setWord : undefined}
+          onWord={WordPanel ? setWord : undefined}
         />
       )}
 
@@ -242,7 +242,7 @@ function ChapterBody({ text, layout, redLetter, verse, onVerseLayout, onVersePre
                 >
                   {i > 0 ? ' ' : ''}
                   <VerseNumber n={v.n} onPress={onVersePress} />
-                  <Segments segs={v.s} redLetter={redLetter} onWord={onWord ? (w) => onWord({ ...w, verse: v.n }) : undefined} />
+                  <Segments segs={v.s} redLetter={redLetter} onWord={onWord ? (w) => onWord({ ...w, tr: text.tr, verse: v.n }) : undefined} />
                 </Text>
               ))}
             </Text>
@@ -271,15 +271,15 @@ function Parallel({ kjv, asv, wide, verse, onVerseLayout, onVersePress, onWord }
         const a = asvByVerse.get(v.n);
         const highlight = v.n === verse ? { backgroundColor: palette.highlight } : null;
         const kjvCell = (
-          <Text style={[base, { color: palette.text }]}>
+          <Text testID={`par-kjv-${v.n}`} style={[base, { color: palette.text }]}>
             <VerseNumber n={v.n} onPress={onVersePress} />
-            <Segments segs={v.s} redLetter={display.redLetter} onWord={onWord ? (w) => onWord({ ...w, verse: v.n }) : undefined} />
+            <Segments segs={v.s} redLetter={display.redLetter} onWord={onWord ? (w) => onWord({ ...w, tr: 'kjv', verse: v.n }) : undefined} />
           </Text>
         );
         const asvCell = (
-          <Text style={[base, { color: palette.text }]}>
+          <Text testID={`par-asv-${v.n}`} style={[base, { color: palette.text }]}>
             {wide ? <VerseNumber n={v.n} onPress={onVersePress} /> : null}
-            {a ? <Segments segs={a.s} redLetter={false} /> : null}
+            {a ? <Segments segs={a.s} redLetter={false} onWord={onWord ? (w) => onWord({ ...w, tr: 'asv', verse: v.n }) : undefined} /> : null}
           </Text>
         );
         return wide ? (

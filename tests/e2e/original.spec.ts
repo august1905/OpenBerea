@@ -57,6 +57,50 @@ test.describe('original languages', () => {
     await expect(panel).toContainText('love (');
   });
 
+  test('tapping an ASV word shows the Hebrew or Greek word it translates', async ({ page }) => {
+    const panel = page.getByTestId('word-panel');
+    const tap = async (path: string, verse: number, word: string) => {
+      await gotoApp(page, path);
+      await page.getByTestId(`verse-${verse}`).getByRole('button', { name: word, exact: true }).click();
+      await expect(panel).toBeVisible();
+    };
+    await tap('/read/jhn/3?tr=asv', 16, 'loved');
+    await expect(panel.getByTestId('word-strongs')).toHaveText('Strong’s G25');
+    await expectGreek(panel, 'ἠγάπησεν');
+    await expect(panel.getByTestId('word-grammar')).toContainText('Verb Aorist Active Indicative 3rd Singular');
+    await page.getByTestId('word-panel-close').click();
+    // Where the ASV words differ from the KJV ("eternal" for "everlasting").
+    await page.getByTestId('verse-16').getByRole('button', { name: 'eternal', exact: true }).click();
+    await expect(panel.getByTestId('word-strongs')).toHaveText('Strong’s G166');
+    await expectGreek(panel, 'αἰώνιον');
+    await page.getByTestId('word-panel-close').click();
+    // The ASV moves this phrase, so its parsing comes from aligning the ASV verse, not the KJV's.
+    await tap('/read/rom/8?tr=asv', 28, 'to them that love');
+    await expect(panel.getByTestId('word-strongs').first()).toHaveText('Strong’s G25');
+    await expect(panel.getByTestId('word-grammar').first()).toContainText('V-PAP-DPM');
+    await page.getByTestId('word-panel-close').click();
+    await tap('/read/psa/23?tr=asv', 1, 'Jehovah');
+    await expect(panel.getByTestId('word-strongs')).toHaveText('Strong’s H3068');
+    await expect(panel).toContainText('Yah.weh');
+    await expectAccessible(page, 'word panel (ASV)');
+  });
+
+  test('the ASV column of the parallel view has word taps too', async ({ page }) => {
+    const panel = page.getByTestId('word-panel');
+    await gotoApp(page, '/read/rom/8?tr=par');
+    await page.getByTestId('par-asv-28').getByRole('button', { name: 'to them that love', exact: true }).click();
+    await expect(panel.getByTestId('word-strongs').first()).toHaveText('Strong’s G25');
+    await expect(panel.getByTestId('word-grammar').first()).toContainText('V-PAP-DPM');
+    await page.getByTestId('word-panel-close').click();
+    await page.getByTestId('par-kjv-28').getByRole('button', { name: 'all things', exact: true }).click();
+    await expect(panel.getByTestId('word-strongs')).toHaveText('Strong’s G3956');
+    await expect(panel.getByTestId('word-grammar')).toContainText('A-APN');
+    await page.getByTestId('word-panel-close').click();
+    await gotoApp(page, '/read/psa/23?tr=par');
+    await page.getByTestId('par-asv-1').getByRole('button', { name: 'Jehovah', exact: true }).click();
+    await expect(panel.getByTestId('word-strongs')).toHaveText('Strong’s H3068');
+  });
+
   test('the word panel shows the root word as a link', async ({ page }) => {
     await gotoApp(page, '/read/1jn/4');
     await page.getByTestId('verse-8').getByRole('button', { name: 'love', exact: true }).first().click();

@@ -29,9 +29,9 @@ function sameLexeme(a: string, b: string): boolean {
 }
 
 /**
- * Pairs each Strong's-tagged KJV segment with the original-language words it translates, by matching
- * Strong's numbers within the verse. Matching walks forward from the last match so repeated words
- * (e.g. two "אֵת") pair in order. Returns, for each segment index, the indices of its original words.
+ * Pairs each Strong's-tagged KJV or ASV segment with the original-language words it translates, by
+ * matching Strong's numbers within the verse. Matching walks forward from the last match so repeated
+ * words (e.g. two "אֵת") pair in order. Returns, for each segment index, the indices of its original words.
  */
 export function alignVerse(segs: Seg[], words: OrigWord[]): { bySeg: Map<number, number[]>; unmatched: number[] } {
   const used = new Set<number>();
@@ -53,12 +53,18 @@ export function alignVerse(segs: Seg[], words: OrigWord[]): { bySeg: Map<number,
   // A divine-name run that repeats the previous run's number shares that run's word. (Other repeats,
   // like "Holy, holy, holy", are separate words.)
   let previous = new Map<string, number>();
+  // A segment with the same numbers and morphology as an earlier one, once no unused word is left,
+  // is the rest of that word: the KJV's "should … perish" (one ἀπόληται), or an ASV phrase split
+  // around words the ASV added ("And there was evening").
+  const earlier = new Map<string, Map<string, number>>();
   segs.forEach((seg, si) => {
     if (typeof seg === 'string' || !seg.s?.length) return;
     const found: number[] = [];
     const current = new Map<string, number>();
+    const key = `${seg.s.join()}|${seg.m?.join() ?? ''}`;
     for (const s of seg.s) {
       let i = seg.dn && previous.has(s) ? previous.get(s)! : find(s);
+      if (i < 0) i = earlier.get(key)?.get(s) ?? -1;
       if (i >= 0 && !used.has(i)) {
         used.add(i);
         cursor = i + 1;
@@ -68,6 +74,7 @@ export function alignVerse(segs: Seg[], words: OrigWord[]): { bySeg: Map<number,
       current.set(s, i);
     }
     previous = current;
+    if (current.size) earlier.set(key, current);
     if (found.length) bySeg.set(si, [...new Set(found)].sort((a, b) => a - b));
   });
 
@@ -75,7 +82,7 @@ export function alignVerse(segs: Seg[], words: OrigWord[]): { bySeg: Map<number,
   return { bySeg, unmatched };
 }
 
-/** The original words for one tapped KJV segment, or [] when none match. */
+/** The original words for one tapped KJV or ASV segment, or [] when none match. */
 export function wordsForSegment(segs: Seg[], segIndex: number, words: OrigWord[]): OrigWord[] {
   return (alignVerse(segs, words).bySeg.get(segIndex) ?? []).map((i) => words[i]);
 }

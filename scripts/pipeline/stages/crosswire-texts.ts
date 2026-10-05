@@ -11,6 +11,7 @@ import type { Block, ChapterText, CommentaryChapter, SearchCorpus, Seg, TskChapt
 import { download, log, OUT, readData, recordSource, writeData, writeText } from '../lib/context';
 import { blocksToText, decodeEntities } from '../lib/richtext';
 import { commentaryBlocks, mhcMarkerRange, prepareOsis, prepareScripRefs, type RefStats, splitBarnes, splitJfb } from '../lib/osis-comm';
+import { RULES, transferStrongs, type TransferStats, verseWords, withoutStrongs } from '../lib/asv-strongs';
 import { appendSegs, parseOsisVerse, segsToText, strongsFromLemma } from '../lib/osis-bible';
 import { bookToOsis, OSIS_BOOKS } from '../lib/osis-books';
 import { compactValid, osisRefToCompact } from '../lib/osis-refs';
@@ -99,8 +100,11 @@ interface BibleStats {
   strayHeadingText: string[];
 }
 
-/** Writes {tr}/{BOOK}/{ch}.json and search/{tr}.json from a SWORD Bible module. */
-function convertBible(mod: ZVerse, tr: 'kjv' | 'asv', strongs: boolean): BibleStats {
+/**
+ * Writes {tr}/{BOOK}/{ch}.json and search/{tr}.json from a SWORD Bible module. `tag` adds Strong's
+ * numbers to each verse's segments after conversion (the ASV's, from the KJV).
+ */
+function convertBible(mod: ZVerse, tr: 'kjv' | 'asv', strongs: boolean, tag?: (b: BookCode, c: number, v: number, segs: Seg[]) => Seg[]): BibleStats {
   const st: BibleStats = {
     chapters: 0, verses: 0, emptyVerses: [], redVerses: 0, quotes: 0, paraVerses: 0, titles: 0, titlesInVerse: [],
     droppedHeadings: [], colophons: [], emptyWords: 0, notes: 0, midParagraphs: 0, joinFixes: 0, spaceFixes: 0,
@@ -140,6 +144,7 @@ function convertBible(mod: ZVerse, tr: 'kjv' | 'asv', strongs: boolean): BibleSt
             st.titlesInVerse.push(`${where} ${segsToText(r.title)}`);
           } else st.droppedHeadings.push(`${where} ${segsToText(r.title)}`);
         }
+        if (tag) segs = tag(book.code, c, v, segs);
         const verse: Verse = { n: v, s: segs };
         if (r.para) {
           verse.p = 1;
@@ -443,13 +448,36 @@ const ASV_OMITTED = [
   'LUK 17:36', 'LUK 23:17', 'JHN 5:4', 'ACT 8:37', 'ACT 15:34', 'ACT 24:7', 'ACT 28:29', 'ROM 16:24',
 ];
 
+/** Adds the KJV's Strong's numbers to ASV verses (lib/asv-strongs.ts), reading the converted KJV. */
+function asvTagger() {
+  const stats: TransferStats = { words: 0, tagged: 0, rules: { same: 0, similar: 0, position: 0 }, kjvUntagged: 0, italic: 0 };
+  let kjv: ChapterText | null = null;
+  const tag = (b: BookCode, c: number, v: number, segs: Seg[]) => {
+    if (kjv?.b !== b || kjv.c !== c) kjv = readChapter('kjv', b, c);
+    const r = transferStrongs(kjv.v[v - 1].s, segs);
+    assert(JSON.stringify(withoutStrongs(r.segs)) === JSON.stringify(segs), `ASV ${ref(b, c, v)}: tagging changed the text or italics`);
+    stats.words += r.stats.words;
+    stats.tagged += r.stats.tagged;
+    stats.kjvUntagged += r.stats.kjvUntagged;
+    stats.italic += r.stats.italic;
+    for (const rule of RULES) stats.rules[rule] += r.stats.rules[rule];
+    return r.segs;
+  };
+  return { tag, stats };
+}
+
+const percent = (n: number, of: number) => `${((100 * n) / of).toFixed(1)}%`;
+
 async function runAsv() {
   const { conf, driver, module: mod, file } = await zipModule('ASV');
   const canon = await download(CANON_H.url, 'crosswire', 'canon.h', CANON_H.sha256);
   assert(driver === 'zText' && confValue(conf, 'Version') === '2.0', `ASV conf: ${driver} v${confValue(conf, 'Version')}`);
   assert(confValue(conf, 'DistributionLicense') === 'Public Domain', 'ASV DistributionLicense changed');
+  assert(existsSync(join(OUT, 'kjv', 'REV', '22.json')), 'the ASV takes its Strong’s numbers from kjv/: run the kjv stage first');
 
-  const st = convertBible(mod, 'asv', false);
+  const tagging = asvTagger();
+  const st = convertBible(mod, 'asv', false, tagging.tag);
+  const t = tagging.stats;
   log('asv', `wrote ${st.chapters} chapters, ${st.verses} verses, search/asv.json`);
 
   recordSource({
@@ -460,19 +488,29 @@ async function runAsv() {
     files: [file],
     license: {
       id: 'PD',
-      name: 'Public Domain',
-      attribution: 'American Standard Version (1901), public domain. Text from the CrossWire Bible Society ASV module (https://www.crosswire.org/sword/modules/).',
+      name: 'Public Domain (text). The Strong’s numbers and morphology are carried over from the CrossWire KJV module, whose markup CrossWire licenses under the GPL with a grant "to use this text for any purpose".',
+      attribution:
+        'American Standard Version (1901), public domain. Text from the CrossWire Bible Society ASV module; Strong’s numbers and morphology carried over from the CrossWire KJV module (https://www.crosswire.org/sword/modules/).',
       confirmedAt: `mods.d/asv.conf inside ${file.url} (DistributionLicense=Public Domain; About: "The American Standard Version (ASV) of the Holy Bible is in the Public Domain.")`,
     },
     outputs: ['asv', 'search'],
-    notes: `Strong's tags are not kept (misaligned in this module). Footnotes, poetry line breaks, and 21 Ps 119 acrostic headings after verse 1 are not included. ${ASV_OMITTED.length} verses the ASV omits are empty (s: []). ${st.joinFixes} missing spaces at <transChange> boundaries were restored.`,
+    notes: `Strong’s numbers and morphology come from the KJV verse, matched word by word (scripts/pipeline/lib/asv-strongs.ts): ${percent(t.tagged, t.words)} of words are tagged; words the ASV adds, rewords, or prints in italics are not. The module’s own Strong’s tags are not used (most sit on a neighbouring word). Footnotes, poetry line breaks, and 21 Ps 119 acrostic headings after verse 1 are not included. ${ASV_OMITTED.length} verses the ASV omits are empty (s: []). ${st.joinFixes} missing spaces at <transChange> boundaries were restored.`,
   });
   writeSearchLicense();
 
-  verifyAsv(st, mod, canon.path);
+  verifyAsv(st, mod, canon.path, t);
 }
 
-function verifyAsv(st: BibleStats, mod: ZVerse, canonPath: string) {
+/** Text of the translators' added words (<transChange type="added">) in a raw verse, notes and titles removed. */
+function rawItalics(osis: string): string {
+  const s = osis.replace(/<note\b[^>]*>[\s\S]*?<\/note>/g, '').replace(/<title\b[^>]*>[\s\S]*?<\/title>/g, '');
+  return [...s.matchAll(/<transChange\b[^>]*type="added"[^>]*>([\s\S]*?)<\/transChange>/g)].map((m) => decodeEntities(m[1].replace(/<[^>]+>/g, ''))).join('');
+}
+
+const WORDS = /[\p{L}\p{N}]+(?:['’\-–][\p{L}\p{N}]+)*/gu;
+const wordCount = (s: string) => s.match(WORDS)?.length ?? 0;
+
+function verifyAsv(st: BibleStats, mod: ZVerse, canonPath: string, tagging: TransferStats) {
   verifyVersification(readFileSync(canonPath, 'utf8'), mod, 'ASV');
   assert(st.strayHeadingText.length === 0, `text in ASV chapter-heading slots: ${st.strayHeadingText.slice(0, 3).join(' | ')}`);
   assert(JSON.stringify(st.emptyVerses) === JSON.stringify(ASV_OMITTED), `ASV empty verses: ${st.emptyVerses.join(', ')}`);
@@ -485,20 +523,42 @@ function verifyAsv(st: BibleStats, mod: ZVerse, canonPath: string) {
   assert(corpus.length === 31102, `search/asv.json has ${corpus.length} entries`);
   let n = 0;
   let paras = 0;
+  const words = { asv: 0, asvTagged: 0, kjv: 0, kjvTagged: 0 };
   for (const book of BOOKS) {
     for (let c = 1; c <= book.chapters; c++) {
       const ch = readChapter('asv', book.code, c);
+      const kjv = readChapter('kjv', book.code, c);
       assert(ch.b === book.code && ch.c === c && ch.tr === 'asv', `asv/${book.code}/${c}.json header`);
       assert(ch.v.length === verseCount(book.code, c), `ASV ${book.code} ${c}: ${ch.v.length} verses`);
+      assert((ch.title ?? []).every((s) => typeof s === 'string' || !s.s), `ASV ${book.code} ${c}: tagged title`);
       ch.v.forEach((verse, i) => {
         const where = ref(book.code, c, i + 1);
         assert(verse.n === i + 1, `${where}: numbered ${verse.n}`);
         const text = segText(verse);
-        for (const s of verse.s) assert(typeof s === 'string' || (!s.s && !s.m && !s.w && !s.dn), `${where}: unexpected flags`);
+        // Tagged words carry the numbers (and morphology) of a KJV word in the same verse, and the
+        // translators' italics stay untagged.
+        const kjvTags = new Set(kjv.v[i].s.flatMap((s) => (typeof s !== 'string' && s.s ? [JSON.stringify([s.s, s.m ?? null])] : [])));
+        for (const s of verse.s) {
+          if (typeof s === 'string') continue;
+          assert(Object.keys(s).every((k) => ['t', 's', 'm', 'a'].includes(k)) && s.t, `${where}: bad segment ${JSON.stringify(s)}`);
+          if (!s.s) assert(s.a === 1 && !s.m, `${where}: bad segment ${JSON.stringify(s)}`);
+          else {
+            assert(!s.a, `${where}: italic "${s.t}" has Strong’s numbers`);
+            assert(kjvTags.has(JSON.stringify([s.s, s.m ?? null])), `${where}: "${s.t}" has ${s.s} ${s.m ?? ''}, which no KJV word in the verse has`);
+            words.asvTagged += wordCount(s.t);
+          }
+        }
+        words.asv += wordCount(text);
+        for (const s of kjv.v[i].s) if (typeof s !== 'string' && s.s) words.kjvTagged += wordCount(s.t);
+        words.kjv += wordCount(segText(kjv.v[i]));
         assert(!/[<>]|\s\s|^\s|\s$|\s[,.;:?!)]/.test(text), `${where}: bad spacing "${text}"`);
-        // Same text as the module apart from the spaces restored at <transChange> boundaries.
-        const raw = rawPlain(mod.verse(book.code, c, i + 1), i + 1 !== 1);
+        // Same text as the module apart from the spaces restored at <transChange> boundaries, and
+        // the same italics.
+        const rawVerse = mod.verse(book.code, c, i + 1);
+        const raw = rawPlain(rawVerse, i + 1 !== 1);
         assert(text.replace(/ /g, '') === raw.replace(/ /g, ''), `${where}: text differs from the module\n  out: ${text}\n  raw: ${raw}`);
+        const italics = verse.s.map((s) => (typeof s !== 'string' && s.a ? s.t : '')).join('');
+        assert(italics.replace(/\s/g, '') === rawItalics(rawVerse).replace(/\s/g, ''), `${where}: italics differ from the module`);
         assert(corpus[n] === text, `${where}: search text differs`);
         if (verse.p) paras++;
         n++;
@@ -520,8 +580,39 @@ function verifyAsv(st: BibleStats, mod: ZVerse, canonPath: string) {
   assert(segsToText(readChapter('asv', 'PSA', 119).title ?? []) === 'א ALEPH.', 'ASV Ps 119 title');
   assert(!segText(readVerse('asv', 'PSA', 119, 8)).includes('BETH'), 'ASV Ps 119:8 keeps the next heading');
   assert(segText(readVerse('asv', 'HAB', 3, 19)).endsWith('For the Chief Musician, on my stringed instruments.'), 'ASV Hab 3:19 subscription');
-  log('asv', `verify ok: ${n} verses in KJV versification, text equals the module; empty (omitted) verses ${st.emptyVerses.length}: ${st.emptyVerses.join(', ')}`);
+
+  // Strong's numbers carried over from the KJV, including words the ASV renders differently.
+  const tagged = (b: BookCode, c: number, v: number, word: string) => {
+    const seg = readVerse('asv', b, c, v).s.find((s) => typeof s !== 'string' && new RegExp(`(^|\\s)${word}($|\\s)`).test(s.t));
+    return seg && typeof seg !== 'string' ? seg : undefined;
+  };
+  const spot: [BookCode, number, number, string, string, string?][] = [
+    ['GEN', 1, 1, 'God', 'H430'],
+    ['GEN', 1, 1, 'created', 'H853,H1254', 'TH8804'],
+    ['GEN', 1, 1, 'heavens', 'H8064'], // KJV "heaven"
+    ['PSA', 23, 1, 'Jehovah', 'H3068'], // KJV "The LORD"
+    ['PSA', 23, 1, 'shepherd', 'H7462', 'TH8802'],
+    ['JHN', 3, 16, 'loved', 'G25', 'V-AAI-3S'],
+    ['JHN', 3, 16, 'eternal', 'G166', 'A-ASF'], // KJV "everlasting"
+    ['ACT', 2, 4, 'Spirit', 'G4151'], // KJV "Ghost"
+    ['ROM', 8, 28, 'love', 'G3588,G25', 'T-DPM,V-PAP-DPM'], // in a phrase the ASV moved
+    ['ROM', 8, 28, 'are', 'G1510', 'V-PAP-DPM'],
+  ];
+  for (const [b, c, v, word, s, m] of spot) {
+    const seg = tagged(b, c, v, word);
+    assert(seg?.s?.join() === s && (m === undefined || seg.m?.join() === m), `ASV ${ref(b, c, v)} "${word}": ${JSON.stringify(seg)}, expected ${s} ${m ?? ''}`);
+  }
+  assert(!tagged('PSA', 23, 1, 'is'), 'ASV Ps 23:1 "is" is added in the KJV, so untagged');
+  assert(readVerse('asv', 'ROM', 8, 28).s.some((s) => typeof s !== 'string' && s.t === 'his' && s.a === 1 && !s.s), 'ASV Rom 8:28 italic "his" untagged');
+  assert(words.asvTagged === tagging.tagged && words.asv === tagging.words, `tagged words in the files ${words.asvTagged}/${words.asv}, converter ${tagging.tagged}/${tagging.words}`);
+  assert(tagging.tagged / tagging.words > 0.86, `only ${percent(tagging.tagged, tagging.words)} of ASV words tagged`);
+
+  log('asv', `verify ok: ${n} verses in KJV versification, text and italics equal the module; empty (omitted) verses ${st.emptyVerses.length}: ${st.emptyVerses.join(', ')}`);
   log('asv', `paragraph-start verses ${paras} (${st.midParagraphs} mid-verse paragraph marks not representable); titles ${st.titles}; restored ${st.joinFixes} missing spaces at <transChange> boundaries; dropped ${st.droppedHeadings.length} later Ps 119 headings, ${st.notes} footnotes; Hab 3:19 subscription kept in the verse`);
+  log('asv', `Strong’s numbers from the KJV: ${tagging.tagged} of ${tagging.words} words (${percent(tagging.tagged, tagging.words)}; the KJV itself ${percent(words.kjvTagged, words.kjv)}), each a KJV word's numbers from the same verse; ${spot.length + 2} spot checks ok`);
+  const r = tagging.rules;
+  log('asv', `  matched: identical ${r.same} (${percent(r.same, tagging.words)}), respelled or substituted ${r.similar} (${percent(r.similar, tagging.words)}), one-for-one swap ${r.position} (${percent(r.position, tagging.words)})`);
+  log('asv', `  untagged: ${tagging.kjvUntagged} match an untagged KJV word (its italics), ${tagging.italic} are ASV italics, ${tagging.words - tagging.tagged - tagging.kjvUntagged - tagging.italic} have no KJV counterpart (added or reworded)`);
   log('asv', `output asv/ ${folderStats('asv').text}; search/asv.json ${(statSync(join(OUT, 'search', 'asv.json')).size / 1e6).toFixed(2)} MB`);
 }
 
@@ -1034,7 +1125,7 @@ async function runCommentaries() {
 
 export const stages: Stage[] = [
   { id: 'kjv', description: 'CrossWire KJV → kjv/{BOOK}/{ch}.json and search/kjv.json', run: runKjv },
-  { id: 'asv', description: 'CrossWire ASV → asv/{BOOK}/{ch}.json and search/asv.json', run: runAsv },
+  { id: 'asv', deps: ['kjv'], description: 'CrossWire ASV → asv/{BOOK}/{ch}.json (Strong’s from the KJV) and search/asv.json', run: runAsv },
   { id: 'tsk', description: 'CrossWire TSK 1.5 (beta) → tsk/{BOOK}/{ch}.json cross-references', run: runTsk },
   {
     id: 'commentaries',

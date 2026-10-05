@@ -1,14 +1,15 @@
 import { memo } from 'react';
 import { Text, type TextStyle } from 'react-native';
 
-import type { Seg } from '@/lib/data/types';
+import type { Seg, TranslationId } from '@/lib/data/types';
 import { useTheme } from '@/theme';
 
 export interface WordTap {
   text: string;
   strongs: string[];
   morph?: string[];
-  /** Verse and segment index, so the panel can find the original word (KJV taps). */
+  /** Translation (KJV when absent), verse, and segment index, so the panel can find the original word. */
+  tr?: TranslationId;
   verse?: number;
   segIndex?: number;
   /** The original-language word itself (taps in the Hebrew/Greek or interlinear views). */
@@ -18,7 +19,7 @@ export interface WordTap {
 interface Props {
   segs: Seg[];
   redLetter: boolean;
-  /** Called when a word with Strong's numbers is tapped (KJV). */
+  /** Called when a word with Strong's numbers is tapped (KJV and ASV). */
   onWord?: (word: WordTap) => void;
   /** Strong's number to highlight (e.g. from a word study). */
   highlightStrongs?: string;

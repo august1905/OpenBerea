@@ -11,7 +11,7 @@ Checked on 2026-10-02. Versions are pinned by commit SHA or file checksum in `sc
 | Source | Used for | License (as confirmed) | Status |
 | --- | --- | --- | --- |
 | KJV (CrossWire KJV module 3.1) | KJV text with Strong's, morphology, red letter, italics, paragraphs | Public-domain text (Crown rights in the UK); module markup under CrossWire's GPL grant "to use this text for any purpose" | **Used** |
-| ASV (CrossWire ASV module 2.0) | ASV text | Public domain | **Used** (its Strong's tags are misaligned, so unused) |
+| ASV (CrossWire ASV module 2.0) | ASV text; Strong's numbers carried over from the KJV | Public domain | **Used** (the module's own Strong's tags are misaligned, so unused) |
 | STEPBible TAHOT, TAGNT | Hebrew/Aramaic and Greek text, interlinear, morphology, glosses, edition markers | CC BY 4.0 | **Used** |
 | STEPBible TBESG | Greek brief lexicon (Abbott-Smith, Middle Liddell, STEPBible) | CC BY 4.0, with Middle Liddell entries CC BY-SA 4.0 | **Used** (folder is CC BY-SA 4.0) |
 | STEPBible TBESH | Hebrew brief lexicon | CC BY 4.0 for lemma, gloss, morphology; definitions need Online Bible's permission | **Used in part** (definitions column skipped) |
@@ -51,7 +51,16 @@ Checked on 2026-10-02. Versions are pinned by commit SHA or file checksum in `sc
 
 ### ASV: CrossWire ASV module
 - **Source:** CrossWire `ASV.zip`, module 2.0, pinned by sha256. **License:** public domain (`.conf`).
-- **Used:** text and paragraph marks. Its Strong's tags are misaligned with the words, so they are not used, and the reader's red letter applies to the KJV only (the ASV has no words-of-Christ markup). The 16 verses the ASV prints only as footnotes (e.g. Matt 17:21) are kept as empty verses so the numbering matches.
+- **Used:** text, translators' added words (italics), and paragraph marks. The reader's red letter applies to the KJV only (the ASV has no words-of-Christ markup). The 16 verses the ASV prints only as footnotes (e.g. Matt 17:21) are kept as empty verses so the numbering matches.
+- **The module's Strong's tags are not used.** It tags 87% of words, but usually with a neighbouring word's number: in Gen 1:1 "In" is H430 and "the" H853, and in Ps 23:1 "is", "my", "I" and "shall" are all H3068. On words identical to the KJV, its number agrees with the KJV's only 47% of the time (83% on content words), so the wrong ones can't be told apart from the right ones.
+- **Strong's numbers come from the KJV instead** (`scripts/pipeline/lib/asv-strongs.ts`). The ASV is a light revision of the KJV, so each ASV verse is aligned to the KJV verse word by word. The steps are:
+  - identical words, including phrases of three or more words the ASV moved, with "Jehovah" matching the KJV's small-caps LORD;
+  - respellings and systematic substitutions inside the gaps ("honour"/"honor", "Ghost"/"Spirit", "which"/"who", "any thing"/"anything");
+  - one-for-one swaps between two matched words ("wells"/"springs"), but only when both are content words or both are function words. A swap of "and" or "the" for a content word means the ASV reworded the phrase, so the word stays untagged.
+
+  Each matched ASV word takes the Strong's numbers and morphology of the KJV phrase it belongs to. Words the ASV adds or rewords, and its own italics, stay untagged, so they can't be tapped.
+- **Coverage:** 87.8% of ASV words are tagged (688,349 of 783,567), against 94.3% in the KJV. Tagged: 84.0% of all words are identical to the KJV, 1.5% are respelled or substituted, and 2.3% are one-for-one swaps. Untagged: 4.4% match words the KJV itself leaves untagged (its italics), 0.5% are ASV italics, and 7.2% have no KJV counterpart.
+- **Verified:** the text, italics, paragraphs, titles, and empty verses are unchanged: stripping the tags gives back the untagged conversion exactly, and the search corpus is byte-identical. Every tag is checked to be a KJV tag of the same verse. Tagged ASV words align with the Hebrew/Greek words as well as the KJV's do (99.5% of tagged words in Genesis, 99.6% in Psalms, 98.8% in John, 99.0% in Romans). Spot checks: Gen 1:1 "God" H430 and "heavens" H8064; Ps 23:1 "Jehovah" H3068; John 3:16 "loved" G25 and "eternal" G166; Acts 2:4 "Spirit" G4151; and Rom 8:28's moved "to them that love" G25.
 
 ## Original languages and lexicons (STEPBible)
 

@@ -2,6 +2,8 @@
 //   - verse counts in every chapter of the KJV, ASV, and Hebrew/Greek data match the KJV versification;
 //   - randomly sampled KJV and ASV verses read exactly as the CrossWire module text;
 //   - the Strong's numbers on sampled KJV verses equal the module's tags, in order;
+//   - the Strong's numbers on sampled ASV verses (carried over from the KJV) are among the KJV module's
+//     tags for the same verse, and a fixed set of ASV words carries the expected numbers;
 //   - the Strong's numbers on sampled Hebrew and Greek verses equal the TAHOT/TAGNT rows.
 // The raw files are parsed here with their own minimal code, separate from the converters.
 //   npx tsx scripts/verify-data.ts [samples=300]
@@ -118,6 +120,38 @@ function checkModule(name: 'KJV' | 'ASV') {
   console.log(`${name}: ${texts} sampled verses match the module text${name === 'KJV' ? `; ${tagged} Strong's tags match in order` : ''}.`);
 }
 
+/** ASV Strong's numbers come from the KJV: each must be a KJV module tag of the same verse. */
+function checkAsvStrongs() {
+  const kjv = openModule(readZip(readFileSync(join(CACHE, 'crosswire', 'KJV.zip')))).module;
+  let words = 0;
+  let tagged = 0;
+  for (const [b, c, v] of sample(SAMPLES)) {
+    const want = new Set(osisStrongs(kjv.verse(b, c, v)));
+    const verse = load<ChapterText>(`asv/${b}/${c}.json`).v.find((x) => x.n === v)!;
+    for (const s of verse.s) {
+      const n = (typeof s === 'string' ? s : s.t).match(/[\p{L}\p{N}]+/gu)?.length ?? 0;
+      words += n;
+      if (typeof s === 'string' || !s.s) continue;
+      tagged += n;
+      if (s.a) fail(`ASV ${b} ${c}:${v} italic "${s.t}" is tagged`);
+      for (const id of s.s) if (!want.has(id)) fail(`ASV ${b} ${c}:${v} "${s.t}" ${id} is not a KJV tag of the verse (${[...want].join(' ')})`);
+    }
+  }
+  // A word the ASV prints as the KJV does, one it renders differently, and the divine name.
+  const spot: [BookCode, number, number, string, string][] = [
+    ['GEN', 1, 1, 'God', 'H430'],
+    ['JHN', 3, 16, 'loved', 'G25'],
+    ['JHN', 3, 16, 'eternal', 'G166'],
+    ['PSA', 23, 1, 'Jehovah', 'H3068'],
+    ['EXO', 3, 15, 'Jehovah', 'H3068'],
+  ];
+  for (const [b, c, v, word, id] of spot) {
+    const seg = load<ChapterText>(`asv/${b}/${c}.json`).v[v - 1].s.find((s) => typeof s !== 'string' && s.t.split(/\W+/).includes(word));
+    if (typeof seg === 'string' || !seg?.s?.includes(id)) fail(`ASV ${b} ${c}:${v} "${word}" should carry ${id}: ${JSON.stringify(seg)}`);
+  }
+  console.log(`ASV: ${SAMPLES} sampled verses, ${tagged} of ${words} words tagged (${((100 * tagged) / words).toFixed(1)}%), every number a KJV module tag of the verse; ${spot.length} spot checks.`);
+}
+
 /** Raw TAHOT/TAGNT rows grouped by KJV verse ("GEN.1.1"). */
 function stepRows(prefix: 'TAHOT' | 'TAGNT') {
   const dir = join(CACHE, 'stepbible');
@@ -190,6 +224,7 @@ function checkLexicon() {
 checkCounts();
 checkModule('KJV');
 checkModule('ASV');
+checkAsvStrongs();
 checkOriginal();
 checkLexicon();
 console.log(failures ? `\n${failures} mismatches.` : '\nAll data checks passed.');

@@ -15,6 +15,7 @@ test.describe('reader', () => {
   });
 
   test('switches between KJV and ASV instantly and shows them side by side', async ({ page }) => {
+    test.slow(); // axe checks every word button in both columns (about 1,100 in John 3)
     await gotoApp(page, '/read/jhn/3');
     await page.getByTestId('version-asv').click();
     await expect(page).toHaveURL(/tr=asv/);
