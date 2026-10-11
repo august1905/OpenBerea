@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { UpdateNotice } from '@/components/UpdateNotice';
 import '@/features/registry';
 import { CornerMenus } from '@/features/nav/CornerMenus';
 import { startOffline } from '@/lib/platform/offline';
@@ -21,6 +22,7 @@ function Shell() {
       ) : (
         <Stack screenOptions={{ headerShown: false, animation: 'none', contentStyle: { backgroundColor: palette.bg } }} />
       )}
+      <UpdateNotice />
       <CornerMenus />
     </View>
   );

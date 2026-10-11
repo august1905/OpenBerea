@@ -1,5 +1,7 @@
 // Minimal static server for the exported site (dist/, or DIST_DIR), used by end-to-end tests
-// and Lighthouse. Mirrors Cloudflare's single-page-application fallback.
+// and Lighthouse. Mirrors Cloudflare's single-page-application mode exactly: any path that matches
+// no file, including a missing script or data file, gets the app's page (index.html) with 200, so
+// tests see what production does.
 import { createReadStream, readFileSync, statSync } from 'node:fs';
 import { createServer } from 'node:http';
 import { extname, join, normalize } from 'node:path';
@@ -60,17 +62,17 @@ const matches = (pattern, path) => (pattern.endsWith('*') ? path.startsWith(patt
 
 createServer((req, res) => {
   const urlPath = req.url ?? '/';
-  let file = fileFor(urlPath);
-  let status = 200;
-  if (!file) {
-    // Missing data or asset files are real 404s; app routes fall back to the shell.
-    if (/^\/(data|_expo|assets|fonts)\//.test(urlPath) || extname(urlPath.split('?')[0])) {
-      res.writeHead(404, { 'content-type': 'text/plain' });
-      res.end('Not found');
-      return;
-    }
-    file = join(root, 'index.html');
+  // Cloudflare's URL handling: /index.html redirects to /, and "@" in a path to "%40".
+  const [rawPath, query] = urlPath.split(/\?(.*)/s);
+  const canonical = rawPath === '/index.html' ? '/' : rawPath.replace(/@/g, '%40');
+  if (canonical !== rawPath) {
+    res.writeHead(307, { location: canonical + (query ? `?${query}` : '') });
+    res.end();
+    return;
   }
+  let file = fileFor(urlPath);
+  const status = 200;
+  if (!file) file = join(root, 'index.html');
   const ext = extname(file);
   const headers = { 'content-type': types[ext] ?? 'application/octet-stream', 'cache-control': 'no-cache' };
   const pathOnly = urlPath.split('?')[0];

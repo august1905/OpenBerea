@@ -3,6 +3,9 @@ import { expect, type Page } from '@playwright/test';
 
 /** Fails on serious or critical axe violations. */
 export async function expectAccessible(page: Page, context?: string) {
+  // Check the settled screen: a closing corner menu's fading copies (aria-hidden, gone in about a
+  // quarter second) would otherwise be measured mid-fade.
+  await page.waitForFunction(() => document.querySelectorAll('[data-testid$="-ghosts"] > *').length === 0, null, { timeout: 3000 }).catch(() => {});
   const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
   const serious = results.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
   const summary = serious.map((v) => `${v.id} (${v.impact}): ${v.help}\n  ${v.nodes.slice(0, 3).map((n) => n.target.join(' ')).join('\n  ')}`);

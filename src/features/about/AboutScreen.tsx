@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-import { Body, ErrorState, ExternalLink, Heading, Loading, Rule, Screen } from '@/components/ui';
+import { Body, Button, ErrorState, ExternalLink, Heading, Loading, Rule, Screen } from '@/components/ui';
 import { t } from '@/i18n';
 import { useData } from '@/lib/data/fetch';
 import type { DataManifest } from '@/lib/data/types';
-import { useOfflineStatus } from '@/lib/platform/offline';
+import { applyUpdate, checkForUpdates, useOfflineStatus } from '@/lib/platform/offline';
 import { useTheme } from '@/theme';
 
 import site from '../../../content/site.json';
@@ -22,6 +22,40 @@ function OfflineStatus() {
     <Text testID="offline-status" role="status">
       <Body>{text}</Body>
     </Text>
+  );
+}
+
+const UPDATE_TEXT = {
+  idle: null,
+  checking: 'about.updateChecking',
+  latest: 'about.updateLatest',
+  downloading: 'about.updateDownloading',
+  ready: 'about.updateReady',
+} as const;
+
+/** Which version this device runs, and a way to check for a newer one. */
+function Updates() {
+  const s = useOfflineStatus();
+  if (!s.supported || !s.build) return null;
+  const status = UPDATE_TEXT[s.update];
+  return (
+    <View testID="updates">
+      <Heading level={2}>{t('about.updates')}</Heading>
+      <Body muted>{t('about.updatesIntro')}</Body>
+      <Body style={{ marginTop: 8 }}>{t('about.build', { build: s.build })}</Body>
+      {status ? (
+        <Text testID="update-status" role="status">
+          <Body>{t(status)}</Body>
+        </Text>
+      ) : null}
+      <View style={styles.row}>
+        {s.update === 'ready' ? (
+          <Button testID="about-reload" label={t('update.reload')} onPress={applyUpdate} />
+        ) : (
+          <Button testID="check-updates" label={t('about.checkUpdates')} onPress={() => checkForUpdates()} disabled={s.update === 'checking' || s.update === 'downloading'} />
+        )}
+      </View>
+    </View>
   );
 }
 
@@ -72,6 +106,7 @@ export function AboutScreen() {
 
       <Heading level={2}>{t('about.offline')}</Heading>
       <OfflineStatus />
+      <Updates />
 
       <Heading level={2}>{t('about.credits')}</Heading>
       <Body muted>{t('about.creditsIntro')}</Body>

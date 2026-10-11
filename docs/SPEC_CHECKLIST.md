@@ -4,7 +4,7 @@ One line per requirement in the spec ("Bible Study App — Requirements Spec.md"
 
 Legend: ✅ yes · ⚠️ partly (see note) · ⏳ waiting on the owner (listed in the hand-off)
 
-Latest run (after the owner's hover and edge-swipe menus and ASV word taps): 504 unit tests and 255 end-to-end runs passed (19 skipped by design: phone-only or desktop-only cases), axe reported no serious or critical violations, and the data checks passed. From the run before (light/dark and menu motion): 394 of 394 external links resolved, and Lighthouse scored 100 for accessibility, best practices, and SEO on the key pages.
+Latest run (after the owner's hover and edge-swipe menus, ASV word taps, and reliable updates): 508 unit tests and 265 end-to-end runs passed (27 skipped by design: phone-only or desktop-only cases; 20 that the Mac sleeping or a busy test server interrupted passed on re-run), axe reported no serious or critical violations, and the data checks passed. From the run before (light/dark and menu motion): 394 of 394 external links resolved, and Lighthouse scored 100 for accessibility, best practices, and SEO on the key pages.
 
 ## Guiding principles
 
@@ -136,7 +136,7 @@ Latest run (after the owner's hover and edge-swipe menus and ASV word taps): 504
 | P6 | Funding: donations only; no ads, no paid tiers | ✅ | ✅ | As G1; donation link ⏳ |
 | P7 | No account: no sign-up, no login, no user data on a server | ✅ | ✅ | Static site, no server code |
 | P8 | Nothing saved: no settings or history stored; only app data cached | ✅ | ✅ | `offline.spec`, `design.spec`, `policy.test` |
-| P9 | Offline: installable web app; KJV, ASV, original texts, and lexicons offline after the first visit; other study data cached as viewed | ✅ | ✅ | `offline.spec`; Lighthouse installable-manifest pass; `public/sw.js` |
+| P9 | Offline: installable web app; KJV, ASV, original texts, and lexicons offline after the first visit; other study data cached as viewed | ✅ | ✅ | `offline.spec`; Lighthouse installable-manifest pass; `public/sw.js`; new versions reach installed apps and open tabs (`update.spec`, decision 69) |
 | P10 | Accessibility: screen reader support | ✅ | ✅ | axe on every screen (no serious or critical violations); Lighthouse accessibility 100 on key pages; roles and labels; list-menu fallback |
 | P11 | Accessibility: adjustable font size (resets each visit) | ✅ | ✅ | `design.spec` |
 | P12 | Accessibility: dyslexia-friendly font option | ✅ | ✅ | `design.spec` (DECISIONS #29) |
@@ -155,7 +155,7 @@ Latest run (after the owner's hover and edge-swipe menus and ASV word taps): 504
 | T3 | Data pipeline: build-time scripts download each source, check its license, convert to compact JSON split by chapter, with a manifest recording each source and license | ✅ | ✅ | `npm run data` (24 stages with verification; `data/manifest.json`); pipeline unit tests; `npm run verify` |
 | T4 | References: standard book codes (GEN … REV); STEPBible TVTMS maps verse numbers where English and Hebrew/Greek differ | ✅ | ✅ | `books.ts`; `versemap` stage (TVTMS) maps OpenBible.info's numbering; TAHOT/TAGNT carry STEPBible's KJV mappings (e.g. Mal 4:1 = Hebrew 3:19) |
 | T5 | Search: prebuilt indexes searched in the browser; no search server | ✅ | ✅ | `search.spec`; works offline (`offline.spec`) |
-| T6 | Offline: a service worker caches the app shell and core data | ✅ | ✅ | `offline.spec` |
+| T6 | Offline: a service worker caches the app shell and core data | ✅ | ✅ | `offline.spec`; `update.spec` (updates, previous build kept, nothing but real files cached) |
 | T7 | State in memory only; the URL reflects the current passage, so back and direct links work | ✅ | ✅ | `reader.spec` (direct links, back button) |
 | T8 | Data licenses: code MIT; data files keep their own licenses in a separate data folder (share-alike stays share-alike) | ✅ | ✅ | `LICENSE.txt` in every data folder; Theographic and the STEPBible lexicon folder are CC BY-SA |
 | T9 | Testing: unit tests (reference parsing, data conversion); end-to-end (reading, tabs, corner menus, interlinear, search, memorization); automated accessibility checks | ✅ | ✅ | `npm test`, `npm run e2e` |

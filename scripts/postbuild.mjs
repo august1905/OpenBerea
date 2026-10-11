@@ -1,5 +1,5 @@
-// Runs after `expo export`: stamps the service worker with build versions, writes the offline
-// precache list, and writes Cloudflare static-asset headers.
+// Runs after `expo export`: stamps the page and the service worker with the build id, writes the
+// offline precache list, and writes Cloudflare static-asset headers.
 import { createHash } from 'node:crypto';
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
@@ -33,6 +33,14 @@ const shellFiles = [
 
 const shellHash = createHash('sha256');
 for (const f of shellFiles) if (f !== '/') shellHash.update(f).update(readFileSync(join(dist, f)));
+const shellBuild = shellHash.digest('hex').slice(0, 12);
+
+// The page carries its build id, so the running app can tell whether the service worker it talks
+// to serves the same build (src/lib/platform/offline.web.ts).
+const indexPath = join(dist, 'index.html');
+const page = readFileSync(indexPath, 'utf8');
+if (!page.includes('</head>')) throw new Error('postbuild: index.html has no </head>');
+writeFileSync(indexPath, page.replace('</head>', `<meta name="openberea-build" content="${shellBuild}" />\n</head>`));
 
 // Core data, available offline after the first visit (spec: KJV, ASV, original-language texts,
 // and lexicons; plus the concordance, grammar tables, and search index those features rely on).
@@ -67,7 +75,7 @@ writeFileSync(join(dist, 'precache.json'), JSON.stringify({ version: dataVersion
 
 const swPath = join(dist, 'sw.js');
 if (existsSync(swPath)) {
-  const build = { shell: shellHash.digest('hex').slice(0, 12), data: dataVersion, shellFiles };
+  const build = { shell: shellBuild, data: dataVersion, shellFiles };
   const source = readFileSync(swPath, 'utf8');
   if (!source.includes('const BUILD = __BUILD__;')) throw new Error('postbuild: sw.js build placeholder not found');
   writeFileSync(swPath, source.replace('const BUILD = __BUILD__;', `const BUILD = ${JSON.stringify(build)};`));
@@ -97,12 +105,17 @@ writeFileSync(
     '  Referrer-Policy: strict-origin-when-cross-origin',
     '  Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=(), interest-cohort=()',
     `  Content-Security-Policy: ${csp}`,
+    // Only file names with a content hash may be cached as never changing. Everything else is
+    // checked with the server on use (a quick "not modified" when unchanged), so a deploy shows
+    // up at once. Pages, icons, the manifest, and boot.js get Cloudflare's default, which does the
+    // same. (Cloudflare answers a missing file with the app's page; the app and the service worker
+    // treat that as missing and never keep it.)
     '/_expo/static/*',
     '  Cache-Control: public, max-age=31536000, immutable',
     '/fonts/*',
-    '  Cache-Control: public, max-age=31536000, immutable',
+    '  Cache-Control: public, max-age=86400',
     '/data/*',
-    '  Cache-Control: public, max-age=3600',
+    '  Cache-Control: public, max-age=0, must-revalidate',
     '/sw.js',
     '  Cache-Control: no-cache',
     '/precache.json',

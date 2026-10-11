@@ -29,6 +29,9 @@ export function loadData<T>(path: string): Promise<T> {
   }
   const promise = fetch(DATA_BASE + path).then(async (res) => {
     if (!res.ok) throw new DataError(`Failed to load ${path}`, res.status);
+    // The host answers a file that doesn't exist with the app's page (single-page-app hosting), so
+    // anything but JSON means the file is missing.
+    if (!/json/i.test(res.headers.get('content-type') ?? '')) throw new DataError(`No data file ${path}`, 404);
     const data = (await res.json()) as T;
     resolved.set(path, data);
     return data;

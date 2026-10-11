@@ -82,6 +82,7 @@ Where the spec was unclear, the simplest option that fits the Guiding principles
     - It caches other `/data/` files as they are viewed.
     - It never intercepts other sites, per Desiring God's terms and for privacy.
     - Data caches are versioned by the data manifest's content hash.
+    - How new versions reach devices is decision 71.
 47. **Security headers:** a strict Content-Security-Policy (only this site, plus Desiring God and archive.org audio and youtube-nocookie frames), no-sniff, a referrer policy, and a Permissions-Policy that turns off camera, microphone, geolocation, and ad topics.
 48. **App icon:** an original mark echoing the corner menus, with gold dots fanning from a corner, rendered from `assets/brand/icon.svg` by `scripts/make-icons.mjs`.
 
@@ -139,3 +140,17 @@ Requests from the site owner after the first release.
     - Only one menu is open at a time.
     - The app's root clips its overflow: on phones the main menu's touch zone stuck out 2 px past the screen, which let the whole page pan sideways.
 70. **Interrupted animations carry on smoothly.** Hovering opens and closes menus and arcs often, so the engine now runs exits itself, frame by frame with the same curves and timings, instead of handing them to the browser. A menu, arc, or label that comes back while its copy is still leaving takes over from the copy. It starts where the copy is, moving as it was, and springs back to its place, rather than restarting its entrance beside a fading double. Ring guides keep their spin angle, and the corner dot cross-fades with the open menu's own dot.
+71. **Updates reach every device** (the site owner reported devices stuck on old versions). Three causes, three fixes:
+    - *Installed apps and long-open tabs never checked for updates.* Browsers check only on a full page load, and moving around this app never does one. The app now checks when it loads, every time it comes back into view, and every 30 minutes.
+    - *A new version took over pages still running the old one, and deleted the old files.* The old page's next screen then failed to load. A new version now installs in the background and waits. Each build keeps its own cache, plus the previous build's, for pages still running it. The page switches when it's safe:
+      - silently, when it's already running the new build (a fresh visit after a deploy);
+      - by itself, just after opening or after 10+ minutes away, before anything is touched, or while away 10+ minutes, and never while audio plays;
+      - otherwise through a small "new version is ready" notice with a Reload button.
+    - *Cloudflare answers a missing file with the app's page (status 200), and it was being kept as if it were the file.* With a one-year "never changes" header on build files, that happened in the browser and in the service worker. It also made chapters with no entries in a source (e.g. Barnes on Genesis) show an error instead of "nothing here". Now:
+      - the service worker keeps only responses of the expected type (a redirect is fine for a file, since Cloudflare redirects "@" in names to "%40", but not for the page);
+      - the app reads HTML-where-data-belongs as "no file";
+      - only content-hashed build files are marked as never changing; data, fonts, and everything else are checked with the server on use.
+
+      A small Worker returning real 404s would also work, but the spec allows server code only when a feature can't work without it, and this one can. The local test server now answers as Cloudflare does (the app's page for missing files, and its redirects for `/index.html` and "@"), so the tests see production's behavior.
+
+    The About page shows the version a device runs and has "Check for updates".
